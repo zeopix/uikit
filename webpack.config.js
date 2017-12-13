@@ -118,15 +118,6 @@ module.exports = [
                 {loader: 'vue-loader', test: /\.vue$/, options: {minimize: false}}
             ])
         },
-        plugins: [
-            // new circular,
-            new webpack.DefinePlugin({
-                BUNDLED: true,
-                VERSION: `'${version}'`
-            }),
-            new webpack.optimize.ModuleConcatenationPlugin(),
-            // new uglify
-        ],
         externals: {uikit: 'UIkit'}
     }
 

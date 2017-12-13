@@ -1,26 +1,35 @@
 <template lang="pug">
     div.uk-container
-        input(v-model='cols' type='number')
-        input(v-model='masonry' type='checkbox')
-        div(uk-grid :masonry='masonry' :class="`uk-child-width-1-${cols} uk-grid-small`")
-            div(v-for='block in children')
-                div.uk-card.uk-card-default.uk-card-body(v-html='block')
+        div(v-bind="attributes" :class="`uk-child-width-1-${cols} uk-grid-small`")
+            div(v-for="block in children")
+                div.uk-card.uk-card-default.uk-card-body(v-html="block")
 
 </template>
 
 <script>
 import ipsum from 'lorem-ipsum';
+import base from '../base/component';
 
 export default {
 
+    name:'grid',
+    
+    extends: base,
+
+    props: {
+        cols: {
+            type:Number,
+            default: 4
+        },
+        rows: {
+            type:Number,
+            default: 4
+        }
+    },
 
     data() {
-
         return {
-            rows:4,
-            cols:4,
-            masonry:false,
-            blocks:[]
+            blocks: []
         }
     },
 

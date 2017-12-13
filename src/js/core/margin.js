@@ -6,7 +6,7 @@ export default function (UIkit) {
 
         props: {
             margin: String,
-            firstColumn: Boolean
+            firstColumn: String
         },
 
         defaults: {
