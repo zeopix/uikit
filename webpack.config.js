@@ -8,12 +8,14 @@ var version = require('./package.json').version;
 var uglify = require('uglifyjs-webpack-plugin');
 var circular = require('circular-dependency-plugin');
 
-var loaders = {
-    loaders: [
-        {loader: 'buble-loader', test: /(src|tests)[\/\\].*\.js$/},
-        {loader: 'json-loader', test: /\.json$/},
-        {loader: 'html-loader', test: /\.svg$/, options: {minimize: false}}
-    ]
+var loaders = [
+    {loader: 'buble-loader', test: /(src|tests)[\/\\].*\.js$/},
+    {loader: 'json-loader', test: /\.json$/},
+    {loader: 'html-loader', test: /\.svg$/, options: {minimize: false}}
+];
+
+var modules = {
+    loaders
 };
 
 var components = {};
@@ -28,7 +30,7 @@ module.exports = [
             library: 'UIkit',
             libraryTarget: 'umd'
         },
-        module: loaders,
+        module: modules,
         resolve: {
             alias: {
                 'components$': __dirname + '/dist/icons/components.json',
@@ -51,7 +53,7 @@ module.exports = [
             library: 'UIkit',
             libraryTarget: 'umd'
         },
-        module: loaders,
+        module: modules,
         resolve: {
             alias: {
                 'components$': __dirname + '/dist/icons/components.json',
@@ -64,7 +66,7 @@ module.exports = [
                 VERSION: `'${version}'`
             }),
             new webpack.optimize.ModuleConcatenationPlugin(),
-            new uglify
+            // new uglify
         ]
     },
 
@@ -75,7 +77,7 @@ module.exports = [
             library: 'UIkitIcons',
             libraryTarget: 'umd'
         },
-        module: loaders,
+        module: modules,
         plugins: [
             {
 
@@ -102,7 +104,29 @@ module.exports = [
         output: {
             filename: 'tests/js/test.js'
         },
-        module: loaders,
+        module: modules,
+        externals: {uikit: 'UIkit'}
+    },
+
+    {
+        entry: './tests/reactive/index.js',
+        output: {
+            filename: './tests/reactive/index.min.js'
+        },
+        module: {
+            loaders: loaders.concat([
+                {loader: 'vue-loader', test: /\.vue$/, options: {minimize: false}}
+            ])
+        },
+        plugins: [
+            // new circular,
+            new webpack.DefinePlugin({
+                BUNDLED: true,
+                VERSION: `'${version}'`
+            }),
+            new webpack.optimize.ModuleConcatenationPlugin(),
+            // new uglify
+        ],
         externals: {uikit: 'UIkit'}
     }
 
