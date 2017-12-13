@@ -1,9 +1,11 @@
-<template lang="pug">
-    div.uk-container
-        div(v-bind="attributes" :class="`uk-child-width-1-${cols} uk-grid-small`")
-            div(v-for="block in children")
-                div.uk-card.uk-card-default.uk-card-body(v-html="block")
-
+<template>
+    <div class="uk-container">
+        <div v-bind="attributes" :class="`uk-child-width-1-${cols} uk-grid-small`">
+            <div v-for="block in children">
+                <div class="uk-card uk-card-default uk-card-body" v-html="block"></div>
+            </div>
+        </div>
+    </div>
 </template>
 
 <script>
