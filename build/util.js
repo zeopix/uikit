@@ -8,8 +8,12 @@ var uglify = require('uglify-js');
 var CleanCSS = require('clean-css');
 var html = require('rollup-plugin-html');
 var json = require('rollup-plugin-json');
+var vue = require('rollup-plugin-vue');
 var buble = require('rollup-plugin-buble');
 var replace = require('rollup-plugin-replace');
+var node = require('rollup-plugin-node-resolve');
+var nodeStubs = require('rollup-plugin-node-builtins');
+var commonjs = require('rollup-plugin-commonjs');
 var alias = require('rollup-plugin-import-alias');
 var version = require('../package.json').version;
 var banner = `/*! UIkit ${version} | http://www.getuikit.com | (c) 2014 - 2017 YOOtheme | MIT License */\n`;
@@ -90,9 +94,16 @@ exports.compile = function (file, dest, external, globals, name, aliases, bundle
         external,
         entry: `${path.resolve(path.dirname(file), path.basename(file, '.js'))}.js`,
         plugins: [
+            vue(),
+            node(),
+            nodeStubs(),
+            commonjs(),
             replace({
                 BUNDLED: bundled || false,
-                VERSION: `'${version}'`
+                VERSION: `'${version}'`,
+                DEBUG: minify ? 'false' : 'true',
+                'process.env.NODE_ENV': minify ? "'production'" : "'development'",
+                'process.env.VUE_ENV': "'browser'"
             }),
             alias({
                 Paths: aliases || {},

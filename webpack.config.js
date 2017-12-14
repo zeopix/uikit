@@ -109,9 +109,9 @@ module.exports = [
     },
 
     {
-        entry: './tests/vue/index.js',
+        entry: './tests/vue/app.js',
         output: {
-            filename: './tests/vue/index.min.js'
+            filename: './tests/vue/index.js'
         },
         module: {
             loaders: loaders.concat([

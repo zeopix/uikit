@@ -31,7 +31,9 @@ var steps = {
     icons: () => util.write('dist/icons.json', util.icons('{src/images,custom}/icons/*.svg'))
 		.then(() => util.compile('src/js/icons.js', 'dist/js/uikit-icons', undefined, undefined, 'icons', { icons: 'dist/icons' }, undefined, minify))
 		.then(() => fs.unlink('dist/icons.json', () => {})),
-    tests: () => util.compile('tests/js/index.js', 'tests/js/test', undefined, undefined, 'test', undefined, undefined, minify)
+    tests: () => util.compile('tests/js/index.js', 'tests/js/test', undefined, undefined, 'test', undefined, undefined, minify).then(
+        () => util.compile('tests/vue/app.js', 'tests/vue/index', undefined, undefined, 'test', undefined, undefined, minify)
+    )
 
 };
 

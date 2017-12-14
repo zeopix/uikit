@@ -26,7 +26,7 @@
 
 <script>
 
-import components from './tests';
+import components from './tests/index';
 export default {
     components,
     data() {
