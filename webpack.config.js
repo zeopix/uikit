@@ -118,7 +118,13 @@ module.exports = [
                 {loader: 'vue-loader', test: /\.vue$/, options: {minimize: false}}
             ])
         },
-        externals: {uikit: 'UIkit'}
+        externals: {uikit: 'UIkit'},
+        plugins: [
+            // new circular,
+            new webpack.DefinePlugin({
+                DEBUG: process.argv.indexOf('--debug') >= 0 ? 'true' : 'foalse'
+            }),
+        ]
     }
 
 ];

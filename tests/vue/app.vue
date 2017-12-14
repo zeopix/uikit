@@ -1,17 +1,26 @@
-<template lang="pug">
-    div.uk-container
-        section
-            select
-                option(v-for='(obj, name) in $options.components' v-model='componentName' v-html='name')
-        section
-            div
-                label(v-for='(param, name) in attributes' v-if='name !== componentAttribute' ) {{name}}:
-                    input(:type="getType(name)" v-model="attributes[name]")
-            div
-                label(v-for='(param, name) in props') {{name}}:
-                    input(:type="getPropType(name)" v-model="props[name]")
-        section
-            component(:is='componentName' :attributes='attributes' v-bind='props')
+<template>
+
+    <div class="uk-container">
+        <div v-if="debug">__debug__</div>
+        <section>
+            <select>
+            <option v-for="(obj, name) in $options.components" v-model="componentName" v-html="name"></option>
+            </select>
+        </section>
+        <section>
+            <div v-for="(param, name) in attributes" v-if="name !== componentAttribute">
+                <label :for="name" v-html="`${name}:`"></label>
+                <input :name="name" :type="getType(name)" v-model="attributes[name]">
+            </div>
+            <div v-for="(param, name) in props">
+                <label :for="name" v-html="`${name}:`"></label>
+                <input :type="getPropType(name)" v-model="props[name]">
+            </div>
+        </section>
+        <section>
+            <component :is="componentName" :attributes="attributes" v-bind="props"></component>
+        </section>
+    </div>
 
 </template>
 
@@ -24,11 +33,17 @@ export default {
         return {
             componentName:'grid',
             attributes: {},
-            props: {}
+            props: {},
+            debug: DEBUG
         }
     },
     methods: {
         getType(paramName) {
+
+            const propOverrideType = this.getPropType(paramName);
+            if (propOverrideType) {
+                return propOverrideType;
+            }
 
             switch(this.component.options.props[paramName]) {
                 case Number:
@@ -39,14 +54,18 @@ export default {
                     return 'text';
             }
         },
+
         getPropType(paramName) {
-            switch(this.vueComp.props[paramName].type) {
-                case Number:
-                    return 'number';
-                case Boolean:
-                    return 'checkbox';
-                default:
-                    return 'text';
+            if (this.vueComp.props[paramName]) {
+
+                switch(this.vueComp.props[paramName].type) {
+                    case Number:
+                        return 'number';
+                    case Boolean:
+                        return 'checkbox';
+                    default:
+                        return 'text';
+                }
             }
         }
     },  
@@ -54,6 +73,7 @@ export default {
         component: {
             
             handler() {
+
                 this.attributes = {};
                 this.$set(this.attributes, this.componentAttribute, '');
                 Object.keys(this.component.options.props)
@@ -62,11 +82,14 @@ export default {
                 this.props = {};
                 Object.keys(this.vueComp.props)
                     .forEach(name => {
+                        //igonre override props in props
+                        if (this.attributes[name]) {
+                            return;
+                        }
                         const def = this.vueComp.props[name].default;
                         const value = typeof def === 'function' ? def() : def;
                         this.$set(this.props, name, value);
                     });
-
                 
             },
             immediate:true
