@@ -122,7 +122,7 @@ module.exports = [
         plugins: [
             // new circular,
             new webpack.DefinePlugin({
-                DEBUG: process.argv.indexOf('--debug') >= 0 ? 'true' : 'foalse'
+                DEBUG: process.argv.indexOf('--debug') >= 0 ? 'true' : 'false'
             }),
         ]
     }

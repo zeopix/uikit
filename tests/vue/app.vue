@@ -8,6 +8,23 @@
             </select>
         </section>
         <section>
+
+            <div v-for="(param, name) in classes" >
+                <label :for="name" v-html="`${name}:`"></label>
+                <select v-if="Array.isArray(param)" :name="name" v-model="classesValues[name]">
+                    <option v-for="val in param" :value="val" v-html="val"></option>
+                </select>
+                <input v-else :name="name" type="checkbox" v-model="classesValues[name]">
+            </div>
+
+           <div v-for="(param, name) in childClasses" >
+                <label :for="name" v-html="`${name}:`"></label>
+                <select v-if="Array.isArray(param)" :name="name" v-model="childClassesValues[name]">
+                    <option v-for="val in param" :value="val" v-html="val"></option>
+                </select>
+                <input v-else :name="name" type="checkbox" v-model="childClassesValues[name]">
+            </div>
+
             <div v-for="(param, name) in attributes" v-if="name !== componentAttribute">
                 <label :for="name" v-html="`${name}:`"></label>
                 <input :name="name" :type="getType(name)" v-model="attributes[name]">
@@ -18,7 +35,7 @@
             </div>
         </section>
         <section>
-            <component :is="componentName" :attributes="attributes" v-bind="props"></component>
+            <component :is="componentName" :attributes="attributes" v-bind="props" :classes="computedClasses"></component>
         </section>
     </div>
 
@@ -34,6 +51,8 @@ export default {
             componentName:'grid',
             attributes: {},
             props: {},
+            classesValues: {},
+            childClassesValues: {},
             debug: DEBUG
         }
     },
@@ -96,6 +115,28 @@ export default {
         }
     },
     computed: {
+
+        computedClasses() {
+            const res = [];
+            Object.keys(this.classesValues).forEach(name => {
+                const value = this.classesValues[name];
+                if (value === true) {
+                    res.push(this.classes[name]);
+                } else if (typeof value === 'string') {
+                    res.push(value);
+                }
+            });
+            debugger
+            return res;            
+        },
+        classes() {
+            return this.vueComp.classes;
+        },
+
+        childClasses() {
+            return this.vueComp.childClasses;
+        },
+
         propsFiltered() {
 
         },
