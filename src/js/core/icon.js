@@ -173,4 +173,10 @@ export default function (UIkit) {
         return parsed[icon];
     }
 
+    /*#if test*/
+    UIkit.icon.list = () => {
+        return Object.keys(icons);
+    };
+    /*#endif */
+
 }

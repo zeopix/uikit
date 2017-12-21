@@ -11,7 +11,9 @@ var circular = require('circular-dependency-plugin');
 var loaders = [
     {loader: 'buble-loader', test: /(src|tests)[\/\\].*\.js$/},
     {loader: 'json-loader', test: /\.json$/},
-    {loader: 'html-loader', test: /\.svg$/, options: {minimize: false}}
+    {loader: 'html-loader', test: /\.svg$/, options: {minimize: false}},
+    {test: /\.(js|htm(l?))$/, loader: "webpack-preprocessor?definitions=['test']" }
+
 ];
 
 var modules = {
@@ -115,12 +117,14 @@ module.exports = [
         },
         module: {
             loaders: loaders.concat([
-                {loader: 'vue-loader', test: /\.vue$/, options: {minimize: false}}
+                {loader: 'vue-loader', test: /\.vue$/, options: {minimize: false}},
+                {test: /\.(js|htm(l?))$/, loader: "webpack-preprocessor?definitions=['test']" }
             ])
         },
         externals: {uikit: 'UIkit'},
         plugins: [
             // new circular,
+
             new webpack.DefinePlugin({
                 DEBUG: process.argv.indexOf('--debug') >= 0 ? 'true' : 'false'
             }),

@@ -64,7 +64,8 @@
     "vue-loader": "^13.5.0",
     "vue-template-compiler": "^2.5.10",
     "webpack": "^3.6.1",
-    "webpack-dev-server": "^2.9.4"
+    "webpack-dev-server": "^2.9.4",
+    "webpack-preprocessor": "^0.1.10"
   },
   "watch": {
     "compile-js": "src/js/**/*.js",
