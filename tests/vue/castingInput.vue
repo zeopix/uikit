@@ -1,10 +1,15 @@
 <template>
-    <input v-bind="config" :value="value" @input="change">
+    <input v-if="type==='checkbox'" :type="type" v-bind="config" :checked="value" @change="change">
+    <input v-else v-bind="config" :value="value" @input="change" >
 </template>
 
 <script>
 export default {
     props: {
+        type: {
+            required:true,
+            type: String
+        },
         value:{
             required:true
         },
@@ -21,7 +26,6 @@ export default {
                     this.$emit('input', parseFloat(e.target.value));
                     break;
                 case 'checkbox': {
-                    debugger;
                     this.$emit('input', e.target.checked);
                     break;
                 }

@@ -14,7 +14,7 @@ export default {
         icon: {
             type: String,
             default: 'home',
-            options: UIkit.icon.list()
+            options: [].concat(UIkit.icon.list())
         }
     }
 }

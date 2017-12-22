@@ -18,6 +18,14 @@ export default {
     extends: base,
 
     props: {
+        src:{
+            type: String,
+            options: {
+                'Image': '../../src/images/components/navbar-toggle-icon.svg',
+                'Symbol+ID': '../images/icons.svg#table',
+                'Symbol+ID+notfound': '../images/icons.svg#notfound'
+            }
+        },
         ratio: {
             type: Number,
             default: 1,

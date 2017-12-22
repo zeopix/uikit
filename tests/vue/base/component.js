@@ -1,3 +1,5 @@
+import ipsum from 'lorem-ipsum';
+
 export default {
     props: {
         attributes: {
@@ -14,5 +16,11 @@ export default {
             min: 0,
             max: 100
         },
+    },
+
+    methods: {
+        ipsum() {
+            return ipsum({count: Math.random() * 5 });
+        }
     }
 };

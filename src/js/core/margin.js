@@ -4,6 +4,8 @@ export default function (UIkit) {
 
     UIkit.component('margin', {
 
+        attrs: true,
+        
         props: {
             margin: String,
             firstColumn: String
