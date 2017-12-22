@@ -67,33 +67,19 @@ export default {
         ]
     },
 
-    props: {
-        cols: {
-            type:Number,
-            default: 4
-        },
-        rows: {
-            type:Number,
-            default: 4
-        }
-    },
 
     data() {
         return {
             blocks: [],
-
         }
     },
 
     computed: {
-        numItems() {
-            return this.cols * this.rows;
-        },
         children() {
-            while (this.numItems > this.blocks.length) {
+            while (this.count > this.blocks.length) {
                 this.blocks.push(ipsum({count: Math.random() * 5 }));
             }
-            while (this.numItems < this.blocks.length) {
+            while (this.count < this.blocks.length) {
                 this.blocks.shift();
             }
             return this.blocks;

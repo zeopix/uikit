@@ -16,6 +16,7 @@ function plugin(UIkit) {
 
     UIkit.component('slideshow', {
 
+        attrs: true,
         mixins: [mixin.class, mixin.slideshow],
 
         props: {

@@ -3,7 +3,7 @@
     <div class="uk-container">
         <section>
             <select v-model="componentName">
-            <option v-for="(obj, name) in $options.components"  v-html="name"></option>
+            <option v-for="(obj, name) in $options.components" v-if="!obj.hidden"  v-html="name"></option>
             </select>
         </section>
 
@@ -21,7 +21,7 @@
                 <select v-if="Array.isArray(param)" :name="name" v-model="childClassesValues[name]">
                     <option v-for="val in param" :value="val" v-html="val"></option>
                 </select>
-                <input v-else :name="name" type="checkbox" v-model="childClassesValues[name]">
+                <input v-else :name="name" type="checkbox" v-model="childClassesValues[name]"></input>
             </div>
 
             <div v-for="(param, name) in attributes" v-if="component.options.props[name] && name !== componentAttribute">
@@ -29,17 +29,17 @@
                 <select v-if="vueProps[name] && vueProps[name].options" v-model="attributes[name]">
                     <option v-for="option in vueProps[name].options" :value="option" v-html="option"></option>
                 </select>
-                <input v-else :type="getType(name)" v-bind="inputOptions(name)" v-model="attributes[name]">
+                <castingInput v-else :config="inputOptions(name)" v-model="attributes[name]"></castingInput>
             </div>
 
             <div v-for="(param, name) in vueProps" v-if="!component.options.props[name]">
                 <label :for="name" v-html="`${name}:`"></label>
-                <input v-bind="inputOptions(name)" v-model="vuePropValues[name]">
+                <castingInput :config="inputOptions(name)" v-model="vuePropValues[name]"></castingInput>
             </div>
         </section>
 
         <section>
-            <component :is="componentName" :attributes="attributes" v-bind="vuePropValues" :classes="computedClasses"></component>
+            <component ref="compInstance" :is="componentName" :attributes="attributes" v-bind="vuePropValues" :classes="computedClasses"></component>
         </section>
     </div>
 
@@ -48,9 +48,9 @@
 <script>
 
 import components from './tests/index';
+import castingInput from './castingInput.vue';
 
-const urlFields = ['attributes','componentName','classesValues'];
-
+components.castingInput = castingInput;
 export default {
     components,
     data() {
@@ -72,15 +72,16 @@ export default {
         this.$watch('classesValues', this.makeHash, {deep: true});
 
         window.onhashchange = () => {
-            console.log('hashed');
             const data = JSON.parse(window.location.hash.replace('#','')) || {};
             this.componentName = data.comp || this.componentName;
-            this.attributes = data.attributes || this.attributes;
+            if(data.attributes) {
+                Object.assign(this.attributes, data.attributes);
+            }
             this.classesValues = data.classes || this.classesValues;
         };
     },
-    methods: {
 
+    methods: {
         makeHash() {
             const sets = [`comp=${this.componentName}`];
             Object.keys(this.attributes).forEach(name => {
@@ -99,7 +100,6 @@ export default {
                     }
                     });
              } 
-             console.log(opts);
              return opts;
         },
         getInputType(type) {
@@ -200,7 +200,24 @@ export default {
         },
 
         vueProps() {
-            return this.vueComp.props ? this.vueComp.props : {};
+            const obj = {};
+            var comp = this.vueComp;
+
+            while(comp && (comp.props || comp.extends)) {
+                
+                if(comp.props) {
+                    Object.keys(comp.props).forEach(name => {
+                        const prop = comp.props[name];
+                        if(!prop.private) {
+                            obj[name] = prop;
+                        }
+                    });
+                }
+
+                comp = comp.extends;
+            }
+
+            return obj;
         },
 
         vueComp() {

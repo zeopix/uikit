@@ -126,7 +126,8 @@ module.exports = [
             // new circular,
 
             new webpack.DefinePlugin({
-                DEBUG: process.argv.indexOf('--debug') >= 0 ? 'true' : 'false'
+                DEBUG: process.argv.indexOf('--debug') >= 0 ? 'true' : 'false',
+                JPGS: JSON.stringify(fs.readdirSync('./tests/images').filter(img => img.indexOf('.jpg') >= 0))
             }),
         ]
     }
