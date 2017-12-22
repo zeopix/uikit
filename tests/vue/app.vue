@@ -2,14 +2,14 @@
 
     <div class="uk-container">
         <section>
-            <select v-model="componentName" @change="loadComp,makeHash">
+            <select v-model="componentName" @change="loadComp(),makeHash()">
                 <option v-for="(obj, name) in $options.components" v-if="!obj.hidden" :value="obj.name"  v-html="name"></option>
             </select>
         </section>
 
         <h2>classes</h2>
         <section>
-            <div v-for="(param, name) in classes" >
+            <div v-for="(param, name) in classes" v-if="param" >
                 <label :for="name" v-html="`${name}:`"></label>
                 <select v-if="Array.isArray(param)" :name="name" v-model="classesValues[name]">
                     <option v-for="val in param" :value="val" v-html="val"></option>
@@ -35,12 +35,12 @@
                 <castingInput v-else :type="getType(name)" :config="inputOptions(name)" v-model="attributes[name]"></castingInput>
             </div>
 
-            <div v-for="(param, name) in vueProps" v-if="!component.options.props[name]">
+        <h2>content</h2>
+            <div v-for="(param, name) in vueProps" v-if="!component.options.props[name]  && !(vueProps[name] && vueProps[name].private) ">
                 <label :for="name" v-html="`${name}:`"></label>
                 <castingInput :type="getType(name)" :config="inputOptions(name)" v-model="vuePropValues[name]"></castingInput>
             </div>
         </section>
-
         <section>
             <component :is="testCompName" :attributes="attributeValues" v-bind="vuePropValues" :classes="computedClasses"></component>
         </section>
@@ -79,7 +79,7 @@ export default {
 
         this.loadComp();
         this.$watch('hash',this.makeHash, {deep:true});
-        window.onhashchange = () => {this.loadHash(),this.loadComp()};
+        // window.onhashchange = () => {this.loadHash(),this.loadComp()};
     },
 
     methods: {
@@ -92,13 +92,20 @@ export default {
 
         loadComp() {
                 // this.attributes = {};
+                /* debugger */;
                 console.log('loading');
-                this.$set(this.attributes, this.componentAttribute, '');
+                const newAttributes = {[this.componentAttribute]:''};
+                // this.$set(this.attributes, this.componentAttribute, '');
                 Object.keys(this.component.options.props)
                     .forEach(name => {
        
                         var def = this.component.options.defaults[name];
                         const override = this.vueProps[name];
+
+                        if(override && override.private) {
+                            return;
+                        }
+
                         if (override && override.default) {
                             def = override.default
                             def = typeof def === 'function' ? def() : def;
@@ -106,11 +113,13 @@ export default {
 
                         const validValue = !override || override.options && override.options[this.attributes[name]];
 
-                        if (this.attributes[name] !== undefined && validValue) {
-                            return;
+                        if (this.attributes[name] === undefined || !validValue) {
+                            newAttributes[name] = def;
                         }
-                        this.$set(this.attributes, name, def)
+
                     });
+
+                this.attributes = newAttributes;    
 
                 Object.keys(this.vueProps).forEach(name => {
                         const def = this.vueProps[name].default;
@@ -129,14 +138,13 @@ export default {
                     if (Array.isArray(available) && available.indexOf(currentValue) < 0) {
                         const index = Math.round(Math.random() * (available.length - 1));
                         newValues[name] = available[index];
-                        // this.$set(this.classesValues, name, available[index]);
                     }
                 }); 
                 this.classesValues = newValues;
         },
 
         makeHash() {
-            window.location.hash = JSON.stringify(this.hash);//sets.join('&');
+            window.location.hash = JSON.stringify(this.hash);
 
         },
         inputOptions(name) {
@@ -177,24 +185,22 @@ export default {
             }
         },
 
-        getInheritedValues(key, converter = null) {
-            var comp = this.vueComp;
-            const obj = {};
-            while(comp && (comp[key] || comp.extends)) {
+        getInheritedValues(key, converter = null, comp = this.vueComp, obj = {}) {
+
+            if(comp.extends) {
+                this.getInheritedValues(key, converter, comp.extends, obj);
+            }
+
                 
-                if(comp[key]) {
-                    Object.keys(comp[key]).forEach(name => {
+            if(comp[key]) {
+                Object.keys(comp[key]).forEach(name => {
 
-                        const prop = comp[key][name];
-                        const res = converter ? converter(prop) : prop;
-                        if (typeof res !== 'undefined') {
-                            obj[name] = res;
-                        }
-
-                    });
-                }
-
-                comp = comp.extends;
+                    const prop = comp[key][name];
+                    const res = converter ? converter(prop) : prop;
+                    if (typeof res !== 'undefined') {
+                        obj[name] = res;
+                    }
+                });
             }
 
             return obj;
@@ -216,12 +222,15 @@ export default {
             const res = [];
              Object.keys(this.classes).forEach(name => {
                 const value = this.classesValues[name];
-                if (value === true) {
-                    res.push(this.classes[name]);
+                const definition = this.classes[name];
+                if(definition) {
+                    if (value === true) {
+                        res.push(this.classes[name]);
                 } else if (typeof value === 'string') {
                     res.push(value);
                 } else if (typeof value === 'undefined') {
-                    
+                    // debugger;    
+                    }
                 }
             });
             return res;            
@@ -235,9 +244,7 @@ export default {
         },
 
         propsFiltered() {
-
         },
-
 
         attributeValues() {
             const vals = Object.keys(this.component.options.props).concat([this.componentAttribute]).reduce((val, name) => {val[name] = this.attributes[name]; return val;},{});
@@ -248,11 +255,10 @@ export default {
             return `uk-${this.componentName}`;
         },
 
-
         vueProps() {
 
             return this.getInheritedValues('props',(prop) => {
-                if (!prop.private) {
+                if (true || !prop.private) {
                     if (Array.isArray(prop.options)) {
                         prop.options = prop.options.reduce((val, name) => {val[name] = name; return val;}, {});
                     }

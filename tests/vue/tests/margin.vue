@@ -70,7 +70,7 @@ export default {
 
     props: {
         margin: {
-            options:classesMargin
+            options:classesMargin.filter(name => name.indexOf('top') >= 0 && name.indexOf('remove') < 0)
         }
     }
     

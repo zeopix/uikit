@@ -15,6 +15,9 @@ export default {
             type: String,
             default: 'home',
             options: [].concat(UIkit.icon.list())
+        },
+        id: {
+            private: true
         }
     }
 }
