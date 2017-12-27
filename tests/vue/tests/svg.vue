@@ -1,8 +1,8 @@
 <template>
     <div class="uk-container">
-        <div v-for="n in parseInt(count)">
+        <div v-for="(con, n) in content">
             <span>{{n}}</span>
-            <div v-bind="attributes" :class="classes"></div>
+            <div :src="con.svg || attributes.src" v-bind="attributes" :class="classes"></div>
         </div> 
     </div>
 </template>
@@ -16,6 +16,8 @@ export default {
     name:'svg',
     
     extends: base,
+
+    types: ['svg'],
 
     props: {
         src:{

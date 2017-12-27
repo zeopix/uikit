@@ -1,7 +1,7 @@
 <template>
     <div v-bind="attributes" >
-        <div v-for="n in count">
-            <div :class="classes" class="uk-card uk-card-default uk-card-body" v-html="ipsum()"></div>
+        <div v-for="cont in content">
+            <div :class="classes" class="uk-card uk-card-default uk-card-body" v-html="cont.text"></div>
         </div>
     </div>
 </template>
@@ -62,6 +62,8 @@ export default {
     name:'margin',
     
     extends: base,
+
+    types: ['text'],
 
     classes: {
        margin: classesMargin

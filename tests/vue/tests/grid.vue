@@ -1,7 +1,7 @@
 <template>
     <div v-bind="attributes" :class="classes">
-        <div v-for="n in count">
-            <div class="uk-card uk-card-default uk-card-body" v-html="ipsum()"></div>
+        <div v-for="cont in content">
+            <div class="uk-card uk-card-default uk-card-body" v-html="cont.text"></div>
         </div>
     </div>
 </template>
@@ -27,7 +27,11 @@ export default {
         margin: false,
         
         divider: 'uk-grid-divider'
-    }
+    },
+
+    types: [
+        'text'
+    ]
 
 }
 

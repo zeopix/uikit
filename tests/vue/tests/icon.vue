@@ -1,3 +1,8 @@
+<template>
+    <div>
+        <div v-for="con in content" :icon="con.icon || attributes.icon" v-bind="attributes"></div>
+    </div>
+</template>
 
 <script>
 import ipsum from 'lorem-ipsum';
@@ -8,6 +13,8 @@ export default {
     name:'icon',
     
     extends: svg,
+
+    types: ['icon'],
 
     props: {
         

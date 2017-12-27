@@ -17,14 +17,6 @@
                 <input v-else :name="name" type="checkbox" v-model="classesValues[name]">
             </div>
 
-           <!-- <div v-for="(param, name) in childClasses" >
-                <label :for="name" v-html="`${name}:`"></label>
-                <select v-if="Array.isArray(param)" :name="name" v-model="childClassesValues[name]">
-                    <option v-for="val in param" :value="val" v-html="val"></option>
-                </select>
-                <input v-else :name="name" type="checkbox" v-model="childClassesValues[name]"></input>
-            </div> -->
-
 
             <h2>attributes</h2>
             <div v-for="(param, name) in attributes" v-if="component.options.props[name] && name !== componentAttribute">
@@ -35,14 +27,16 @@
                 <castingInput v-else :type="getType(name)" :config="inputOptions(name)" v-model="attributes[name]"></castingInput>
             </div>
 
-        <h2>content</h2>
+        <h2>    </h2>
             <div v-for="(param, name) in vueProps" v-if="!component.options.props[name]  && !(vueProps[name] && vueProps[name].private) ">
                 <label :for="name" v-html="`${name}:`"></label>
                 <castingInput :type="getType(name)" :config="inputOptions(name)" v-model="vuePropValues[name]"></castingInput>
             </div>
+
+        <content-list v-model="content" :types="vueComp.types"></content-list>
         </section>
         <section>
-            <component :is="testCompName" :attributes="attributeValues" v-bind="vuePropValues" :classes="computedClasses"></component>
+            <component :is="testCompName" :attributes="attributeValues" v-bind="vuePropValues" :content="content" :classes="computedClasses"></component>
         </section>
     </div>
 
@@ -52,11 +46,12 @@
 
 import testComponents from './tests/index';
 import castingInput from './castingInput.vue';
+import content from './base/content.vue';
 
 const components = Object.keys(testComponents).reduce((res, name) => {res[`uk-${name}`] = testComponents[name]; return res;}, {});
 components.castingInput = castingInput;
-
-const hashVars = ['vuePropValues', 'attributes','classesValues', 'componentName'];
+components.contentList = content;
+const hashVars = ['vuePropValues', 'attributes','classesValues', 'componentName', 'content'];
 export default {
     components,
     data() {
@@ -67,6 +62,7 @@ export default {
             vuePropValues: {},
             classesValues:  {},
             childClassesValues: {},
+            content: [],
             debug: DEBUG
         };
 
@@ -79,7 +75,6 @@ export default {
 
         this.loadComp();
         this.$watch('hash',this.makeHash, {deep:true});
-        // window.onhashchange = () => {this.loadHash(),this.loadComp()};
     },
 
     methods: {
@@ -91,11 +86,8 @@ export default {
         },
 
         loadComp() {
-                // this.attributes = {};
-                /* debugger */;
                 console.log('loading');
                 const newAttributes = {[this.componentAttribute]:''};
-                // this.$set(this.attributes, this.componentAttribute, '');
                 Object.keys(this.component.options.props)
                     .forEach(name => {
        
@@ -115,6 +107,8 @@ export default {
 
                         if (this.attributes[name] === undefined || !validValue) {
                             newAttributes[name] = def;
+                        } else {
+                            newAttributes[name] = this.attributes[name];
                         }
 
                     });
@@ -209,11 +203,11 @@ export default {
     }, 
     computed: {
         hash() {
-            const sets = [`comp=${this.componentName}`];
-            Object.keys(this.attributes).forEach(name => {
-                sets.push(`${name}=${this.attributes[name]}`);
+            const obj = {};
+            hashVars.forEach(name => {
+                obj[name] = this[name];
             });
-            return {vuePropValues: this.vuePropValues, componentName: this.componentName, attributes: this.attributeValues,classesValues: this.classesValues}
+            return obj;
         },
         testCompName() {
             return `uk-${this.componentName}`;
@@ -226,10 +220,10 @@ export default {
                 if(definition) {
                     if (value === true) {
                         res.push(this.classes[name]);
-                } else if (typeof value === 'string') {
-                    res.push(value);
-                } else if (typeof value === 'undefined') {
-                    // debugger;    
+                    } else if (typeof value === 'string') {
+                        res.push(value);
+                    } else if (typeof value === 'undefined') {
+                    
                     }
                 }
             });

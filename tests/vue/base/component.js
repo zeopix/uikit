@@ -10,11 +10,10 @@ export default {
             type: Array,
             private: true
         },
-        count: {
-            type: Number,
-            default: 1,
-            min: 0,
-            max: 100
+        content: {
+            type: Array,
+            required: true,
+            private: true
         },
     },
 
@@ -22,5 +21,7 @@ export default {
         ipsum() {
             return ipsum({count: Math.random() * 5 });
         }
-    }
+    },
+
+
 };
