@@ -3,7 +3,8 @@
         <input type="number" min="0" max="100" v-model="length">
         <ul class="sortable">
             <li v-for="(val, index) in value">
-                <component v-for="kind in types" :is="`co${kind}`" ref="element" :key="getKey(val, index)" :value="val">{{text(val)}}</component>
+                <span>{{val.index}}-({{types.join(',')}})</span>
+                <component hidden v-for="kind in types" :index="index" :is="`co${kind}`" ref="element" :key="getKey(val, index)" :value="val">{{text(val)}}</component>
             </li>
         </ul>
     </div>
@@ -53,10 +54,6 @@ export default {
     }
   },
 
-  data: {
-    length: null
-  },
-
   created() {
     if (this.components) {
       Object.assign(this.$options.components, this.components);
@@ -73,9 +70,9 @@ export default {
           this.value.pop();
         }
         while (this.value.length < newLength) {
-          const index = Math.round((this.types.length - 1) * Math.random());
-          const val = this.types[index];
-          this.value.push({ type: val });
+          // const index = Math.round((this.types.length - 1) * Math.random());
+          // const val = this.types[index];
+          this.value.push({ index:this.value.length + 1 });
         }
       }
     }

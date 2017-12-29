@@ -1,7 +1,7 @@
 <template>
     <div class="uk-container">
         <div v-for="(con, n) in content">
-            <span>{{n}}</span>
+            <!-- <span>{{n}}</span> -->
             <div :src="con.svg || attributes.src" v-bind="attributes" :class="classes"></div>
         </div> 
     </div>
@@ -18,7 +18,7 @@ export default {
     extends: base,
 
     types: ['svg'],
-
+    togglable:true,
     props: {
         src:{
             type: String,

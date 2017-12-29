@@ -16,6 +16,8 @@ export default {
 
     types: ['icon'],
 
+    togglable: true,
+    
     props: {
         
         icon: {

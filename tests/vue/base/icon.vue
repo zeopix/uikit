@@ -11,10 +11,15 @@ export default {
     props:{
         value: {
             type: Object
+        },
+        index: {
+            type: Number
         }
     },
 
-    toggleable: true,
+    created() {
+        this.value[this.type] = this.value[this.type] || this.items[this.index % this.items.length];
+    },
 
     computed:{
         type(){
@@ -23,6 +28,7 @@ export default {
         items() {
             return UIkit.icon.list();
         }
+
     }
  
 }

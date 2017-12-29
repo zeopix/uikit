@@ -27,16 +27,23 @@
                 <castingInput v-else :type="getType(name)" :config="inputOptions(name)" v-model="attributes[name]"></castingInput>
             </div>
 
-        <h2>    </h2>
-            <div v-for="(param, name) in vueProps" v-if="!component.options.props[name]  && !(vueProps[name] && vueProps[name].private) ">
+            <template v-if="hasTestAttributes">
+
+            <h2 >test attributes</h2>
+
+            <div v-for="(param, name) in additionalVueProps">
                 <label :for="name" v-html="`${name}:`"></label>
                 <castingInput :type="getType(name)" :config="inputOptions(name)" v-model="vuePropValues[name]"></castingInput>
             </div>
 
-        <content-list v-model="content" :types="vueComp.types"></content-list>
+            </template>
+
+        <h2>content</h2>
         </section>
+        <input v-if="vueComp.togglable" type="checkbox" v-model="toggleContent"/>
+        <content-list v-else v-model="content" :types="vueComp.types"></content-list>
         <section>
-            <component :is="testCompName" :attributes="attributeValues" v-bind="vuePropValues" :content="content" :classes="computedClasses"></component>
+            <component :is="testCompName" :attributes="attributeValues" v-bind="vuePropValues" :content="vueComp.togglable ? (toggleContent ? [{}] : []) : content" :classes="computedClasses"></component>
         </section>
     </div>
 
@@ -57,6 +64,7 @@ export default {
     data() {
 
         const res = {
+            toggleContent: true,
             componentName: 'grid',
             attributes: {},
             vuePropValues: {},
@@ -202,6 +210,7 @@ export default {
         }
     }, 
     computed: {
+ 
         hash() {
             const obj = {};
             hashVars.forEach(name => {
@@ -249,6 +258,19 @@ export default {
             return `uk-${this.componentName}`;
         },
 
+        hasTestAttributes() {
+            return Object.keys(this.additionalVueProps).length;
+        },
+
+        additionalVueProps() {
+            const obj = {};
+            Object.keys(this.vueProps).forEach(name => {
+                if (!this.vueProps[name].private && !this.component.options.props && !this.component.options.props[name]) {
+                    obj[name] = this.vueProps[name];
+                }
+            });
+            return obj;
+        },
         vueProps() {
 
             return this.getInheritedValues('props',(prop) => {
