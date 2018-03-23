@@ -1,4 +1,4 @@
-import {isInView} from '../util/index';
+import {isInView} from 'uikit-utils';
 
 export default function (UIkit) {
 

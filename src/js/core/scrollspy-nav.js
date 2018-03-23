@@ -1,4 +1,4 @@
-import {$, $$, addClass, closest, filter, height, isInView, offset, removeClass, trigger} from '../util/index';
+import {$, $$, addClass, closest, filter, height, isInView, offset, removeClass, trigger} from 'uikit-utils';
 
 export default function (UIkit) {
 

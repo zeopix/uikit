@@ -1,5 +1,5 @@
 import {Togglable} from '../mixin/index';
-import {$$, addClass, attr, data, filter, getIndex, hasClass, index, isTouch, matches, queryAll, removeClass} from '../util/index';
+import {$$, addClass, attr, data, filter, getIndex, hasClass, index, isTouch, matches, queryAll, removeClass} from 'uikit-utils';
 
 export default function (UIkit) {
 

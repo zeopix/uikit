@@ -1,4 +1,4 @@
-import {css, endsWith, height, isNumeric, isString, offset, query, toFloat} from '../util/index';
+import {css, endsWith, height, isNumeric, isString, offset, query, toFloat} from 'uikit-utils';
 
 export default function (UIkit) {
 

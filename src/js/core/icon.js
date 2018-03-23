@@ -1,5 +1,5 @@
 import {Class} from '../mixin/index';
-import {$, addClass, apply, css, hasClass, isRtl, noop, parents, Promise, swap} from '../util/index';
+import {$, addClass, apply, css, hasClass, isRtl, noop, parents, Promise, swap} from 'uikit-utils';
 import closeIcon from '../../images/components/close-icon.svg';
 import closeLarge from '../../images/components/close-large.svg';
 import marker from '../../images/components/marker.svg';

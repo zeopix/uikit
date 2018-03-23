@@ -1,5 +1,5 @@
 import {Modal} from '../mixin/index';
-import {$, addClass, css, hasClass, height, isTouch, once, removeClass, trigger, unwrap, width, wrapAll} from '../util/index';
+import {$, addClass, css, hasClass, height, isTouch, once, removeClass, trigger, unwrap, width, wrapAll} from 'uikit-utils';
 
 let scroll;
 

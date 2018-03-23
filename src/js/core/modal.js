@@ -1,5 +1,5 @@
 import {Class, Modal} from '../mixin/index';
-import {$, addClass, assign, closest, css, hasClass, height, html, isString, on, Promise, removeClass, trigger} from '../util/index';
+import {$, addClass, assign, closest, css, hasClass, height, html, isString, on, Promise, removeClass, trigger} from 'uikit-utils';
 
 export default function (UIkit) {
 

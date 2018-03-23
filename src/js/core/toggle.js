@@ -1,4 +1,4 @@
-import {closest, hasTouch, includes, isTouch, isVisible, matches, once, pointerEnter, pointerLeave, queryAll, trigger} from '../util/index';
+import {closest, hasTouch, includes, isTouch, isVisible, matches, once, pointerEnter, pointerLeave, queryAll, trigger} from 'uikit-utils';
 
 export default function (UIkit) {
 

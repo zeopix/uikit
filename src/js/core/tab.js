@@ -1,5 +1,5 @@
 import {Class} from '../mixin/index';
-import {hasClass} from '../util/index';
+import {hasClass} from 'uikit-utils';
 
 export default function (UIkit) {
 

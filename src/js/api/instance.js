@@ -1,4 +1,4 @@
-import {remove, within} from '../util/index';
+import {remove, within} from 'uikit-utils';
 
 export default function (UIkit) {
 

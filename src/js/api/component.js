@@ -1,4 +1,4 @@
-import {$$, camelize, fastdom, isPlainObject, isUndefined, startsWith} from '../util/index';
+import {$$, camelize, fastdom, isPlainObject, isUndefined, startsWith} from 'uikit-utils';
 
 export default function (UIkit) {
 

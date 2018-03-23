@@ -1,5 +1,5 @@
 import {Class} from '../mixin/index';
-import {$, $$, includes, isInput, matches, query, selInput, toggleClass} from '../util/index';
+import {$, $$, includes, isInput, matches, query, selInput, toggleClass} from 'uikit-utils';
 
 export default function (UIkit) {
 

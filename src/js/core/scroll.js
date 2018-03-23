@@ -1,4 +1,4 @@
-import {$, clamp, escape, height, offset, trigger} from '../util/index';
+import {$, clamp, escape, height, offset, trigger} from 'uikit-utils';
 
 export default function (UIkit) {
 

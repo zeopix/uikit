@@ -1,4 +1,4 @@
-import {$$, attr, css, isUndefined, isVisible} from '../util/index';
+import {$$, attr, css, isUndefined, isVisible} from 'uikit-utils';
 
 export default function (UIkit) {
 

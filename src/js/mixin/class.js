@@ -1,4 +1,4 @@
-import {addClass} from '../util/index';
+import {addClass} from 'uikit-utils';
 
 export default {
 

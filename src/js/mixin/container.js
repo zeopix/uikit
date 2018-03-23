@@ -1,5 +1,5 @@
 import UIkit from '../api/index';
-import {$} from '../util/index';
+import {$} from 'uikit-utils';
 
 export default {
 

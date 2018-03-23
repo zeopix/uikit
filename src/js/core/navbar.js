@@ -1,5 +1,5 @@
 import {Class} from '../mixin/index';
-import {$, $$, addClass, after, assign, css, height, includes, isRtl, isString, isVisible, matches, noop, query, remove, toFloat, Transition, within} from '../util/index';
+import {$, $$, addClass, after, assign, css, height, includes, isRtl, isString, isVisible, matches, noop, query, remove, toFloat, Transition, within} from 'uikit-utils';
 
 export default function (UIkit) {
 
