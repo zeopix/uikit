@@ -55,6 +55,7 @@
     "shortid": "^2.2.8",
     "uglify-js": "^3.3.13",
     "uglifyjs-webpack-plugin": "^1.2.2",
+    "uikit-utils": "github:uikit/uikit-utils#bee99a3ffc013d1d948d3d386b932fb06035dbb8",
     "webpack": "^3.11.0",
     "webpack-dev-server": "^2.11.2"
   },
