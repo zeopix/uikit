@@ -1,3 +1,4 @@
+/* eslint-env node */
 const chromedriver = require('chromedriver');
 const path = require('path');
 const httpServer = require('http-server');
@@ -7,19 +8,18 @@ const server = httpServer.createServer({
 });
 
 module.exports = {
+
     before(done) {
-        server.server.listen(8080).on('listening', () => {
-            chromedriver.start();
-            setTimeout(() => {
-                done();
-            });
-        });
+        server.listen(8080);
+        chromedriver.start();
+        done();
     },
 
     after(done) {
         chromedriver.stop();
         server.close();
-        done();
         process.exit();
-    },
+        done();
+    }
+
 };

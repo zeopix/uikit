@@ -4,9 +4,6 @@ module.exports = {
 
     src_folders: ['tests/js/nightwatch'],
     output_folder: 'reports',
-    custom_commands_path: '',
-    custom_assertions_path: '',
-    page_objects_path: '',
     globals_path: './nightwatch.globals.js',
     selenium: {
         start_process: false,
