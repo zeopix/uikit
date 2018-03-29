@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Tooltip - UIkit tests</title>
+        <script src="js/test.js"></script>
+        <script src="../node_modules/mocha/mocha.js"></script>
+        <script src="../node_modules/chai/chai.js"></script>
+        <script src="../node_modules/chai-jasmine/chai-jasmine.js"></script>
+        <script>
+            mocha.setup('bdd');
+            window.fetch('./js/unit').then(data => data.text()).then(text => {
+
+                const el = document.createElement('div');
+                el.innerHTML = text;
+                const list = Array.from(el.getElementsByTagName('a'));
+
+                const testCodeP = [];
+                list.forEach(a => {
+                    if (a.attributes.title && ~a.attributes.title.value.indexOf('.spec.')) {
+                        const promise = window.fetch('./js/unit/' + a.attributes.title.value).then(data => data.text()).then(eval);
+                        testCodeP.push(promise);
+                    }
+                })
+
+                Promise.all(testCodeP).then(res => {
+                    mocha.run();
+                });
+            })
+        </script>
+    </head>
+
+    <body>
+
+        <div id="mocha">
+
+        </div>
+
+    </body>
+</html>
