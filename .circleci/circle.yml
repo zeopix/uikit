@@ -1,0 +1,44 @@
+version: 2
+
+defaults: &defaults
+  docker:
+    - image: circleci/node:9-browsers
+  environment:
+    CHROME_BIN: /usr/bin/google-chrome
+  working_directory: ~/uikit
+
+jobs:
+  build:
+    <<: *defaults
+    steps:
+      - run:
+          name: Update Environment
+          command: echo 'export PATH=$CIRCLE_WORKING_DIRECTORY/node_modules/.bin:$PATH' >> $BASH_ENV
+      - checkout
+      - restore_cache:
+          key: yarn-{{ checksum "yarn.lock" }}
+      - run:
+          name: Install Dependencies
+          command: yarn install --pure-lockfile --cache-folder ~/.yarn
+      - save_cache:
+          key: yarn-{{ checksum "yarn.lock" }}
+          paths:
+            - ./node_modules
+      - run:
+          name: Lint JavaScript
+          command: |
+            npm run eslint -- --format junit --output-file ../reports/eslint/eslint.xml
+      - run:
+          name: Run JavaScript Unit Tests
+          command: |
+            karma start test/karma.circle.conf.js
+          environment:
+            JUNIT_REPORT_PATH: ../reports/unit
+            JUNIT_REPORT_NAME: unit.xml
+          when: always
+      - store_test_results:
+          path: ../reports
+      - run:
+          name: Compile
+          command: |
+            yarn run compile

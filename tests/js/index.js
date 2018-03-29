@@ -51,7 +51,7 @@ window.addEventListener('load', () => setTimeout(() => {
 
     var $body = document.body;
     var $container = prepend($body, '<div class="uk-container"></div>');
-    var $tests = css(append($container, '<select class="uk-select uk-form-width-small"></select>'), 'margin', '20px 20px 20px 0');
+    var $tests = css(append($container, '<select id="testSelect" class="uk-select uk-form-width-small"></select>'), 'margin', '20px 20px 20px 0');
     var $styles = css(append($container, '<select class="uk-select uk-form-width-small"></select>'), 'margin', '20px');
     var $inverse = css(append($container, '<select class="uk-select uk-form-width-small"></select>'), 'margin', '20px');
     var $rtl = css(append($container, '<label></label>'), 'margin', '20px');
