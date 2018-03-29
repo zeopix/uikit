@@ -16,7 +16,7 @@
     "scope": "node build/scope",
     "release": "npm run compile && npm run compile-rtl && npm run build-scss && node build/release",
     "watch": "npm-watch",
-    "eslint": "eslint --quiet src/js || true",
+    "eslint": "eslint --quiet src/js",
     "eslint-fix": "eslint --fix --quiet src/js || true",
     "test": "webpack-dev-server --inline --hot --watchContentBase --devtool sourcemap && open http://localhost:8080/tests/",
     "test:e2e": "nightwatch"

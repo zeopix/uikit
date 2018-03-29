@@ -27,7 +27,7 @@ jobs:
       - run:
           name: Lint JavaScript
           command: |
-            npm run eslint -- --format junit --output-file ../reports/eslint/eslint.xml
+            npm run eslint -- --format junit --output-file reports/eslint.xml
       - run:
           name: Build
           command: |
@@ -37,8 +37,8 @@ jobs:
           command: |
             npm run test:e2e
           environment:
-            JUNIT_REPORT_PATH: ../reports/unit
+            JUNIT_REPORT_PATH: reports
             JUNIT_REPORT_NAME: unit.xml
           when: always
       - store_test_results:
-          path: ../reports
+          path: reports
