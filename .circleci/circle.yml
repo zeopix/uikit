@@ -29,16 +29,16 @@ jobs:
           command: |
             npm run eslint -- --format junit --output-file ../reports/eslint/eslint.xml
       - run:
-          name: Run JavaScript Unit Tests
+          name: Build
           command: |
-            karma start test/karma.circle.conf.js
+            npm run compile
+      - run:
+          name: Run Nightwatch e2e Tests
+          command: |
+            npm run test:e2e
           environment:
             JUNIT_REPORT_PATH: ../reports/unit
             JUNIT_REPORT_NAME: unit.xml
           when: always
       - store_test_results:
           path: ../reports
-      - run:
-          name: Compile
-          command: |
-            yarn run compile
