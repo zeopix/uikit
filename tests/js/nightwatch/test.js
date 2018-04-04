@@ -7,9 +7,9 @@ module.exports = {
         browser
         .url(browser.globals.rootUrl + '/navbar.html')
         .waitForElementVisible('#testSelect', 1000)
-        .waitForElementVisible('#parent1', 1000, res => {
-            return browser.options.desiredCapabilities.mobile ? browser.click('#parent1') : browser.moveToElement('#parent1', 0, 0);
-        }).waitForElementVisible('#sub1', 1000)
+        .waitForElementVisible('#parent1', 1000)
+        .click('#parent1')
+        .waitForElementVisible('#sub1', 1000)
         .end();
     },
 
