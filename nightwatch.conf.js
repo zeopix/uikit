@@ -21,21 +21,36 @@ if (bsMode) {
 
     const devices = [
         {
-            device: 'Samsung Galaxy S8',
-            realMobile: 'true',
-            os_version: '7.0',
-            mobile: true
-        },
-        {
             device: 'iPhone X',
-            realMobile: 'true',
+            realMobile: true,
             os_version: '11.0',
             mobile: true
+
+        },
+        {
+            os: 'Windows',
+            os_version: '7',
+            browser: 'IE',
+            browser_version: '11.0',
+            resolution: '1024x768'
+        },
+        {
+            os: 'OS X',
+            os_version: 'El Capitan',
+            browser: 'Safari',
+            browser_version: '9.1',
+            resolution: '1024x768'
         }
     ];
     devices.forEach((desiredCapabilities, i) => {
-        const id = desiredCapabilities.device.replace(/ /g, '_');
-        nightwatch_config.test_settings[id] = {desiredCapabilities};
+        const id = [];
+        for(const key in desiredCapabilities) {
+            const val = desiredCapabilities[key];
+            if (typeof val === 'string') {
+                id.push(val.replace(/ /g, '_'));
+            }
+        }
+        nightwatch_config.test_settings[id.join('_')] = {desiredCapabilities};
     });
 
     process.argv.env = devices.map(entry => `'${entry.device}'`).join(',');

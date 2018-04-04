@@ -19,7 +19,7 @@ if (~process.argv.indexOf('--bs') || process.env.NIGHTWATCH_BROWSERSTACK) {
     bsLocal = nightwatch.bs_local = new browserstack.Local;
 }
 
-beforeTests().then(doTests).then(afterTest);
+beforeTests().then(doTests).then(afterTest).then(process.exit);
 
 function beforeTests() {
 
@@ -66,14 +66,21 @@ function doTests() {
     });
 }
 
-function afterTest(code) {
-    server.close();
-    if (bsLocal) {
-        bsLocal.stop(() => {});
-    } else {
-        chromedriver.stop();
-    }
+function afterTest(exitCode) {
 
-    process.exit(code);
+    return new Promise(res => {
+
+        server.close();
+        if (bsLocal) {
+            bsLocal.stop(() => {
+                res(exitCode);
+            });
+        } else {
+            chromedriver.stop();
+            res(exitCode);
+        }
+    });
 }
 
+//clean up in case of crash
+process.on('exit', afterTest);

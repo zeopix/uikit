@@ -12,13 +12,6 @@ module.exports = {
 
     rootUrl,
 
-    after(done) {
-        done();
-        process.exit();
-    }
 
 };
 
-process.on('exit', function() {
-    module.exports.after(() => {});
-});
