@@ -25,7 +25,7 @@ module.exports = {
             browser.assert.ok(value, 'uikit should find a body element');
         })
         .executeAsync(function(done) {
-            UIkit.modal.prompt('Test inpout:', '').then(res => {
+            UIkit.modal.prompt('Test inpout:', '').then(function(res) {
                 window.modalres = res;
             });
             done();
