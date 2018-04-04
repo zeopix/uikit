@@ -14,5 +14,7 @@ const comand = './node_modules/.bin/nightwatch -e ' + configs.join(',') + ' ' + 
 cp.exec(comand, {stdio: [0, 1, 2]}, (err, out) => {
     console.log(out);
     server.close();
+}).on('error', err => {
+    throw err;
 });
 
