@@ -35,7 +35,8 @@ jobs:
       - run:
           name: Run Nightwatch e2e Tests
           command: |
-            npm run test:e2e
+            echo 127.0.0.1 uikit.test | sudo tee -a /etc/hosts
+            npm run test:e2e -- --bs
           environment:
             JUNIT_REPORT_PATH: reports
             JUNIT_REPORT_NAME: unit.xml
