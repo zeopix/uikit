@@ -34,7 +34,8 @@ if (bsMode) {
         }
     ];
     devices.forEach((desiredCapabilities, i) => {
-        nightwatch_config.test_settings['dev' + i] = {desiredCapabilities};
+        const id = desiredCapabilities.device.replace(/ /g, '_');
+        nightwatch_config.test_settings[id] = {desiredCapabilities};
     });
 
     process.argv.env = devices.map(entry => `'${entry.device}'`).join(',');

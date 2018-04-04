@@ -33,7 +33,7 @@ function beforeTests() {
                 if (err) {
                     if (err.message.indexOf('another browserstack local')) {
                         console.log('re-using running bs-local instance');
-                        doTests();
+                        res();
                     } else {
                         throw err.message;
                     }
@@ -53,22 +53,27 @@ function doTests() {
 
     return new Promise(res => {
         const comand = './node_modules/.bin/nightwatch -e ' + configs.join(',') + ' ' + process.argv.slice(2).join(' ');
-        cp.exec(comand, {stdio: [0, 1, 2]}, (err, out) => {
-            console.log(out);
-
-            res();
-        }).on('error', err => {
-            throw err;
+        const proc = cp.exec(comand);
+        proc.stdout.on('data', data => {
+            console.log(data);
         });
+
+        proc.stderr.on('data', err => {
+            console.log(err);
+        });
+
+        proc.on('close', res);
     });
 }
 
-function afterTest() {
+function afterTest(code) {
     server.close();
     if (bsLocal) {
         bsLocal.stop(() => {});
     } else {
         chromedriver.stop();
     }
+
+    process.exit(code);
 }
 
