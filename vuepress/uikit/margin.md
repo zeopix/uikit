@@ -14,8 +14,6 @@ Add one or more of the following classes to any element to create the same verti
 <div class="uk-margin"></div>
 ~~~
 
-<ExampleRunner id="runner-037a2885-deb6-a2d3-f3cb-5354004e9605" resource="src.js.core.margin.js"/>
-
 * * *
 
 ## Small margin
@@ -23,8 +21,6 @@ Add one or more of the following classes to any element to create the same verti
 Add one of the following classes to add small spacing to block elements.
 
 <table><thead><tr><th style="text-align:left">Class</th><th style="text-align:left">Description</th></tr></thead><tbody><tr><td style="text-align:left"><code>.uk-margin-small</code></td><td style="text-align:left">Adds small top margin, if it is preceded by another element, and always bottom margin.</td></tr><tr><td style="text-align:left"><code>.uk-margin-small-top</code></td><td style="text-align:left">Adds small top margin.</td></tr><tr><td style="text-align:left"><code>.uk-margin-small-bottom</code></td><td style="text-align:left">Adds small bottom margin.</td></tr><tr><td style="text-align:left"><code>.uk-margin-small-left</code></td><td style="text-align:left">Adds small left margin.</td></tr><tr><td style="text-align:left"><code>.uk-margin-small-right</code></td><td style="text-align:left">Adds small right margin.</td></tr></tbody></table>
-
-<ExampleRunner id="runner-2061cb35-2932-058f-8242-28bb35fd9de2" resource="src.js.core.margin.js"/>
 
 * * *
 
@@ -34,8 +30,6 @@ Add one of the following classes to add medium spacing to block elements.
 
 <table><thead><tr><th style="text-align:left">Class</th><th style="text-align:left">Description</th></tr></thead><tbody><tr><td style="text-align:left"><code>.uk-margin-medium</code></td><td style="text-align:left">Adds medium top margin, if it is preceded by another element, and always bottom margin.</td></tr><tr><td style="text-align:left"><code>.uk-margin-medium-top</code></td><td style="text-align:left">Adds medium top margin.</td></tr><tr><td style="text-align:left"><code>.uk-margin-medium-bottom</code></td><td style="text-align:left">Adds medium bottom margin.</td></tr><tr><td style="text-align:left"><code>.uk-margin-medium-left</code></td><td style="text-align:left">Adds medium left margin.</td></tr><tr><td style="text-align:left"><code>.uk-margin-medium-right</code></td><td style="text-align:left">Adds medium right margin.</td></tr></tbody></table>
 
-<ExampleRunner id="runner-36505a9f-b2ad-1e34-97a2-79f1b61e3786" resource="src.js.core.margin.js"/>
-
 * * *
 
 ## Large margin
@@ -44,8 +38,6 @@ Add one of the following classes to add large spacing to block elements.
 
 <table><thead><tr><th style="text-align:left">Class</th><th style="text-align:left">Description</th></tr></thead><tbody><tr><td style="text-align:left"><code>.uk-margin-large</code></td><td style="text-align:left">Adds large margin, if it is preceded by another element, and always bottom margin.</td></tr><tr><td style="text-align:left"><code>.uk-margin-large-top</code></td><td style="text-align:left">Adds large top margin.</td></tr><tr><td style="text-align:left"><code>.uk-margin-large-bottom</code></td><td style="text-align:left">Adds large bottom margin.</td></tr><tr><td style="text-align:left"><code>.uk-margin-large-left</code></td><td style="text-align:left">Adds large left margin.</td></tr><tr><td style="text-align:left"><code>.uk-margin-large-right</code></td><td style="text-align:left">Adds large right margin.</td></tr></tbody></table>
 
-<ExampleRunner id="runner-506fd17b-fc43-a1dc-a448-ece61e7a723a" resource="src.js.core.margin.js"/>
-
 * * *
 
 ## X-Large margin
@@ -53,8 +45,6 @@ Add one of the following classes to add large spacing to block elements.
 Add one of the following classes to add very large spacing to block elements.
 
 <table><thead><tr><th style="text-align:left">Class</th><th style="text-align:left">Description</th></tr></thead><tbody><tr><td style="text-align:left"><code>.uk-margin-xlarge</code></td><td style="text-align:left">Adds larger margin, if it is preceded by another element, and always bottom margin.</td></tr><tr><td style="text-align:left"><code>.uk-margin-xlarge-top</code></td><td style="text-align:left">Adds larger top margin.</td></tr><tr><td style="text-align:left"><code>.uk-margin-xlarge-bottom</code></td><td style="text-align:left">Adds larger bottom margin.</td></tr><tr><td style="text-align:left"><code>.uk-margin-xlarge-left</code></td><td style="text-align:left">Adds larger left margin.</td></tr><tr><td style="text-align:left"><code>.uk-margin-xlarge-right</code></td><td style="text-align:left">Adds larger right margin.</td></tr></tbody></table>
-
-<ExampleRunner id="runner-6782fe53-8ce4-a166-d775-de8040c69ec0" resource="src.js.core.margin.js"/>
 
 * * *
 
@@ -76,8 +66,6 @@ Add one of the following classes to set auto margin. This can be useful to cente
 
 <table><thead><tr><th style="text-align:left">Class</th><th style="text-align:left">Description</th></tr></thead><tbody><tr><td style="text-align:left"><code>.uk-margin-auto</code></td><td style="text-align:left">Sets left and right margin to auto, horizontally centering block and flex elements.</td></tr><tr><td style="text-align:left"><code>.uk-margin-auto-top</code></td><td style="text-align:left">Sets top margin to auto, pushing block and flex elements to the bottom.</td></tr><tr><td style="text-align:left"><code>.uk-margin-auto-bottom</code></td><td style="text-align:left">Sets bottom margin to auto, pushing block and flex elements to the top.</td></tr><tr><td style="text-align:left"><code>.uk-margin-auto-left</code></td><td style="text-align:left">Sets left margin to auto, pushing block and flex elements to the right.</td></tr><tr><td style="text-align:left"><code>.uk-margin-auto-right</code></td><td style="text-align:left">Sets right margin to auto, pushing block and flex elements to the left</td></tr><tr><td style="text-align:left"><code>.uk-margin-auto-vertical</code></td><td style="text-align:left">Sets top and bottom margin to auto, vertically centering only flex elements.</td></tr></tbody></table>
 
-<ExampleRunner id="runner-b2924665-81c3-e6d5-cc83-87165e4e7e54" resource="src.js.core.margin.js"/>
-
 * * *
 
 ## Dynamic wrapping
@@ -90,8 +78,6 @@ To add spacing to stacking elements, for example inline elements that wrap on sm
     <button></button>
 </div>
 ~~~
-
-<ExampleRunner id="runner-d8b5d245-1506-b660-8cac-710c6e3ffe2f" resource="src.js.core.margin.js"/>
 
 * * *
 

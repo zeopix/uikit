@@ -14,8 +14,6 @@ Typically, classes from the [Animation component](animation.md) are used togethe
 <div uk-scrollspy="cls:uk-animation-fade"></div>
 ~~~
 
-<ExampleRunner id="runner-0d6d03af-1e21-55a9-9f57-65cea9b47ece" resource="src.js.core.scrollspy.js"/>
-
 This example uses the `repeat: true` option. Scroll up and down to see the triggered animations. The layout is made with the [Card component](card.md).
 
 * * *
@@ -30,8 +28,6 @@ You can also group scrollspy elements, so you won't have to apply the attribute 
     <div></div>
 </div>
 ~~~
-
-<ExampleRunner id="runner-3b0166b6-564b-ca52-e0cc-11851c722efe" resource="src.js.core.scrollspy.js"/>
 
 * * *
 

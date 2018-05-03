@@ -19,8 +19,6 @@ The Accordion component consists of a parent container with the `uk-accordion` a
 </ul>
 ~~~
 
-<ExampleRunner id="runner-3424b90b-1973-d6db-006c-73d8e7f7d50f" resource="src.js.core.accordion.js"/>
-
 * * *
 
 ## No collapsing
@@ -31,8 +29,6 @@ By default, all accordion items can be collapsed. To prevent this behavior and a
 <ul uk-accordion="collapsible: false">...</ul>
 ~~~
 
-<ExampleRunner id="runner-44b2cd46-5d08-62c4-7971-fc3af7c1ad46" resource="src.js.core.accordion.js"/>
-
 * * *
 
 ## Multiple open items
@@ -42,8 +38,6 @@ To display multiple content sections at the same time without one collapsing whe
 ~~~html
 <ul uk-accordion="multiple: true">...</ul>
 ~~~
-
-<ExampleRunner id="runner-03afb215-478d-8cf5-fa53-ad93b916549d" resource="src.js.core.accordion.js"/>
 
 * * *
 
@@ -60,8 +54,6 @@ To specify which items should be opened initially, add the `.uk-open` class to t
     <li></li>
 </ul>
 ~~~
-
-<ExampleRunner id="runner-f83ca1b3-a6d9-b4fe-beba-88069237c143" resource="src.js.core.accordion.js"/>
 
 * * *
 

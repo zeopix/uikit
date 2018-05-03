@@ -24,8 +24,6 @@ A dropdown can be enabled by hovering and clicking the toggle. Just add the `mod
 
 **Note** The Drop component has no default styling. In this example, we've used a card from the [Card component](card.md) for visualization.
 
-<ExampleRunner id="runner-0350a4cb-5906-f27c-8d87-15e19c739a53" resource="src.js.core.drop.js"/>
-
 * * *
 
 ## Grid in drop
@@ -40,8 +38,6 @@ You can place a grid from the [Grid component](grid.md) inside a drop. Just wrap
 
 Use one of the classes from the [Width component](width.md) to adjust the drop's width.
 
-<ExampleRunner id="runner-b52efb4b-dfea-895b-e298-92d5853a81ef" resource="src.js.core.drop.js"/>
-
 * * *
 
 ## Position
@@ -51,8 +47,6 @@ Add one of the following options to the `uk-drop` attribute to adjust the drop's
 ~~~html
 <div uk-drop="pos: top-left"></div>
 ~~~
-
-<ExampleRunner id="runner-de06a65f-3fd1-af6a-fa17-87371a1f87be" resource="src.js.core.drop.js"/>
 
 <table><thead><tr><th style="text-align:left">Position</th><th style="text-align:left">Description</th></tr></thead><tbody><tr><td style="text-align:left"><code>bottom-left</code></td><td style="text-align:left">Aligns the drop to the bottom left.</td></tr><tr><td style="text-align:left"><code>bottom-center</code></td><td style="text-align:left">Aligns the drop to the bottom center.</td></tr><tr><td style="text-align:left"><code>bottom-right</code></td><td style="text-align:left">Aligns the drop to the bottom right.</td></tr><tr><td style="text-align:left"><code>bottom-justify</code></td><td style="text-align:left">Aligns the drop to the bottom and justifies its width to the related element.</td></tr><tr><td style="text-align:left"><code>top-left</code></td><td style="text-align:left">Aligns the drop to the top left.</td></tr><tr><td style="text-align:left"><code>top-center</code></td><td style="text-align:left">Aligns the drop to the top center.</td></tr><tr><td style="text-align:left"><code>top-right</code></td><td style="text-align:left">Aligns the drop to the top right.</td></tr><tr><td style="text-align:left"><code>top-justify</code></td><td style="text-align:left">Aligns the drop to the top and justifies its width to the related element.</td></tr><tr><td style="text-align:left"><code>left-top</code></td><td style="text-align:left">Aligns the drop to the left top.</td></tr><tr><td style="text-align:left"><code>left-center</code></td><td style="text-align:left">Aligns the drop to the left center.</td></tr><tr><td style="text-align:left"><code>left-bottom</code></td><td style="text-align:left">Aligns the drop to the left bottom.</td></tr><tr><td style="text-align:left"><code>right-top</code></td><td style="text-align:left">Aligns the drop to the right top.</td></tr><tr><td style="text-align:left"><code>right-center</code></td><td style="text-align:left">Aligns the drop to the right center.</td></tr><tr><td style="text-align:left"><code>right-bottom</code></td><td style="text-align:left">Aligns the drop to the right bottom.</td></tr></tbody></table>
 
@@ -69,8 +63,6 @@ By default, the drop flips automatically when it exceeds the viewport's edge. If
 </div>
 ~~~
 
-<ExampleRunner id="runner-20dd8cbc-0060-4dfb-e72e-847dfd604bbe" resource="src.js.core.drop.js"/>
-
 * * *
 
 ### Boundary alignment
@@ -84,8 +76,6 @@ You can also align the drop to its boundary. To do so, add the `boundary-align: 
 </div>
 ~~~
 
-<ExampleRunner id="runner-0dcf072a-bba7-b6b4-5e28-1db4fc1a6c95" resource="src.js.core.drop.js"/>
-
 * * *
 
 ## Offset
@@ -96,8 +86,6 @@ To define a custom offset between the drop container and the toggle, add the `of
 <div uk-drop="offset: 80"></div>
 ~~~
 
-<ExampleRunner id="runner-61a84902-0606-3719-aab0-1023d903e113" resource="src.js.core.drop.js"/>
-
 * * *
 
 ## Animation
@@ -107,8 +95,6 @@ Apply one or more animations to the dropdown by adding the `animation: uk-animat
 ~~~html
 <div uk-drop="animation: uk-animation-slide-top-small; duration: 1000"></div>
 ~~~
-
-<ExampleRunner id="runner-25c99437-7598-c6b4-03e1-cb43bc3298ba" resource="src.js.core.drop.js"/>
 
 * * *
 

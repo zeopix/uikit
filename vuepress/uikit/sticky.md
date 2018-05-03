@@ -12,8 +12,6 @@ To create an element that remains at the top of the viewport when scrolling down
 <div uk-sticky></div>
 ~~~
 
-<ExampleRunner id="runner-201d9bf5-a627-d8c2-f3d4-12a65d6dbb2d" resource="src.js.core.sticky.js"/>
-
 **Note** Example elements on this page are only sticky until you scroll down to the next heading and disappear afterwards. This was done so as not to clutter your screen with all variations of sticky containers.
 
 * * *
@@ -25,8 +23,6 @@ You can position the element below the viewport edge. Add the `offset` attribute
 ~~~html
 <div uk-sticky="offset: 100"></div>
 ~~~
-
-<ExampleRunner id="runner-27983c43-99b6-ff16-b6e2-74318940b02f" resource="src.js.core.sticky.js"/>
 
 * * *
 
@@ -47,8 +43,6 @@ To apply the sticky behavior with a delay, add the `top` attribute, which can be
 </div>
 ~~~
 
-<ExampleRunner id="runner-877507bf-8baf-5b59-99ad-02b6123b0a7a" resource="src.js.core.sticky.js"/>
-
 * * *
 
 ## Animation
@@ -59,8 +53,6 @@ Add an animation from the [Animation component](animation.md) in order to have t
 <div uk-sticky="animation: uk-animation-slide-top"></div>
 ~~~
 
-<ExampleRunner id="runner-f82d541d-43d1-5d3c-083c-651595a2942a" resource="src.js.core.sticky.js"/>
-
 * * *
 
 ## Sticky on scroll up
@@ -70,8 +62,6 @@ You can make the sticky element show only when scrolling up to save space. Toget
 ~~~html
 <div uk-sticky="show-on-up: true"></div>
 ~~~
-
-<ExampleRunner id="runner-29c91794-6975-7406-3741-143b2cda558d" resource="src.js.core.sticky.js"/>
 
 * * *
 
@@ -89,8 +79,6 @@ Bind the sticky behavior to a specific element, so that it disappears after scro
 <div uk-sticky="bottom: #my-id"></div>
 <div id="my-id"></div>
 ~~~
-
-<ExampleRunner id="runner-c4611fea-1518-bbf9-3e83-cf2739b0449b" resource="src.js.core.sticky.js"/>
 
 * * *
 

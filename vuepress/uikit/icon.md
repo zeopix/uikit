@@ -30,8 +30,6 @@ If `icon` is the only option in the attribute value, you can also use `uk-icon="
 <span uk-icon="heart"></span>
 ~~~
 
-<ExampleRunner id="runner-f6356c71-8810-645a-57fa-ef16a7f3a5cb" resource="src.js.core.icon.js"/>
-
 * * *
 
 ## Library
@@ -211,8 +209,6 @@ Add the `ratio: 2` parameter to the `uk-icon` attribute to double its size – o
 <span uk-icon="icon: check; ratio: 2"></span>
 ~~~
 
-<ExampleRunner id="runner-f6ad95b8-93e6-35ff-3eeb-2ecaef9c5b10" resource="src.js.core.icon.js"/>
-
 * * *
 
 ## Link modifier
@@ -222,8 +218,6 @@ To reset the default link styling to a more muted color when using an icon insid
 ~~~html
 <a href="" class="uk-icon-link" uk-icon="heart"></a>
 ~~~
-
-<ExampleRunner id="runner-8c336d6c-9359-cddd-f395-d2170151b25b" resource="src.js.core.icon.js"/>
 
 * * *
 
@@ -235,15 +229,11 @@ Use the modifier `.uk-icon-button` class on an `<a>` element to create an icon b
 <a href="" class="uk-icon-button" uk-icon="twitter"></a>
 ~~~
 
-<ExampleRunner id="runner-d6d46230-b015-5964-53eb-ea159b4f8a62" resource="src.js.core.icon.js"/>
-
 * * *
 
 ## Image modifier
 
 You can also make any background image scale to the size of an icon. Just add the `.uk-icon-image` class and a background image path.
-
-<ExampleRunner id="runner-38e9eb8f-7b78-0266-9b2d-f1a64e6058f0" resource="src.js.core.icon.js"/>
 
 * * *
 

@@ -18,8 +18,6 @@ The tab component consists of clickable tabs, that are aligned side by side in a
 </ul>
 ~~~
 
-<ExampleRunner id="runner-ceb1341d-0cd9-f2e3-325c-f238a88f51ca" resource="src.js.core.tab.js"/>
-
 * * *
 
 ## Bottom modifier
@@ -29,8 +27,6 @@ Add the `.uk-tab-bottom` class to flip tab items to the bottom.
 ~~~html
 <ul class="uk-tab-bottom" uk-tab>...</ul>
 ~~~
-
-<ExampleRunner id="runner-64c07507-9c34-f791-30c7-4b9d66d4615c" resource="src.js.core.tab.js"/>
 
 * * *
 
@@ -46,8 +42,6 @@ When using the vertical alignment, you will usually create a grid to apply the l
 <ul class="uk-tab-right" uk-tab>...</ul>
 ~~~
 
-<ExampleRunner id="runner-3e8117af-0f6e-6648-b365-84bdc4d699ba" resource="src.js.core.tab.js"/>
-
 * * *
 
 ## Alignment
@@ -57,8 +51,6 @@ You can combine tabs with the [Flex component](flex.md) or the [Width component]
 ~~~html
 <ul class="uk-flex-right" uk-tab>...</ul>
 ~~~
-
-<ExampleRunner id="runner-354ad4b8-08b7-41ce-3798-fb1489ff72da" resource="src.js.core.tab.js"/>
 
 * * *
 
@@ -81,8 +73,6 @@ Tabs can be used to trigger a dropdown menu from the [Dropdown component](dropdo
     </li>
 </ul>
 ~~~
-
-<ExampleRunner id="runner-ff4f1fbc-e391-4a9e-73d2-2583a150cc66" resource="src.js.core.tab.js"/>
 
 * * *
 

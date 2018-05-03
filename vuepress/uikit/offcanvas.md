@@ -37,8 +37,6 @@ You can use any element to toggle an off-canvas sidebar. To enable the necessary
 </body>
 ~~~
 
-<ExampleRunner id="runner-5321d1f3-b131-f2b2-2bcd-7f53c59d2ab9" resource="src.js.core.offcanvas.js"/>
-
 * * *
 
 ### Overlay
@@ -49,8 +47,6 @@ To add an overlay, blanking out the page, add the `overlay: true` parameter to t
 <div id="my-id" uk-offcanvas="overlay: true">...</div>
 ~~~
 
-<ExampleRunner id="runner-a67fef32-9a64-fca6-bc7b-2167ff0883cf" resource="src.js.core.offcanvas.js"/>
-
 * * *
 
 ## Flip modifier
@@ -60,8 +56,6 @@ Add the `flip: true` parameter to the `uk-offcanvas` attribute to adjust its ali
 ~~~html
 <div id="my-id" uk-offcanvas="flip: true">...</div>
 ~~~
-
-<ExampleRunner id="runner-5ba739da-43a5-9632-e931-3296ef3aecb3" resource="src.js.core.offcanvas.js"/>
 
 * * *
 
@@ -74,8 +68,6 @@ By default, the off-canvas slides in. But you can actually choose between differ
 ~~~html
 <div id="my-id" uk-offcanvas="mode: push">...</div>
 ~~~
-
-<ExampleRunner id="runner-8e20ef5f-4476-9e51-0605-20ddf065bdc9" resource="src.js.core.offcanvas.js"/>
 
 * * *
 
@@ -90,8 +82,6 @@ You can use the [Nav component](nav.md) inside an off-canvas to create a mobile 
     </div>
 </div>
 ~~~
-
-<ExampleRunner id="runner-d36dec14-5ff3-9395-25fa-6caabaf39ac4" resource="src.js.core.offcanvas.js"/>
 
 * * *
 

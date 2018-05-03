@@ -16,8 +16,6 @@ To have an image cover its parent element, add the `.uk-cover-container` class t
 
 **Note** To position content on top of the covering element, use the [Position component](position.md). To adapt your content for better visibility, add the `.uk-light` or `.uk-dark` class from the [Inverse component](inverse.md).
 
-<ExampleRunner id="runner-11a731df-f7a3-c2c6-9d6f-721185967888" resource="src.js.core.cover.js"/>
-
 * * *
 
 ## Video
@@ -32,8 +30,6 @@ The Cover component inherits all properties from the [Video component](utility.m
 </div>
 ~~~
 
-<ExampleRunner id="runner-1eceabde-b9d8-609e-35fa-81f81a536932" resource="src.js.core.cover.js"/>
-
 * * *
 
 ## Iframe
@@ -45,8 +41,6 @@ To apply the Cover component to an iframe, you need to add the `uk-cover` attrib
     <iframe src="" uk-cover></iframe>
 </div>
 ~~~
-
-<ExampleRunner id="runner-b2fa08c1-8c56-5c7d-336c-d19eba4db64a" resource="src.js.core.cover.js"/>
 
 * * *
 
@@ -60,8 +54,6 @@ To add responsive behavior to your cover image, you need to create an invisible 
     <img src="" alt="" uk-cover>
 </div>
 ~~~
-
-<ExampleRunner id="runner-2d08a058-c8fc-0acd-5bf1-aba9070f882e" resource="src.js.core.cover.js"/>
 
 * * *
 

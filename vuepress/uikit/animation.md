@@ -16,8 +16,6 @@ Add one of the `.uk-animation-*` classes to any element. The animation is shown 
 </div>
 ~~~
 
-<ExampleRunner id="runner-b71803ad-eda5-d33a-5356-7870a0e02dc5" resource="src.js.util.animation.js"/>
-
 To apply the hover effect, add the `.uk-animation-toggle` class on a parent element. This will trigger the animation when the element is hovered.
 
 * * *
@@ -30,8 +28,6 @@ By default, all animations are incoming. To reverse any animation, add the `.uk-
 <div class="uk-animation-fade uk-animation-reverse"></div>
 ~~~
 
-<ExampleRunner id="runner-4d40c011-473e-30f2-94e3-4b2bd7398c9f" resource="src.js.util.animation.js"/>
-
 * * *
 
 ## Fast modifier
@@ -42,8 +38,6 @@ To play animations at a faster speed, add the `.uk-animation-fast` class to the 
 <div class="uk-animation-fade uk-animation-fast"></div>
 ~~~
 
-<ExampleRunner id="runner-d68831ff-c17a-d794-e87f-7101456600a5" resource="src.js.util.animation.js"/>
-
 * * *
 
 ## Origin modifiers
@@ -53,8 +47,6 @@ By default, scaling animations originate from the center. To modify this behavio
 ~~~html
 <div class="uk-animation-scale-up uk-transform-origin-bottom-right"></div>
 ~~~
-
-<ExampleRunner id="runner-34faded4-feb0-559a-f463-09eac5c68723" resource="src.js.util.animation.js"/>
 
 * * *
 
@@ -67,8 +59,6 @@ To add a simple Ken Burns effect, add the `.uk-animation-kenburns` class to any 
 ~~~
 
 By default the animation starts on page load. In this example we used the [Scrollspy](scrollspy.md) component, to toggle the effect when the image enters the view.
-
-<ExampleRunner id="runner-0e3b2e80-d4d3-c3a0-23f1-038805cc7515" resource="src.js.util.animation.js"/>
 
 ## code:
 

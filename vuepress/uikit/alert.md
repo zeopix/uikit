@@ -12,8 +12,6 @@ To apply this component, add the `uk-alert` attribute to a block element.
 <div uk-alert></div>
 ~~~
 
-<ExampleRunner id="runner-80a6caa3-17e0-b032-d9ad-ead21c77b113" resource="src.js.core.alert.js"/>
-
 * * *
 
 ## Close button
@@ -26,8 +24,6 @@ To create a close button and enable its functionality, add the `.uk-alert-close`
 </div>
 ~~~
 
-<ExampleRunner id="runner-05acd3a3-d79e-41fb-e6e2-4a7d71e30a47" resource="src.js.core.alert.js"/>
-
 * * *
 
 ## Style modifiers
@@ -35,8 +31,6 @@ To create a close button and enable its functionality, add the `.uk-alert-close`
 There are several style modifiers available. Just add one of the following classes to apply a different look.
 
 <table><thead><tr><th style="text-align:left">Class</th><th style="text-align:left">Description</th></tr></thead><tbody><tr><td style="text-align:left"><code>.uk-alert-primary</code></td><td style="text-align:left">Give the message a prominent styling.</td></tr><tr><td style="text-align:left"><code>.uk-alert-success</code></td><td style="text-align:left">Indicates success or a positive message.</td></tr><tr><td style="text-align:left"><code>.uk-alert-warning</code></td><td style="text-align:left">Indicates a message containing a warning.</td></tr><tr><td style="text-align:left"><code>.uk-alert-danger</code></td><td style="text-align:left">Indicates an important or error message.</td></tr></tbody></table>
-
-<ExampleRunner id="runner-a9b54a64-35d4-6875-ff76-18de3193b7d2" resource="src.js.core.alert.js"/>
 
 * * *
 

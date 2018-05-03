@@ -26,8 +26,6 @@ Typically, the switcher toggles are styled through other components, some of whi
 
 In this example we are using the [Subnav component](subnav.md).
 
-<ExampleRunner id="runner-f5b8178a-8e21-6931-d2ef-3fb5d55d60af" resource="src.js.core.switcher.js"/>
-
 * * *
 
 ## Navigation controls
@@ -45,8 +43,6 @@ Setting the attribute to `next` and `previous` will switch to the adjacent items
 </ul>
 ~~~
 
-<ExampleRunner id="runner-39f0a839-177f-8456-8e34-59a711d2cf2d" resource="src.js.core.switcher.js"/>
-
 * * *
 
 ## Connect multiple containers
@@ -63,8 +59,6 @@ It is also possible to connect multiple content containers. Just add the `connec
 <ul class="uk-switcher my-class">...</ul>
 ~~~
 
-<ExampleRunner id="runner-1cd5ea79-8300-6c52-7f99-93867fd6ffd9" resource="src.js.core.switcher.js"/>
-
 * * *
 
 ## Animations
@@ -75,8 +69,6 @@ You can apply all animations from the [Animation component](animation) to switch
 <ul uk-switcher="animation: uk-animation-fade">...</ul>
 ~~~
 
-<ExampleRunner id="runner-9bae2c84-3cc5-5c92-9e59-30dd692ed4f7" resource="src.js.core.switcher.js"/>
-
 * * *
 
 ### Multiple animations
@@ -86,8 +78,6 @@ You can also apply multiple animations from the [Animation component](animation)
 ~~~html
 <ul uk-switcher="animation: uk-animation-slide-left-medium, uk-animation-slide-right-medium">...</ul>
 ~~~
-
-<ExampleRunner id="runner-4585382f-cbbe-12f3-7b31-714258fd0abe" resource="src.js.core.switcher.js"/>
 
 * * *
 
@@ -103,8 +93,6 @@ The switcher is easily applied to the [Subnav component](subnav).
 <ul class="uk-switcher"></ul>
 ~~~
 
-<ExampleRunner id="runner-7d856ac6-8e9c-2ac6-cfe5-a0eaba8e2300" resource="src.js.core.switcher.js"/>
-
 * * *
 
 ## Switcher and tab
@@ -118,8 +106,6 @@ As an exception to the rule, add the `uk-tab` attribute instead of `uk-switcher`
 <!-- This is the container of the content items -->
 <ul class="uk-switcher">...</ul>
 ~~~
-
-<ExampleRunner id="runner-8ce21934-7df8-da08-0c0a-19798651b63f" resource="src.js.core.switcher.js"/>
 
 * * *
 
@@ -138,8 +124,6 @@ Use the [Grid](grid) and [Width](width) components to display content correctly 
 </div>
 ~~~
 
-<ExampleRunner id="runner-78fcce70-496e-9659-1add-d94bcba5ba24" resource="src.js.core.switcher.js"/>
-
 * * *
 
 ## Switcher and button
@@ -155,8 +139,6 @@ The switcher can also be applied to buttons or button groups from the [Button co
 
 <ul class="uk-switcher">...</ul>
 ~~~
-
-<ExampleRunner id="runner-a4886d89-025a-0359-35c8-d98a2533a6fb" resource="src.js.core.switcher.js"/>
 
 * * *
 
@@ -174,8 +156,6 @@ To apply the switcher to the [Nav component](nav), add the `uk-switcher` attribu
     </div>
 </div>
 ~~~
-
-<ExampleRunner id="runner-fa42e894-c051-6852-4c4e-5cf39e6a69a3" resource="src.js.core.switcher.js"/>
 
 * * *
 

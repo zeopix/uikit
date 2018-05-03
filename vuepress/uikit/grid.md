@@ -23,8 +23,6 @@ To create the grid container, add the `uk-grid` attribute to a `<div>` element. 
 
 **Note** Often cards from the [Card component](card.md) are used inside a grid. In the following examples too for visualization.
 
-<ExampleRunner id="runner-55c154ca-fe15-0d46-c49a-0c298cad43f1" resource="src.js.core.grid.js"/>
-
 * * *
 
 ## Gutter modifiers
@@ -36,14 +34,6 @@ The Grid component comes with a default gutter, that is decreased automatically 
 ~~~html
 <div class="uk-grid-small" uk-grid>...</div>
 ~~~
-
-<ExampleRunner id="runner-378eb340-1dde-1471-4060-84182be835bd" resource="src.js.core.grid.js"/>
-
-<ExampleRunner id="runner-80f29037-5d4f-ede6-268a-26be877e19eb" resource="src.js.core.grid.js"/>
-
-<ExampleRunner id="runner-f3637067-d5ae-2e64-8e02-c2751b58be88" resource="src.js.core.grid.js"/>
-
-<ExampleRunner id="runner-5e6ee2a9-9703-7e0b-e621-bdf802f6d6a9" resource="src.js.core.grid.js"/>
 
 * * *
 
@@ -68,8 +58,6 @@ You can easily extend your grid layout with nested grids.
 </div>
 ~~~
 
-<ExampleRunner id="runner-9ac72a3b-7ad5-a5c3-db7e-b3333b8e3c3e" resource="src.js.core.grid.js"/>
-
 * * *
 
 ## Divider modifier
@@ -80,8 +68,6 @@ Add the `.uk-grid-divider` class to separate grid cells with lines. This class c
 <div class="uk-grid-divider" uk-grid>...</div>
 ~~~
 
-<ExampleRunner id="runner-c090dcc0-ad6a-35d2-5047-c80b75b7194c" resource="src.js.core.grid.js"/>
-
 * * *
 
 ## Match height
@@ -91,8 +77,6 @@ To match the height of the direct child of each cell, add the `.uk-grid-match` c
 ~~~html
 <div class="uk-grid-match" uk-grid>....</div>
 ~~~
-
-<ExampleRunner id="runner-6da61383-a0f8-e982-602d-c5d7f7ab0ed9" resource="src.js.core.grid.js"/>
 
 * * *
 
@@ -106,8 +90,6 @@ You can also match the height of the direct child of just one cell. To do so, ad
     <div></div>
 </div>
 ~~~
-
-<ExampleRunner id="runner-529a6ceb-91d3-6d48-f194-fad9d4c8fa17" resource="src.js.core.grid.js"/>
 
 * * *
 
@@ -126,8 +108,6 @@ For a more specific selection of the elements whose heights should be matched, a
 </div>
 ~~~
 
-<ExampleRunner id="runner-16249e00-02d5-e875-a495-c84c8b1e8c94" resource="src.js.core.grid.js"/>
-
 * * *
 
 ## Grid and width
@@ -142,8 +122,6 @@ The grid is mostly used in combination with the [Width component](width.md). Thi
 </div>
 ~~~
 
-<ExampleRunner id="runner-4f3bf134-28fb-0583-c8f4-da16e2bdaff0" resource="src.js.core.grid.js"/>
-
 * * *
 
 ### Child width
@@ -153,8 +131,6 @@ If the grid columns are evenly split, you can add one of the `.uk-child-width-*`
 ~~~html
 <div class="uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid>...</div>
 ~~~
-
-<ExampleRunner id="runner-d0503865-ba56-d343-f9e7-c2b129f86d9f" resource="src.js.core.grid.js"/>
 
 For more detailed information, take a look at the [Width component](width.md).
 
@@ -170,8 +146,6 @@ You can easily combine the grid with the [Flex component](flex.md). That way you
     <div class="uk-flex-first"></div>
 </div>
 ~~~
-
-<ExampleRunner id="runner-3118258f-51de-8446-1d0d-fc424522681b" resource="src.js.core.grid.js"/>
 
 * * *
 

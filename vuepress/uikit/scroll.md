@@ -12,8 +12,6 @@ Simply add the `uk-scroll` attribute to any page-internal link that contains a U
 <a href="#my-id" uk-scroll></a>
 ~~~
 
-<ExampleRunner id="runner-e2109fdd-fa07-0813-aa1f-4ed9aba56a1e" resource="src.js.core.scroll.js"/>
-
 * * *
 
 ## Callback after scroll
@@ -29,8 +27,6 @@ UIkit.util.on('#scroll-trigger', 'scrolled', function () {
     alert('Done.');
 });
 ~~~
-
-<ExampleRunner id="runner-2a26b499-728b-6276-4b63-b1f2f1fdd105" resource="src.js.core.scroll.js"/>
 
 * * *
 

@@ -45,7 +45,7 @@ module.exports = {
         'VueComponentMapper',
         'ComponentLinker',
         new MarkdownExporter({
-            output: false
+            output: false,
         }),
         new VuePressExporter({
             getMDFileName: desc => desc.name + '.md'

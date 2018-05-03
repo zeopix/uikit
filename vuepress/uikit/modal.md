@@ -25,8 +25,6 @@ Add the `uk-modal` attribute to a `<div>` element to create the modal container 
 </div>
 ~~~
 
-<ExampleRunner id="runner-8b13d6be-c5e4-2783-1ba5-c4d3cdbd5612" resource="src.js.core.modal.js"/>
-
 * * *
 
 ## Close button
@@ -49,8 +47,6 @@ Add the `uk-close` attribute from the [Close component](close.md), to apply a cl
 </div>
 ~~~
 
-<ExampleRunner id="runner-5b3b5fb0-bab1-a34c-3f70-e0f186c8f2dd" resource="src.js.core.modal.js"/>
-
 * * *
 
 ## Center modal
@@ -62,8 +58,6 @@ To vertically center the modal dialog, you can use the `.uk-margin-auto-vertical
     <div class="uk-modal-dialog uk-margin-auto-vertical"></div>
 </div>
 ~~~
-
-<ExampleRunner id="runner-2f8036d9-1ec1-2d86-223d-65139062f573" resource="src.js.core.modal.js"/>
 
 **Note** `.uk-flex-top` on the modal container is needed to support IE 11.
 
@@ -88,8 +82,6 @@ To divide the modal into different content sections, use the following classes.
 </div>
 ~~~
 
-<ExampleRunner id="runner-a99c1383-c9e1-e661-f787-e55df8c54f41" resource="src.js.core.modal.js"/>
-
 * * *
 
 ## Container modifier
@@ -99,8 +91,6 @@ Add the `.uk-modal-container` class to expand the modal dialog to the default [C
 ~~~html
 <div id="my-id" class="uk-modal-container" uk-modal>...</div>
 ~~~
-
-<ExampleRunner id="runner-ca06c2eb-d319-a71d-0b6e-f53329d65088" resource="src.js.core.modal.js"/>
 
 * * *
 
@@ -118,8 +108,6 @@ To create a modal, that fills the entire page, add the `.uk-modal-full` class. I
 
 Using the [grid](grid.md) and [width](width.md) classes, you can create a nice, split fullscreen modal.
 
-<ExampleRunner id="runner-66aa1da9-5ce9-88ef-5704-2ec6e010ab6e" resource="src.js.core.modal.js"/>
-
 * * *
 
 ## Overflow
@@ -131,8 +119,6 @@ By default, the page will scroll with the modal, if its content exceeds the wind
     <div class="uk-modal-dialog" uk-overflow-auto></div>
 </div>
 ~~~
-
-<ExampleRunner id="runner-23ab5830-108d-2473-0041-0a25fb4396ca" resource="src.js.core.modal.js"/>
 
 * * *
 
@@ -149,8 +135,6 @@ If you want to display media, you should first check, if the [Lightbox component
     </div>
 </div>
 ~~~
-
-<ExampleRunner id="runner-1d743ac1-d307-7c9e-6aff-82d7e3fa39cc" resource="src.js.core.modal.js"/>
 
 * * *
 
@@ -171,8 +155,6 @@ You can group multiple modals by linking from one to the other and back. Use thi
     </div>
 </div>
 ~~~
-
-<ExampleRunner id="runner-be1ea72f-7973-a179-d4c9-fb0007180245" resource="src.js.core.modal.js"/>
 
 * * *
 
@@ -215,8 +197,6 @@ UIkit.modal.confirm('UIkit confirm!').then(function() {
     console.log('Rejected.')
 });
 ~~~
-
-<ExampleRunner id="runner-8d08aac6-16ee-738c-7d12-9b8a5f183a60" resource="src.js.core.modal.js"/>
 
 * * *
 

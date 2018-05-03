@@ -22,8 +22,6 @@ A dropdown can be enabled by hovering and clicking the toggle. Just add the `mod
 </div>
 ~~~
 
-<ExampleRunner id="runner-2c8e138c-5c8a-96d9-1ce2-6ea6ec405f7e" resource="src.js.core.dropdown.js"/>
-
 * * *
 
 ## Nav in dropdown
@@ -36,8 +34,6 @@ A dropdown can contain a nav from the [Nav component](nav.md). Just add the `.uk
     <ul class="uk-nav uk-dropdown-nav">...</ul>
 </div>
 ~~~
-
-<ExampleRunner id="runner-7e652b0a-e321-690e-ce00-5eaca4b144d4" resource="src.js.core.dropdown.js"/>
 
 * * *
 
@@ -53,8 +49,6 @@ You can place a grid from the [Grid component](grid.md) inside a dropdown, which
 
 Use one of the classes from the [Width component](width.md) to adjust the dropdown's width.
 
-<ExampleRunner id="runner-26f1f677-40f6-1e01-69f1-a01686fd1ab3" resource="src.js.core.dropdown.js"/>
-
 * * *
 
 ## Position
@@ -64,8 +58,6 @@ Add one of the following options to the `uk-dropdown` attribute to adjust the dr
 ~~~html
 <div uk-dropdown="pos: top-left"></div>
 ~~~
-
-<ExampleRunner id="runner-0a45470e-2ab0-2dda-18c4-7a49a09a6ba1" resource="src.js.core.dropdown.js"/>
 
 <table><thead><tr><th style="text-align:left">Position</th><th style="text-align:left">Description</th></tr></thead><tbody><tr><td style="text-align:left"><code>bottom-left</code></td><td style="text-align:left">Aligns the dropdown to the bottom left.</td></tr><tr><td style="text-align:left"><code>bottom-center</code></td><td style="text-align:left">Aligns the dropdown to the bottom center.</td></tr><tr><td style="text-align:left"><code>bottom-right</code></td><td style="text-align:left">Aligns the dropdown to the bottom right.</td></tr><tr><td style="text-align:left"><code>bottom-justify</code></td><td style="text-align:left">Aligns the dropdown to the bottom and justifies its width to the related element.</td></tr><tr><td style="text-align:left"><code>top-left</code></td><td style="text-align:left">Aligns the dropdown to the top left.</td></tr><tr><td style="text-align:left"><code>top-center</code></td><td style="text-align:left">Aligns the dropdown to the top center.</td></tr><tr><td style="text-align:left"><code>top-right</code></td><td style="text-align:left">Aligns the dropdown to the top right.</td></tr><tr><td style="text-align:left"><code>top-justify</code></td><td style="text-align:left">Aligns the dropdown to the top and justifies its width to the related element.</td></tr><tr><td style="text-align:left"><code>left-top</code></td><td style="text-align:left">Aligns the dropdown to the left top.</td></tr><tr><td style="text-align:left"><code>left-center</code></td><td style="text-align:left">Aligns the dropdown to the left center.</td></tr><tr><td style="text-align:left"><code>left-bottom</code></td><td style="text-align:left">Aligns the dropdown to the left bottom.</td></tr><tr><td style="text-align:left"><code>right-top</code></td><td style="text-align:left">Aligns the dropdown to the right top.</td></tr><tr><td style="text-align:left"><code>right-center</code></td><td style="text-align:left">Aligns the dropdown to the right center.</td></tr><tr><td style="text-align:left"><code>right-bottom</code></td><td style="text-align:left">Aligns the dropdown to the right bottom.</td></tr></tbody></table>
 
@@ -82,8 +74,6 @@ By default, the dropdown flips automatically when it exceeds the viewport's edge
 </div>
 ~~~
 
-<ExampleRunner id="runner-f2b36ec0-9b99-a63e-d76e-54e2b354c746" resource="src.js.core.dropdown.js"/>
-
 * * *
 
 ### Boundary alignment
@@ -97,8 +87,6 @@ You can also align the dropdown to its boundary. To do so, add the `boundary-ali
 </div>
 ~~~
 
-<ExampleRunner id="runner-78d8b537-230a-f4fe-b15e-b96ed990cf21" resource="src.js.core.dropdown.js"/>
-
 * * *
 
 ## Offset
@@ -109,8 +97,6 @@ To define a custom offset between the dropdown container and the toggle, add the
 <div uk-dropdown="offset: 80"></div>
 ~~~
 
-<ExampleRunner id="runner-b5804b57-b01e-8346-c85a-458223fd0518" resource="src.js.core.dropdown.js"/>
-
 * * *
 
 ## Animation
@@ -120,8 +106,6 @@ Apply one or more animations to the dropdown by adding the `animation: uk-animat
 ~~~html
 <div uk-dropdown="animation: uk-animation-slide-top-small; duration: 1000"></div>
 ~~~
-
-<ExampleRunner id="runner-b1c9a0ca-dfb8-8806-56d8-5d026a31dc3f" resource="src.js.core.dropdown.js"/>
 
 * * *
 

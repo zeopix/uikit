@@ -17,8 +17,6 @@ To apply this component, use the following classes.
 </ul>
 ~~~
 
-<ExampleRunner id="runner-42f5434e-c36a-3f6a-ccd5-c3664cfe44e1" resource="src.js.core.nav.js"/>
-
 **Note** By default, the nav has no styling. That's why it is important to add a modifier class. In our example we are using the `.uk-nav-default` class.
 
 * * *
@@ -42,8 +40,6 @@ Add the `.uk-parent` class to an item to turn it into a parent. Add the `.uk-nav
 </ul>
 ~~~
 
-<ExampleRunner id="runner-b787347e-f9ba-3a6a-c6c4-bdb7843e953b" resource="src.js.core.nav.js"/>
-
 * * *
 
 ## Accordion
@@ -56,8 +52,6 @@ By default, child menu items are always visible. To apply an accordion effect, j
 <ul class="uk-nav-parent-icon" uk-nav>...</ul>
 ~~~
 
-<ExampleRunner id="runner-693e562b-9ed9-daef-53c5-738ebba791bf" resource="src.js.core.nav.js"/>
-
 * * *
 
 ### Multiple open subnavs
@@ -67,8 +61,6 @@ When clicking on a parent item, an open one will close, allowing only one open n
 ~~~html
 <ul class="uk-nav-parent-icon" uk-nav="multiple: true">...</ul>
 ~~~
-
-<ExampleRunner id="runner-7ca0392e-befe-c228-ee46-42d2672d23ae" resource="src.js.core.nav.js"/>
 
 * * *
 
@@ -84,8 +76,6 @@ Add one of the following classes to a list item to create a header or a divider 
 <li class="uk-nav-divider"></li>
 ~~~
 
-<ExampleRunner id="runner-d5b9d852-b759-4655-5edd-dbc41eee2b85" resource="src.js.core.nav.js"/>
-
 * * *
 
 ## Default modifier
@@ -95,8 +85,6 @@ Add the `.uk-nav-default` class to give the nav its default style. You can place
 ~~~html
 <ul class="uk-nav uk-nav-default">...</ul>
 ~~~
-
-<ExampleRunner id="runner-ea970c72-d15f-22aa-bb99-90bd3b092c9c" resource="src.js.core.nav.js"/>
 
 * * *
 
@@ -108,8 +96,6 @@ Add the `.uk-nav-primary` class to give the nav a more distinct styling, for exa
 <ul class="uk-nav uk-nav-primary">...</ul>
 ~~~
 
-<ExampleRunner id="runner-385535a0-77f4-7417-1285-c120b24e5d8d" resource="src.js.core.nav.js"/>
-
 * * *
 
 ## Center modifier
@@ -119,8 +105,6 @@ Add the `.uk-nav-center` class to center nav items. This can be combined with th
 ~~~html
 <ul class="uk-nav uk-nav-default uk-nav-center">...</ul>
 ~~~
-
-<ExampleRunner id="runner-a546fb2c-9f3e-09f0-b29c-d4a719421474" resource="src.js.core.nav.js"/>
 
 * * *
 
@@ -134,8 +118,6 @@ Add the `.uk-dropdown-nav` class to place a nav inside a default dropdown from t
 </div>
 ~~~
 
-<ExampleRunner id="runner-9e6134d8-c3d7-21d1-c849-c92904a0988b" resource="src.js.core.nav.js"/>
-
 * * *
 
 ## Nav in Navbar
@@ -148,15 +130,11 @@ Add the `.uk-navbar-dropdown-nav` class to place the nav inside a navbar dropdow
 </div>
 ~~~
 
-<ExampleRunner id="runner-0312151d-42cd-8eff-7462-d975ea2683f8" resource="src.js.core.nav.js"/>
-
 * * *
 
 ## Nav in Off-canvas
 
 A nav can be used inside an off-canvas from the [Off-canvas component](offcanvas.md). No modifier class needs to be added.
-
-<ExampleRunner id="runner-c249034b-c35d-24c1-0f00-c21c888126de" resource="src.js.core.nav.js"/>
 
 * * *
 

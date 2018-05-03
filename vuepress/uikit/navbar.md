@@ -22,8 +22,6 @@ The Navbar component consists of a navbar container, the navbar itself and one o
 </nav>
 ~~~
 
-<ExampleRunner id="runner-3203f919-f3a4-877c-e401-357042a7d500" resource="src.js.core.navbar.js"/>
-
 * * *
 
 ## Multiple navigations
@@ -38,8 +36,6 @@ You can place more than one navigation inside a navbar container. That way you c
 </nav>
 ~~~
 
-<ExampleRunner id="runner-ca08d0bc-a344-9470-15ca-8dcd30338ba4" resource="src.js.core.navbar.js"/>
-
 * * *
 
 ## Click mode
@@ -50,8 +46,6 @@ A parent item inside the navbar can be enabled by either hovering or clicking th
 <nav class="uk-navbar-container" uk-navbar="mode: click">...</nav>
 ~~~
 
-<ExampleRunner id="runner-9b0c2094-4b99-c555-e193-b1a5d7373733" resource="src.js.core.navbar.js"/>
-
 * * *
 
 ## Transparent modifier
@@ -61,8 +55,6 @@ When using an image or colored background for the hero section of your website, 
 ~~~html
 <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>...</nav>
 ~~~
-
-<ExampleRunner id="runner-bd7daa08-b4a7-01fd-f88e-25f5659e1b9f" resource="src.js.core.navbar.js"/>
 
 * * *
 
@@ -80,8 +72,6 @@ To define a subtitle, create a `<div>` element inside an item's `<a>` element. A
     </a>
 </li>
 ~~~
-
-<ExampleRunner id="runner-85332401-51d0-aeef-59a9-dd53cafd6741" resource="src.js.core.navbar.js"/>
 
 * * *
 
@@ -101,8 +91,6 @@ You can also add custom content to the navbar, like text, icons, buttons or form
 
 Add the `.uk-logo` class from the [Utility component](utility.md) to an `<a>` or `<div>` element to indicate your brand.
 
-<ExampleRunner id="runner-f87bf912-486a-ab2f-36d0-9c18dc6276ce" resource="src.js.core.navbar.js"/>
-
 * * *
 
 ## Centered logo
@@ -121,8 +109,6 @@ You can create a split menu with a centered logo. Just add the `uk-navbar-center
 </div>
 ~~~
 
-<ExampleRunner id="runner-4357fbd0-c414-aaa1-c56a-06f5705e5218" resource="src.js.core.navbar.js"/>
-
 * * *
 
 ## Toggle item
@@ -136,8 +122,6 @@ Add the `.uk-navbar-toggle` class and the `uk-navbar-toggle-icon` attribute to a
     </div>
 </div>
 ~~~
-
-<ExampleRunner id="runner-4c457c65-579d-0fbd-694b-7074e9f35b64" resource="src.js.core.navbar.js"/>
 
 * * *
 
@@ -155,8 +139,6 @@ A navbar can contain a dropdown from the [Dropdown component](dropdown.md). Just
     </li>
 </ul>
 ~~~
-
-<ExampleRunner id="runner-721311b4-146c-1a90-4a09-a44194fd52ea" resource="src.js.core.navbar.js"/>
 
 * * *
 
@@ -177,8 +159,6 @@ The [Dropdown component](dropdown.md) allows you arrange the dropdown content in
 </div>
 ~~~
 
-<ExampleRunner id="runner-124c0d85-88e9-01ab-c928-bc14f5fa84a4" resource="src.js.core.navbar.js"/>
-
 * * *
 
 ### Boundary alignment
@@ -189,8 +169,6 @@ Dropdowns can be aligned to the navbar's boundary. Just append the `boundary-ali
 <nav class="uk-navbar-container" uk-navbar="boundary-align: true; align: center;">...</nav>
 ~~~
 
-<ExampleRunner id="runner-fbdf6766-a463-089c-1925-8a11f948615b" resource="src.js.core.navbar.js"/>
-
 * * *
 
 ### Justify
@@ -200,8 +178,6 @@ To justify a dropdown, use the [Drop component](drop.md) and its position featur
 ~~~html
 <div class="uk-navbar-dropdown" uk-drop="boundary: .parent; boundary-align: true; pos: bottom-justify;">...</div>
 ~~~
-
-<ExampleRunner id="runner-cd68df42-9fe9-c0bd-8f28-91d054ee95fa" resource="src.js.core.navbar.js"/>
 
 * * *
 
@@ -214,8 +190,6 @@ A dropbar extends to the full width of the navbar and displays the dropdown with
 <div class="uk-navbar-dropbar"></div>
 ~~~
 
-<ExampleRunner id="runner-f4726d7f-f189-917c-b845-34003f4c1e40" resource="src.js.core.navbar.js"/>
-
 * * *
 
 ### Push
@@ -226,8 +200,6 @@ By default, the dropbar overlays the site content. Add the `dropbar-mode: push;`
 <nav class="uk-navbar-container" uk-navbar="dropbar: true; dropbar-mode: push">...</nav>
 <div class="uk-navbar-dropbar"></div>
 ~~~
-
-<ExampleRunner id="runner-17bbedbf-5fe2-72f8-a714-234649a615c9" resource="src.js.core.navbar.js"/>
 
 * * *
 
@@ -245,8 +217,6 @@ The navbar itself has a modifier class `uk-navbar-sticky` that ensures an optimi
 </div>
 ~~~
 
-<ExampleRunner id="runner-2e4797ab-dacf-631e-d97d-261862d9ce78" resource="src.js.core.navbar.js"/>
-
 Instead of using a Dropdown, you can show a Dropbar, which means that the subnavigation is displayed in full width below the navbar. Simply set `dropbar: true` inside the `uk-navbar` attribute.
 
 ~~~html
@@ -254,8 +224,6 @@ Instead of using a Dropdown, you can show a Dropbar, which means that the subnav
     <nav class="uk-navbar-container" uk-navbar="dropbar: true;">...</nav>
 </div>
 ~~~
-
-<ExampleRunner id="runner-a5c1d990-1a98-e18f-88bc-6d4ce46a6ac9" resource="src.js.core.navbar.js"/>
 
 * * *
 
@@ -270,8 +238,6 @@ By default, the immediate toggling of classes does not look ideal. Instead, we c
     <nav class="uk-navbar-container" uk-navbar>...</nav>
 </div>
 ~~~
-
-<ExampleRunner id="runner-c9fe9a3f-e7cc-bace-f076-28c64d2fbb61" resource="src.js.core.navbar.js"/>
 
 * * *
 

@@ -15,8 +15,6 @@ The toggle can be used to add or remove a class or attribute from the item. By d
 <p id="my-id"></p>
 ~~~
 
-<ExampleRunner id="runner-981ed146-bbab-5804-0fa5-1aeeb6254986" resource="src.js.core.toggle.js"/>
-
 * * *
 
 ## Multiple items
@@ -28,8 +26,6 @@ You can also toggle multiple items at the same time. Just add the `target: SELEC
 <p class="my-class"></p>
 <p class="my-class"></p>
 ~~~
-
-<ExampleRunner id="runner-f6cdde41-96ca-2d78-d3ba-7f7cdf1628c6" resource="src.js.core.toggle.js"/>
 
 **Note** In this example we added the `hidden` attribute to one of the items, so that only the other item will be shown. The toggle will switch visible states between both elements.
 
@@ -44,8 +40,6 @@ If you don't want to toggle the `hidden` attribute, you can also toggle a custom
 <p id="my-id" class="uk-card uk-card-default"></p>
 ~~~
 
-<ExampleRunner id="runner-15bdf4e1-9e1b-3a6a-c209-17449da97f3d" resource="src.js.core.toggle.js"/>
-
 * * *
 
 ## Animations
@@ -56,8 +50,6 @@ The Toggle component allows you to add animations to items when toggling between
 <button type="button" uk-toggle="target: #my-id; animation: uk-animation-fade"></button>
 <p id="my-id"></p>
 ~~~
-
-<ExampleRunner id="runner-2338a225-120a-4ead-8fa0-09427f5cabe4" resource="src.js.core.toggle.js"/>
 
 * * *
 
@@ -70,8 +62,6 @@ You can also apply multiple animations from the [Animation component](animation)
 <p id="my-id"></p>
 ~~~
 
-<ExampleRunner id="runner-7aa56eaa-8295-830e-5def-1a7f7944c53f" resource="src.js.core.toggle.js"/>
-
 * * *
 
 ### Queued animations
@@ -83,8 +73,6 @@ When toggling multiple items with an animation, you might want to wait until the
 <p class="my-class"></p>
 <p class="my-class"></p>
 ~~~
-
-<ExampleRunner id="runner-bac1565b-d20d-78b6-e1e6-9c7d8e98e69b" resource="src.js.core.toggle.js"/>
 
 * * *
 
@@ -99,8 +87,6 @@ A toggle can be triggered in different ways. Just add the `mode` option to the `
 <p id="my-id"></p>
 ~~~
 
-<ExampleRunner id="runner-d2b5d058-dab4-55f4-f50d-e520d684eca0" resource="src.js.core.toggle.js"/>
-
 * * *
 
 ### Media
@@ -112,8 +98,6 @@ When using the `media` mode, you also need to add the `media` option and apply a
 
 <div class="uk-card uk-card-default" uk-toggle="cls: uk-card-primary; mode: media; media: @l"></div>
 ~~~
-
-<ExampleRunner id="runner-f618fd5e-1ca9-f9e9-1332-80ed1b8e8719" resource="src.js.core.toggle.js"/>
 
 **Note** The initial toggle state depends on the `cls` option. It is either the first given class in the space separated list or if set to `false`, the `hidden` attribute. If more than one class is given, the other classes are simply being toggled on state change.
 
