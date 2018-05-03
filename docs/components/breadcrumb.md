@@ -16,7 +16,7 @@ To add list items without a link, use a `<span>` element instead of an `<a>`. Al
 </ul>
 ```
 
-```example
+```run:uikit
 <ul class="uk-breadcrumb">
     <li><a href="#">Item</a></li>
     <li><a href="#">Item</a></li>

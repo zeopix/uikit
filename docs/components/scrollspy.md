@@ -12,7 +12,7 @@ Typically, classes from the [Animation component](animation.md) are used togethe
 <div uk-scrollspy="cls:uk-animation-fade"></div>
 ```
 
-```example
+```run:uikit
 <div class="uk-child-width-1-2@m uk-grid-match" uk-grid>
     <div>
         <div class="uk-card uk-card-default uk-card-body" uk-scrollspy="cls: uk-animation-slide-left; repeat: true">
@@ -44,7 +44,7 @@ You can also group scrollspy elements, so you won't have to apply the attribute 
 </div>
 ```
 
-```example
+```run:uikit
 <div class="uk-child-width-1-3@m" uk-grid uk-scrollspy="cls: uk-animation-fade; target: > div > .uk-card; delay: 500; repeat: true">
     <div>
         <div class="uk-card uk-card-default uk-card-body">

@@ -15,7 +15,6 @@ The Comment component consists of the comment itself, a comment header, includin
 | `.uk-comment-meta`   | Add this class to create meta data about your comment, e.g. a [subnav](subnav.md). |
 | `.uk-comment-avatar` | Add this class to an `<img>` element to create an avatar for the comment author.   |
 
-
 ```html
 <article class="uk-comment">
     <header class="uk-comment-header">
@@ -27,7 +26,7 @@ The Comment component consists of the comment itself, a comment header, includin
 </article>
 ```
 
-```example
+```run:uikit
 <article class="uk-comment">
     <header class="uk-comment-header uk-grid-medium uk-flex-middle" uk-grid>
         <div class="uk-width-auto">
@@ -57,7 +56,7 @@ To style a comment differently, for example to highlight it as the admin's comme
 <article class="uk-comment uk-comment-primary">...</article>
 ```
 
-```example
+```run:uikit
 <article class="uk-comment uk-comment-primary">
     <header class="uk-comment-header uk-grid-medium uk-flex-middle" uk-grid>
         <div class="uk-width-auto">
@@ -96,7 +95,7 @@ Add the `.uk-comment-list` class to a `<ul>` element to create a list of comment
 </ul>
 ```
 
-```example
+```run:uikit
 <ul class="uk-comment-list">
     <li>
         <article class="uk-comment uk-visible-toggle">

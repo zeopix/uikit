@@ -10,13 +10,13 @@ To apply this component, add the `.uk-progress` class to a `<progress>` element.
 <progress class="uk-progress" value="" max=""></progress>
 ```
 
-```example
+```run:uikit
 <progress id="js-progressbar" class="uk-progress" value="10" max="100"></progress>
 
 <script>
-    
+
     UIkit.util.ready(function () {
-        
+
         var bar = document.getElementById('js-progressbar');
 
         var animate = setInterval(function () {

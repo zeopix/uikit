@@ -10,7 +10,7 @@ To emphasize a heading with an alternative styling, for example a larger font si
 <h1 class="uk-heading-primary"></h1>
 ```
 
-```example
+```run:uikit
 <h1 class="uk-heading-primary">Heading Primary</h1>
 ```
 
@@ -24,7 +24,7 @@ You can further enlarge or highlight a heading, for example when using it inside
 <h1 class="uk-heading-hero"></h1>
 ```
 
-```example
+```run:uikit
 <h1 class="uk-heading-hero">Heading Hero</h1>
 ```
 
@@ -38,7 +38,7 @@ To apply a divider to a heading, add the `.uk-heading-divider` class. You can co
 <h1 class="uk-heading-divider"></h1>
 ```
 
-```example
+```run:uikit
 <h1 class="uk-heading-divider">Heading Divider</h1>
 ```
 
@@ -52,7 +52,7 @@ To apply a bullet to a heading, add the `.uk-heading-bullet` class. You can comb
 <h1 class="uk-heading-bullet"></h1>
 ```
 
-```example
+```run:uikit
 <h1 class="uk-heading-bullet">Heading Bullet</h1>
 ```
 
@@ -66,7 +66,7 @@ To apply a vertically centered line to a heading, add the `.uk-heading-line` cla
 <h1 class="uk-heading-line"><span></span></h1>
 ```
 
-```example
+```run:uikit
 <h1 class="uk-heading-line"><span>Heading Line</span></h1>
 
 <h1 class="uk-heading-line uk-text-center"><span>Heading Line</span></h1>

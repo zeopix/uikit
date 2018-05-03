@@ -20,7 +20,7 @@ Add an image in the background of each slide using the `uk-cover` attribute from
 </div>
 ```
 
-```example
+```run:uikit
 <div class="uk-position-relative uk-visible-toggle uk-light" uk-slideshow>
 
     <ul class="uk-slideshow-items">
@@ -60,7 +60,7 @@ By default, the slideshow uses a `slide` animation. You can set the `animation` 
 <div uk-slideshow="animation: fade">...</div>
 ```
 
-```example
+```run:uikit
 <div class="uk-child-width-1-2@m" uk-grid>
     <div>
 
@@ -215,7 +215,7 @@ The slideshow always takes up the full width of its parent container. The height
 <div uk-slideshow="ratio: 7:3">...</div>
 ```
 
-```example
+```run:uikit
 <div class="uk-position-relative uk-visible-toggle uk-light" uk-slideshow="ratio: 7:3; animation: push">
 
     <ul class="uk-slideshow-items">
@@ -246,7 +246,7 @@ By default, the slideshow height adopts to the defined ratio. A minimum or maxim
 <div uk-slideshow="min-height: 300; max-height: 600">...</div>
 ```
 
-```example
+```run:uikit
 <div class="uk-position-relative uk-visible-toggle uk-light" uk-slideshow="min-height: 300; max-height: 600; animation: push">
 
     <ul class="uk-slideshow-items">
@@ -279,7 +279,7 @@ Adding the `uk-height-viewport` attribute from the [Utility component](utility.m
 </div>
 ```
 
-```example
+```run:uikit
 <div class="uk-position-relative uk-visible-toggle uk-light" uk-slideshow>
 
     <ul class="uk-slideshow-items" uk-height-viewport="offset-top: true; offset-bottom: 30">
@@ -339,7 +339,7 @@ If there is no item specific content in the navigation items, you can also add t
 </div>
 ```
 
-```example
+```run:uikit
 <div uk-slideshow="animation: push">
 
     <div class="uk-position-relative uk-visible-toggle uk-light">
@@ -387,7 +387,7 @@ The slideshow is not restricted to images. Other media, like videos, can be posi
 </div>
 ```
 
-```example
+```run:uikit
 <div class="uk-position-relative uk-visible-toggle uk-light" uk-slideshow="animation: push">
 
     <ul class="uk-slideshow-items">
@@ -429,7 +429,7 @@ To add a simple Ken Burns effect, wrap the image with a `div` and add the `.uk-p
 </div>
 ```
 
-```example
+```run:uikit
 <div class="uk-position-relative uk-visible-toggle uk-light" uk-slideshow="animation: push">
 
     <ul class="uk-slideshow-items">
@@ -479,7 +479,7 @@ Add content overlays using the [Position component](position.md). It allows you 
 
 **Note** To adapt your content for better visibility on each image, add the `.uk-light` or `.uk-dark` class from the [Inverse component](inverse.md) or use the [Overlay](overlay.md) to add any style to the overlay box.
 
-```example
+```run:uikit
 <div class="uk-position-relative uk-visible-toggle" uk-slideshow="animation: push">
 
     <ul class="uk-slideshow-items">
@@ -560,7 +560,7 @@ The next example defines different in and out animations. The content slides in 
 <div uk-slideshow-parallax="x: 100,0,0; opacity: 1,1,0">...</div>
 ```
 
-```example
+```run:uikit
 <div class="uk-position-relative uk-visible-toggle uk-light" uk-slideshow="animation: push">
 
     <ul class="uk-slideshow-items">
@@ -612,7 +612,7 @@ The parallax attribute can be used to add additional effects to the slideshow an
 </div>
 ```
 
-```example
+```run:uikit
 <div class="uk-position-relative uk-visible-toggle uk-light" uk-slideshow="animation: push">
 
     <ul class="uk-slideshow-items">
@@ -685,7 +685,7 @@ Transition classes from the [Transition component](transition.md) are triggered 
 
 Together with the [Overlay component](overlay.md), content transitions are used to build a classic caption for the slideshow.
 
-```example
+```run:uikit
 <div class="uk-position-relative uk-visible-toggle uk-light" uk-slideshow="animation: fade">
 
     <ul class="uk-slideshow-items">

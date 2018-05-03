@@ -12,6 +12,6 @@ To add a smooth effect when using the totop to jump up the page, use the [Scroll
 <a href="" uk-totop></a>
 ```
 
-```example
+```run:uikit
 <a href="#" uk-totop uk-scroll></a>
 ```

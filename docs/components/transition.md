@@ -24,7 +24,7 @@ This component is mostly used in combination with the [Overlay component](overla
 | `.uk-transition-slide-top-small`<br> `.uk-transition-slide-bottom-small`<br>  `.uk-transition-slide-left-small`<br> `.uk-transition-slide-right-small` | The element slides in from the top, bottom, left or right with a smaller distance. |
 | `.uk-transition-slide-top-medium`<br> `.uk-transition-slide-bottom-medium`<br>  `.uk-transition-slide-left-medium`<br> `.uk-transition-slide-right-medium`   | The element slides in from the top, bottom, left or right with a medium distance. |
 
-```example
+```run:uikit
 <div class="uk-child-width-1-2 uk-child-width-1-3@s uk-grid-match uk-grid-small" uk-grid>
     <div class="uk-text-center">
         <div class="uk-inline-clip uk-transition-toggle" tabindex="0">

@@ -10,7 +10,7 @@ Simply add the `uk-scroll` attribute to any page-internal link that contains a U
 <a href="#my-id" uk-scroll></a>
 ```
 
-```example
+```run:uikit
 <a class="uk-button uk-button-primary" href="#target" uk-scroll>Scroll down</a>
 ```
 
@@ -30,7 +30,7 @@ UIkit.util.on('#scroll-trigger', 'scrolled', function () {
 });
 ```
 
-```example
+```run:uikit
 <a id="js-scroll-trigger" class="uk-button uk-button-primary" href="#target" uk-scroll>Down with callback</a>
 
 <script>
