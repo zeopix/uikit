@@ -7,12 +7,39 @@ export default {
     mixins: [Class, Togglable],
 
     props: {
+        /**
+         * simple test 1
+         */
         targets: String,
+
+        /**
+         * more testing
+         */
         active: null,
+
+        /**
+         * realtime
+         */
         collapsible: Boolean,
+
+        /**
+         * more tests
+         */
         multiple: Boolean,
+
+        /**
+         * fixing bugs
+         */
         toggle: String,
+
+        /**
+         * enters
+         */
         content: String,
+
+        /**
+         * transitions are nicest
+         */
         transition: String
     },
 

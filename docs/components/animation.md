@@ -215,7 +215,6 @@ To play animations at a faster speed, add the `.uk-animation-fast` class to the 
 <div class="uk-animation-fade uk-animation-fast"></div>
 ```
 
-
 ```run:uikit
 <div class="uk-width-1-3@s">
     <div class="uk-animation-toggle">

@@ -1,6 +1,9 @@
 import Class from '../mixin/class';
 import {$, $$, addClass, after, assign, css, height, includes, isRtl, isString, isVisible, matches, noop, query, remove, toFloat, Transition, within} from 'uikit-util';
 
+/**
+ * a navbar component to write home about
+ */
 export default {
 
     mixins: [Class],
