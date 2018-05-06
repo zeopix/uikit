@@ -9,7 +9,9 @@ const util = require('yootheme-doctools/src/util');
 
 module.exports = {
 
-    include: [__dirname + '/src/js/**/*'],
+    include: [__dirname + '/src/js/@(core|mixin|util|components)/*'],
+
+    exclude: [],
 
     base: __dirname,
 
