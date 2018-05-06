@@ -1,3 +1,4 @@
+import _Users_jms_uikit_src_js_api_global_js from '/Users/jms/uikit/src/js/api/global.js';
 import _Users_jms_uikit_src_js_components_countdown_js from '/Users/jms/uikit/src/js/components/countdown.js';
 import _Users_jms_uikit_src_js_components_filter_js from '/Users/jms/uikit/src/js/components/filter.js';
 import _Users_jms_uikit_src_js_components_lightbox_panel_js from '/Users/jms/uikit/src/js/components/lightbox-panel.js';
@@ -53,6 +54,7 @@ import _Users_jms_uikit_src_js_mixin_slider_js from '/Users/jms/uikit/src/js/mix
 import _Users_jms_uikit_src_js_mixin_slideshow_js from '/Users/jms/uikit/src/js/mixin/slideshow.js';
 import _Users_jms_uikit_src_js_mixin_togglable_js from '/Users/jms/uikit/src/js/mixin/togglable.js';
 const exp = {};
+exp['src/js/api/global.js'] = _Users_jms_uikit_src_js_api_global_js;
 exp['src/js/components/countdown.js'] = _Users_jms_uikit_src_js_components_countdown_js;
 exp['src/js/components/filter.js'] = _Users_jms_uikit_src_js_components_filter_js;
 exp['src/js/components/lightbox-panel.js'] = _Users_jms_uikit_src_js_components_lightbox_panel_js;

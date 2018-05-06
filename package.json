@@ -18,11 +18,12 @@
     "watch": "npm-watch",
     "eslint": "eslint src/js",
     "eslint-fix": "eslint --fix src/js",
+    "link": "npm link yootheme-doctools",
     "test": "webpack-dev-server --inline --hot --watchContentBase && open http://localhost:8080/tests/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/uikit/uikit.git"
+    "url": "uikit/uikit"
   },
   "license": "MIT",
   "bugs": {
