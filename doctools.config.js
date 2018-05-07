@@ -31,6 +31,10 @@ module.exports = {
         {
             label: 'utils',
             match: ['src/js/util/*.js']
+        },
+        {
+            label: 'mixin',
+            match: ['src/js/mixin/*.js']
         }
     ],
 
@@ -41,7 +45,7 @@ module.exports = {
     loaders: [
         () => new DefaultLoader({
             type: 'UIkitComponent',
-            include: ['src/js/components/*.js', 'src/js/mixin/*.js', 'src/js/core/*.js'],
+            include: [__dirname + '/src/js/components/*.js', __dirname + '/src/js/mixin/*.js', __dirname + '/src/js/core/*.js'],
             exclude: ['src/js/core/core.js'],
             desc: {runtime: true}
         }),
@@ -63,5 +67,5 @@ module.exports = {
         'ComponentLinker'
     ],
 
-    getResourceName: desc => desc.fileInPackage.substr(2)
+    getResourceName: desc => desc.name
 };

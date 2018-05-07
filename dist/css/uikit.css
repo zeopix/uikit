@@ -1773,7 +1773,7 @@ select.uk-form-width-xsmall {
 /*
  * Input padding
  */
-.uk-form-icon:not(.uk-form-icon-flip) + .uk-input {
+.uk-form-icon:not(.uk-form-icon-flip) ~ .uk-input {
   padding-left: 40px !important;
 }
 /*
@@ -1783,7 +1783,7 @@ select.uk-form-width-xsmall {
   right: 0;
   left: auto;
 }
-.uk-form-icon-flip + .uk-input {
+.uk-form-icon-flip ~ .uk-input {
   padding-right: 40px !important;
 }
 /* ========================================================================
@@ -2840,11 +2840,13 @@ select.uk-form-width-xsmall {
 /*
      * Default
      */
-.uk-card-body .uk-nav-default {
-  margin: -15px -30px;
+.uk-card-body > .uk-nav-default {
+  margin-left: -30px;
+  margin-right: -30px;
 }
-.uk-card-title + .uk-nav-default {
-  margin-top: 0;
+.uk-card-body > .uk-nav-default:only-child {
+  margin-top: -15px;
+  margin-bottom: -15px;
 }
 .uk-card-body .uk-nav-default > li > a,
 .uk-card-body .uk-nav-default .uk-nav-header,
@@ -2857,11 +2859,13 @@ select.uk-form-width-xsmall {
 }
 /* Desktop and bigger */
 @media (min-width: 1200px) {
-  .uk-card-body .uk-nav-default {
-    margin: -25px -40px;
+  .uk-card-body > .uk-nav-default {
+    margin-left: -40px;
+    margin-right: -40px;
   }
-  .uk-card-title + .uk-nav-default {
-    margin-top: 0;
+  .uk-card-body > .uk-nav-default:only-child {
+    margin-top: -25px;
+    margin-bottom: -25px;
   }
   .uk-card-body .uk-nav-default > li > a,
   .uk-card-body .uk-nav-default .uk-nav-header,
@@ -2876,11 +2880,13 @@ select.uk-form-width-xsmall {
 /*
      * Small
      */
-.uk-card-small .uk-nav-default {
-  margin: -5px -20px;
+.uk-card-small > .uk-nav-default {
+  margin-left: -20px;
+  margin-right: -20px;
 }
-.uk-card-small .uk-card-title + .uk-nav-default {
-  margin-top: 0;
+.uk-card-small > .uk-nav-default:only-child {
+  margin-top: -5px;
+  margin-bottom: -5px;
 }
 .uk-card-small .uk-nav-default > li > a,
 .uk-card-small .uk-nav-default .uk-nav-header,
@@ -2896,11 +2902,20 @@ select.uk-form-width-xsmall {
      */
 /* Desktop and bigger */
 @media (min-width: 1200px) {
-  .uk-card-large .uk-nav-default {
-    margin: -55px -70px;
+  .uk-card-large > .uk-nav-default {
+    margin: 0;
   }
-  .uk-card-large .uk-card-title + .uk-nav-default {
-    margin-top: 0;
+  .uk-card-large > .uk-nav-default:only-child {
+    margin: 0;
+  }
+  .uk-card-large .uk-nav-default > li > a,
+  .uk-card-large .uk-nav-default .uk-nav-header,
+  .uk-card-large .uk-nav-default .uk-nav-divider {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .uk-card-large .uk-nav-default .uk-nav-sub {
+    padding-left: 15px;
   }
 }
 /* ========================================================================
@@ -3464,10 +3479,10 @@ select.uk-form-width-xsmall {
 .uk-search-default .uk-search-icon {
   width: 40px;
 }
-.uk-search-default .uk-search-icon:not(.uk-search-icon-flip) + .uk-search-input {
+.uk-search-default .uk-search-icon:not(.uk-search-icon-flip) ~ .uk-search-input {
   padding-left: 40px;
 }
-.uk-search-default .uk-search-icon-flip + .uk-search-input {
+.uk-search-default .uk-search-icon-flip ~ .uk-search-input {
   padding-right: 40px;
 }
 /* Navbar modifier
@@ -3489,10 +3504,10 @@ select.uk-form-width-xsmall {
 .uk-search-navbar .uk-search-icon {
   width: 40px;
 }
-.uk-search-navbar .uk-search-icon:not(.uk-search-icon-flip) + .uk-search-input {
+.uk-search-navbar .uk-search-icon:not(.uk-search-icon-flip) ~ .uk-search-input {
   padding-left: 40px;
 }
-.uk-search-navbar .uk-search-icon-flip + .uk-search-input {
+.uk-search-navbar .uk-search-icon-flip ~ .uk-search-input {
   padding-right: 40px;
 }
 /* Large modifier
@@ -3514,10 +3529,10 @@ select.uk-form-width-xsmall {
 .uk-search-large .uk-search-icon {
   width: 80px;
 }
-.uk-search-large .uk-search-icon:not(.uk-search-icon-flip) + .uk-search-input {
+.uk-search-large .uk-search-icon:not(.uk-search-icon-flip) ~ .uk-search-input {
   padding-left: 80px;
 }
-.uk-search-large .uk-search-icon-flip + .uk-search-input {
+.uk-search-large .uk-search-icon-flip ~ .uk-search-input {
   padding-right: 80px;
 }
 /* Toggle
@@ -9978,6 +9993,32 @@ iframe.uk-cover {
 .uk-overlay-primary .uk-form-label,
 .uk-offcanvas-bar .uk-form-label {
   color: #fff;
+}
+.uk-light .uk-form-icon,
+.uk-section-primary:not(.uk-preserve-color) .uk-form-icon,
+.uk-section-secondary:not(.uk-preserve-color) .uk-form-icon,
+.uk-tile-primary:not(.uk-preserve-color) .uk-form-icon,
+.uk-tile-secondary:not(.uk-preserve-color) .uk-form-icon,
+.uk-card-primary.uk-card-body .uk-form-icon,
+.uk-card-primary > :not([class*='uk-card-media']) .uk-form-icon,
+.uk-card-secondary.uk-card-body .uk-form-icon,
+.uk-card-secondary > :not([class*='uk-card-media']) .uk-form-icon,
+.uk-overlay-primary .uk-form-icon,
+.uk-offcanvas-bar .uk-form-icon {
+  color: rgba(255, 255, 255, 0.5);
+}
+.uk-light .uk-form-icon:hover,
+.uk-section-primary:not(.uk-preserve-color) .uk-form-icon:hover,
+.uk-section-secondary:not(.uk-preserve-color) .uk-form-icon:hover,
+.uk-tile-primary:not(.uk-preserve-color) .uk-form-icon:hover,
+.uk-tile-secondary:not(.uk-preserve-color) .uk-form-icon:hover,
+.uk-card-primary.uk-card-body .uk-form-icon:hover,
+.uk-card-primary > :not([class*='uk-card-media']) .uk-form-icon:hover,
+.uk-card-secondary.uk-card-body .uk-form-icon:hover,
+.uk-card-secondary > :not([class*='uk-card-media']) .uk-form-icon:hover,
+.uk-overlay-primary .uk-form-icon:hover,
+.uk-offcanvas-bar .uk-form-icon:hover {
+  color: rgba(255, 255, 255, 0.7);
 }
 .uk-light .uk-button-default,
 .uk-section-primary:not(.uk-preserve-color) .uk-button-default,
