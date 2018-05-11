@@ -1,10 +1,7 @@
 const path = require('path');
 const ModuleMapper = require('yootheme-doctools/src/plugins/ModuleMapper.js');
-// const RuntimeAnalyzer = require('yootheme-doctools/src/plugins/RuntimeAnalyzer.js');
-// const VuePressExporter = require('yootheme-doctools/src/plugins/VuePressExporter.js');
-// const MarkdownExporter = require('yootheme-doctools/src/plugins/MarkdownExporter.js');
+const RuntimeAnalyzer = require('yootheme-doctools/src/plugins/RuntimeAnalyzer.js');
 const DefaultLoader = require('yootheme-doctools/src/loaders/DefaultLoader.js');
-// const VueRunner = require('yootheme-doctools/src/runnner/VueRunner.js');
 const util = require('yootheme-doctools/src/util');
 
 module.exports = {
@@ -22,7 +19,7 @@ module.exports = {
         },
         {
             label: 'core',
-            match: util.match.and('src/js/core/*.js', (file, desc) => desc.readme)
+            match: util.match.and('src/js/core/*.js', (file, {data}) => data.readme)
         },
         {
             label: 'components',
@@ -43,6 +40,7 @@ module.exports = {
     },
 
     loaders: [
+        'MarkdownLoader',
         () => new DefaultLoader({
             type: 'UIkitComponent',
             include: [__dirname + '/src/js/components/*.js', __dirname + '/src/js/mixin/*.js', __dirname + '/src/js/core/*.js'],
@@ -56,16 +54,18 @@ module.exports = {
      * extra mapping plugins
      */
     plugins: [
-        'RuntimeAnalyzer',
+        new RuntimeAnalyzer({
+            serve: false
+        }),
 
         new ModuleMapper({
-            getReadme(desc) {
-                return path.join(__dirname, 'docs', 'components', desc.name.toLowerCase() + '.md');
+            getAssets(desc) {
+                return {readme: path.join(__dirname, 'docs', 'components', desc.name.toLowerCase() + '.md')};
             }
         }),
         'UIkitComponentMapper',
         'ComponentLinker'
     ],
 
-    getResourceName: desc => desc.name
+    // getResourceName: desc => desc.name
 };
