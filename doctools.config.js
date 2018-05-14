@@ -1,12 +1,12 @@
 const path = require('path');
-const ModuleMapper = require('yootheme-doctools/src/plugins/ModuleMapper.js');
+const AssetLinker = require('yootheme-doctools/src/plugins/AssetLinker.js');
 const RuntimeAnalyzer = require('yootheme-doctools/src/plugins/RuntimeAnalyzer.js');
 const DefaultLoader = require('yootheme-doctools/src/loaders/DefaultLoader.js');
 const util = require('yootheme-doctools/src/util');
 
 module.exports = {
 
-    include: [__dirname + '/src/js/@(core|mixin|util|components)/*'],
+    include: [ 'src/js/@(core|mixin|util|components)/*', 'docs/**/*.md', 'package.json', 'README.md'],
 
     exclude: [],
 
@@ -54,18 +54,20 @@ module.exports = {
      * extra mapping plugins
      */
     plugins: [
-        new RuntimeAnalyzer({
-            serve: false
-        }),
-
-        new ModuleMapper({
+        // new RuntimeAnalyzer({
+        //     serve: false
+        // }),
+        new AssetLinker({
             getAssets(desc) {
-                return {readme: path.join(__dirname, 'docs', 'components', desc.name.toLowerCase() + '.md')};
+                if (desc.type === 'UIkitComponent') {
+                    return {readme: path.join(__dirname, 'docs', 'components', desc.name.toLowerCase() + '.md')};
+                } else {
+                    return AssetLinker.defaultConfig.getAssets(desc);
+                }
             }
         }),
         'UIkitComponentMapper',
-        'ComponentLinker'
+        'ComponentLinker',
     ],
 
-    // getResourceName: desc => desc.name
 };
