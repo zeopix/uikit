@@ -14,7 +14,7 @@ To apply this component, add the `uk-lightbox` attribute to a container to turn 
 </div>
 ```
 
-```run:uikit
+```html : uikit
 <div uk-lightbox>
     <a class="uk-button uk-button-default" href="../docs/images/photo.jpg">Open Lightbox</a>
 </div>
@@ -32,7 +32,7 @@ To add an `alt` attribute to the image in the lightbox, set the `data-alt` attri
 </div>
 ```
 
-```run:uikit
+```html : uikit
 <div uk-lightbox>
     <a class="uk-button uk-button-default" href="../docs/images/photo.jpg" data-alt="Image">Open Lightbox</a>
 </div>
@@ -50,7 +50,7 @@ To display a caption at the bottom of the lightbox, set the `data-caption` attri
 </div>
 ```
 
-```run:uikit
+```html : uikit
 <div uk-lightbox>
     <a class="uk-button uk-button-default" href="../docs/images/photo.jpg" data-caption="Caption">Open Lightbox</a>
 </div>
@@ -68,7 +68,7 @@ By default, the Lightbox gallery uses a slide animation. You can set the `animat
 </div>
 ```
 
-```run:uikit
+```html : uikit
 <div class="uk-h3">Slide</div>
 <div class="uk-child-width-1-3@m" uk-grid uk-lightbox="animation: slide">
     <div>
@@ -142,7 +142,7 @@ A lightbox is not restricted to images. Other media, like videos, can be display
 </div>
 ```
 
-```run:uikit
+```html : uikit
 <div uk-lightbox>
     <a class="uk-button uk-button-default" href="../docs/images/photo.jpg" data-caption="Image">Image</a>
     <a class="uk-button uk-button-default" href="//www.quirksmode.org/html5/videos/big_buck_bunny.mp4" data-caption="Video">Video</a>

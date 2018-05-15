@@ -8,7 +8,7 @@ UIkit uses panels to outline certain sections of your content. These can be arra
 
 Add the `.uk-panel` class to a `<div>` element to create a position context, set box-sizing to border-box, apply a clearfix and to remove the bottom margin of its last child element.
 
-```run:uikit
+```html : uikit
 <div class="uk-child-width-1-3@s" uk-grid>
     <div>
         <div class="uk-panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
@@ -28,7 +28,7 @@ Add the `.uk-panel` class to a `<div>` element to create a position context, set
 
 Add the `.uk-panel-scrollable` class to give the panel a fixed height and make it scrollable, if its content exceeds the height. You can also add one of the `.uk-height-*` [classes](#height) to apply a different height.
 
-```run:uikit
+```html : uikit
 <div class="uk-panel uk-panel-scrollable">
     <ul class="uk-list">
         <li><label><input class="uk-checkbox" type="checkbox"> Category 1</label></li>
@@ -67,7 +67,7 @@ Floating elements are taken from the document flow and aligned to the left or ri
 | `.uk-clearfix`    | Add this class to a parent container to clear floats. Alternatively, you can create a new block format context, e.g. by adding the `.uk-overflow-hidden` class. |
 
 
-```run:uikit
+```html : uikit
 <div class="uk-clearfix">
     <div class="uk-float-right">
         <div class="uk-card uk-card-default uk-card-body">Right</div>
@@ -91,7 +91,7 @@ These utilities provide different classes to modify an element's overflow behavi
 
 **Note** The `.uk-overflow-auto` class is useful when having to handle tables on a responsive website, which at some point would just get too big. It also works great on `<pre>` elements.
 
-```run:uikit
+```html : uikit
 <div class="uk-overflow-auto uk-height-small">
     <table class="uk-table uk-table-striped uk-table-condensed uk-text-nowrap">
         <thead>
@@ -157,7 +157,7 @@ These utilities provide different classes for resizing elements.
 
 <p>Grab and drag the bottom right corner of each box below to resize it</p>
 
-```run:uikit
+```html : uikit
 <div class="uk-child-width-1-2@s" uk-grid>
     <div>
         <pre class="uk-resize-vertical">
@@ -224,7 +224,7 @@ These classes are often used to create a position context on containers with an 
 </div>
 ```
 
-```run:uikit
+```html : uikit
 <div class="uk-inline">
     <img src="../docs/images/photo.jpg" width="300" alt="">
     <div class="uk-position-medium uk-position-cover uk-overlay uk-overlay-default uk-flex uk-flex-center uk-flex-middle">Overlay</div>
@@ -248,7 +248,7 @@ UIkit provides a number of useful classes to alter a block element's height.
 <div class="uk-height-small"></div>
 ```
 
-```run:uikit
+```html : uikit
 <div class="uk-child-width-1-3@s" uk-grid>
     <div>
         <div class="uk-height-small uk-card uk-card-default uk-card-body uk-flex uk-flex-center uk-flex-middle">Small</div>
@@ -323,7 +323,7 @@ You can also target and match specific elements inside the container, like cards
 <div uk-grid uk-height-match="target: SELECTOR">...</div>
 ```
 
-```run:uikit
+```html : uikit
 <div class="uk-child-width-1-2@s" uk-grid uk-height-match="target: > div > .uk-card">
     <div>
         <div class="uk-card uk-card-default uk-card-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
@@ -350,7 +350,7 @@ If your grid wraps into multiple rows, only grid columns within the same row are
 <div uk-grid uk-height-match="row: false">...</div>
 ```
 
-```run:uikit
+```html : uikit
 <div class="uk-child-width-1-2@s" uk-grid uk-height-match="target: > div > .uk-card; row: false">
     <div class="uk-first-column">
         <div class="uk-card uk-card-default uk-card-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
@@ -407,7 +407,7 @@ To modify the border radius of an element, like an image, add one of the followi
 | `.uk-border-rounded` | Add this class to apply rounded corners.   |
 | `.uk-border-circle`  | Add this class to a apply a circled shape. |
 
-```run:uikit
+```html : uikit
 <img class="uk-border-rounded" src="images/avatar.jpg" width="200" height="200" alt="Border rounded">
 <img class="uk-border-circle" src="images/avatar.jpg" width="200" height="200" alt="Border circle">
 ```
@@ -429,7 +429,7 @@ You can apply different box shadows to elements. Just add one of the following c
 <div class="uk-box-shadow-small"></div>
 ```
 
-```run:uikit
+```html : uikit
 <div class="uk-child-width-1-2@s uk-text-center" uk-grid>
     <div>
         <div class="uk-box-shadow-small uk-padding">Small</div>
@@ -459,7 +459,7 @@ To apply a box shadow at the bottom of an element so that appears to be hovering
 <div class="uk-box-shadow-bottom"></div>
 ```
 
-```run:uikit
+```html : uikit
 <div class="uk-box-shadow-bottom uk-box-shadow-small uk-width-1-2@s uk-text-center">
     <div class="uk-background-default uk-padding-large">
         Box shadow bottom
@@ -484,7 +484,7 @@ To apply a box shadow on hover, add one of the following classes. This can also 
 <div class="uk-box-shadow-hover-small"></div>
 ```
 
-```run:uikit
+```html : uikit
 <div class="uk-child-width-1-2@s uk-text-center" uk-grid>
     <div>
         <div class="uk-box-shadow-hover-small uk-padding">Hover Small</div>
@@ -510,7 +510,7 @@ To apply a box shadow on hover, add one of the following classes. This can also 
 
 With the `.uk-dropcap` class you can achieve a drop cap within a text by adding it directly to the `<p>` element.
 
-```run:uikit
+```html : uikit
 <p class="uk-dropcap">Dorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 ```
 
@@ -524,7 +524,7 @@ To visually connect horizontal items add the `uk-leader` attribute to the elemen
 <div uk-leader></div>
 ```
 
-```run:uikit
+```html : uikit
 <div class="uk-grid-small" uk-grid>
     <div class="uk-width-expand" uk-leader>Lorem ipsum dolor sit amet</div>
     <div>$20.90</div>
@@ -552,13 +552,13 @@ With the new `.uk-logo` class you can easily define your logo, for example withi
 <a class="uk-logo" href=""></a>
 ```
 
-```run:uikit
+```html : uikit
 <a class="uk-logo" href="#">Logo</a>
 ```
 
 Add the `.uk-light` class from the [Inverse component](inverse.md) when displaying the image on dark backgrounds, so that its color will automatically be inverted for better visibility.
 
-```run:uikit
+```html : uikit
 <div class="uk-panel uk-padding uk-background-secondary uk-light">
     <a class="uk-logo" href="#">Logo</a>
 </div>
@@ -587,7 +587,7 @@ You can even automatically display alternative logos for light and dark backgrou
 </div>
 ```
 
-```run:uikit
+```html : uikit
 <div class="uk-child-width-expand@s" uk-grid>
     <div>
         <div class="uk-panel uk-padding uk-background-muted">
@@ -620,7 +620,7 @@ SVGs or Scaleable Vector Graphics are really handy, for example to display a log
 
 Using the `uk-svg` attribute also allows you to inject a symbol from the SVG file. Just append the symbol's ID to the image path as you would in any fragmented URL.
 
-```run:uikit
+```html : uikit
 <!-- Targets the SVG image -->
 <img src="../assets/uikit/src/images/icons/cloud-download.svg" width="40" height="40" uk-svg>
 
@@ -640,7 +640,7 @@ To start playing an animated Gif only when it comes into the viewport, add the `
 <img src="" alt="" uk-gif>
 ```
 
-```run:uikit
+```html : uikit
 <img src="../docs/images/animated.gif" alt="" uk-gif>
 ```
 
@@ -657,7 +657,7 @@ To apply this component, add the `uk-video` attribute with its options.
 <video uk-video></div>
 ```
 
-```run:uikit
+```html : uikit
 <div class="uk-grid uk-child-width-1-2@s">
     <div>
 
@@ -722,7 +722,7 @@ Add one of the following classes to apply different blend modes to your backgrou
 </div>
 ```
 
-```run:uikit
+```html : uikit
 <div class="uk-child-width-1-2 uk-child-width-1-3@s uk-grid-small uk-light" uk-grid>
     <div>
         <div class="uk-inline uk-background-primary">
@@ -853,7 +853,7 @@ Add one of the following classes to apply different blend modes to your backgrou
 
 To center an element to itself, add the `uk-transform-center` class. This is particularly useful for absolute positioning.
 
-```run:uikit
+```html : uikit
 <div class="uk-inline">
     <img src="images/light.jpg" alt="">
     <a class="uk-position-absolute uk-transform-center" style="left: 50%; top: 50%" href="#" uk-marker></a>
@@ -881,7 +881,7 @@ To modify the origin of an animation, like scaling, add one of the `uk-transform
 <div class="uk-transform-origin-bottom-right uk-animation-scale-up"></div>
 ```
 
-```run:uikit
+```html : uikit
 <div class="uk-child-width-1-3@m" uk-grid>
     <div class="uk-animation-toggle">
         <div class="uk-transform-origin-bottom-right uk-card uk-card-default uk-card-body uk-animation-scale-up">
@@ -907,7 +907,7 @@ To modify the origin of an animation, like scaling, add one of the `uk-transform
 
 To disable the click behavior of any element, like a `<a>`, `<button>` or `<iframe>` element, add the `.uk-disabled` class.
 
-```run:uikit
+```html : uikit
 <a class="uk-disabled uk-button uk-button-default" href="#">Disabled</a>
 ```
 
@@ -921,7 +921,7 @@ To apply a move cursor to elements that are being dragged, add the `.uk-drag` cl
 <div class="uk-drag"></div>
 ```
 
-```run:uikit
+```html : uikit
 <div class="uk-drag uk-width-small uk-padding uk-background-muted uk-text-center">
     <i uk-icon="icon: move; ratio: 2"></i>
 </div>

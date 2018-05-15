@@ -41,7 +41,7 @@ Add one of the `.uk-hidden-*` classes to hide the element from screens larger th
 
 **Note** In this example the green elements are hidden on screens that are larger than the defined breakpoint. Resize your browser window to see the effect.
 
-```run:uikit
+```html : uikit
 <div class="uk-grid-small uk-child-width-1-2 uk-child-width-1-4@s uk-text-center" uk-grid>
     <div>
         <div class="uk-panel">
@@ -90,7 +90,7 @@ Use `.uk-visible-*` classes to show the element for screens larger than the spec
 
 **Note** In this example the green elements are displayed on screens that are larger than the defined breakpoint. Resize your browser window to see the effect.
 
-```run:uikit
+```html : uikit
 <div class="uk-grid-small uk-child-width-1-2 uk-child-width-1-4@s uk-text-center" uk-grid>
     <div>
         <div class="uk-panel">
@@ -137,7 +137,7 @@ Use one of the following classes to display elements only when they are being ho
 </div>
 ```
 
-```run:uikit
+```html : uikit
 <div class="uk-child-width-1-2@s" uk-grid>
     <div class="uk-visible-toggle">
 
@@ -188,7 +188,7 @@ Add the `.uk-hidden-touch` class to hide elements on touch devices and the `.uk-
 <div class="uk-hidden-notouch"></div>
 ```
 
-```run:uikit
+```html : uikit
 <div class="uk-grid-small uk-child-width-1-2 uk-child-width-auto@s uk-text-center" uk-grid>
     <div>
         <div class="uk-panel">

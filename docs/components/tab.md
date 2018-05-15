@@ -20,7 +20,7 @@ The tab component consists of clickable tabs, that are aligned side by side in a
 </ul>
 ```
 
-```run:uikit
+```html : uikit
 <ul uk-tab>
     <li class="uk-active"><a href="#">Left</a></li>
     <li><a href="#">Item</a></li>
@@ -39,7 +39,7 @@ Add the `.uk-tab-bottom` class to flip tab items to the bottom.
 <ul class="uk-tab-bottom" uk-tab>...</ul>
 ```
 
-```run:uikit
+```html : uikit
 <ul class="uk-tab-bottom" uk-tab>
     <li class="uk-active"><a href="#">Left</a></li>
     <li><a href="#">Item</a></li>
@@ -61,7 +61,7 @@ When using the vertical alignment, you will usually create a grid to apply the l
 <ul class="uk-tab-right" uk-tab>...</ul>
 ```
 
-```run:uikit
+```html : uikit
 <div class="uk-child-width-1-2@s" uk-grid>
     <div>
         <ul class="uk-tab-left" uk-tab>
@@ -91,7 +91,7 @@ You can combine tabs with the [Flex component](flex.md) or the [Width component]
 <ul class="uk-flex-right" uk-tab>...</ul>
 ```
 
-```run:uikit
+```html : uikit
 <div class="uk-margin-medium-top">
     <ul class="uk-flex-center" uk-tab>
         <li class="uk-active"><a href="#">Center</a></li>
@@ -140,7 +140,7 @@ Tabs can be used to trigger a dropdown menu from the [Dropdown component](dropdo
 </ul>
 ```
 
-```run:uikit
+```html : uikit
 <ul uk-tab>
     <li class="uk-active"><a href="#">Active</a></li>
     <li><a href="#">Item</a></li>

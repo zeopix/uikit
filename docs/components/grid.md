@@ -20,7 +20,7 @@ To create the grid container, add the `uk-grid` attribute to a `<div>` element. 
 ```
 **Note** Often cards from the [Card component](card.md) are used inside a grid. In the following examples too for visualization.
 
-```run:uikit
+```html : uikit
 <div class="uk-child-width-expand@s uk-text-center" uk-grid>
     <div>
         <div class="uk-card uk-card-default uk-card-body">Item</div>
@@ -51,7 +51,7 @@ The Grid component comes with a default gutter, that is decreased automatically 
 <div class="uk-grid-small" uk-grid>...</div>
 ```
 
-```run:uikit
+```html : uikit
 <div class="uk-grid-small uk-child-width-expand@s uk-text-center" uk-grid>
     <div>
         <div class="uk-card uk-card-default uk-card-body">Item</div>
@@ -65,7 +65,7 @@ The Grid component comes with a default gutter, that is decreased automatically 
 </div>
 ```
 
-```run:uikit
+```html : uikit
 <div class="uk-grid-medium uk-child-width-expand@s uk-text-center" uk-grid>
     <div>
         <div class="uk-card uk-card-default uk-card-body">Item</div>
@@ -79,7 +79,7 @@ The Grid component comes with a default gutter, that is decreased automatically 
 </div>
 ```
 
-```run:uikit
+```html : uikit
 <div class="uk-grid-large uk-child-width-expand@s uk-text-center" uk-grid>
     <div>
         <div class="uk-card uk-card-default uk-card-body">Item</div>
@@ -93,7 +93,7 @@ The Grid component comes with a default gutter, that is decreased automatically 
 </div>
 ```
 
-```run:uikit
+```html : uikit
 <div class="uk-grid-collapse uk-child-width-expand@s uk-text-center" uk-grid>
     <div>
         <div class="uk-background-muted uk-padding">Item</div>
@@ -130,7 +130,7 @@ You can easily extend your grid layout with nested grids.
 </div>
 ```
 
-```run:uikit
+```html : uikit
 <div class="uk-child-width-1-2 uk-text-center" uk-grid>
     <div>
         <div class="uk-card uk-card-default uk-card-body">Item</div>
@@ -158,7 +158,7 @@ Add the `.uk-grid-divider` class to separate grid cells with lines. This class c
 <div class="uk-grid-divider" uk-grid>...</div>
 ```
 
-```run:uikit
+```html : uikit
 <div class="uk-grid-divider uk-child-width-expand@s" uk-grid>
     <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
     <div>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
@@ -176,7 +176,7 @@ To match the height of the direct child of each cell, add the `.uk-grid-match` c
 <div class="uk-grid-match" uk-grid>....</div>
 ```
 
-```run:uikit
+```html : uikit
 <div class="uk-grid-match uk-child-width-expand@s uk-text-center" uk-grid>
     <div>
         <div class="uk-card uk-card-default uk-card-body">Item</div>
@@ -203,7 +203,7 @@ You can also match the height of the direct child of just one cell. To do so, ad
 </div>
 ```
 
-```run:uikit
+```html : uikit
 <div class="uk-child-width-expand@s" uk-grid>
     <div class="uk-grid-item-match">
         <div class="uk-card uk-card-default uk-card-body">
@@ -239,7 +239,7 @@ For a more specific selection of the elements whose heights should be matched, a
 </div>
 ```
 
-```run:uikit
+```html : uikit
 <div class="uk-child-width-expand@s uk-text-center" uk-grid uk-height-match="target: > div > .uk-card">
     <div>
         <div class="uk-card uk-card-default uk-card-body">Item</div>
@@ -267,7 +267,7 @@ The grid is mostly used in combination with the [Width component](width.md). Thi
 </div>
 ```
 
-```run:uikit
+```html : uikit
 <div class="uk-text-center" uk-grid>
     <div class="uk-width-auto@m">
         <div class="uk-card uk-card-default uk-card-body">Auto</div>
@@ -291,7 +291,7 @@ If the grid columns are evenly split, you can add one of the `.uk-child-width-*`
 <div class="uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid>...</div>
 ```
 
-```run:uikit
+```html : uikit
 <div class="uk-child-width-1-2@s uk-child-width-1-3@m uk-text-center" uk-grid>
     <div>
         <div class="uk-card uk-card-default uk-card-body">Item</div>
@@ -320,7 +320,7 @@ You can easily combine the grid with the [Flex component](flex.md). That way you
 </div>
 ```
 
-```run:uikit
+```html : uikit
 <div class="uk-grid-small uk-child-width-1-4@s uk-flex-center uk-text-center" uk-grid>
     <div>
         <div class="uk-card uk-card-default uk-card-body">Item 1</div>

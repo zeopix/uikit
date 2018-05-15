@@ -21,7 +21,7 @@ The Accordion component consists of a parent container with the `uk-accordion` a
 ```
 
 
-```run:uikit
+```html : uikit
 <ul uk-accordion>
     <li class="uk-open">
         <a class="uk-accordion-title" href="#">Item 1</a>
@@ -54,7 +54,7 @@ By default, all accordion items can be collapsed. To prevent this behavior and a
 <ul uk-accordion="collapsible: false">...</ul>
 ```
 
-```run:uikit
+```html : uikit
 <ul uk-accordion="collapsible: false">
     <li>
         <a class="uk-accordion-title" href="#">Item 1</a>
@@ -87,7 +87,7 @@ To display multiple content sections at the same time without one collapsing whe
 <ul uk-accordion="multiple: true">...</ul>
 ```
 
-```run:uikit
+```html : uikit
 <ul uk-accordion="multiple: true">
     <li class="uk-open">
         <a class="uk-accordion-title" href="#">Item 1</a>
@@ -126,7 +126,7 @@ To specify which items should be opened initially, add the `.uk-open` class to t
 </ul>
 ```
 
-```run:uikit
+```html : uikit
 <ul uk-accordion>
     <li>
         <a class="uk-accordion-title" href="#">Item 1</a>

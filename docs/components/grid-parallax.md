@@ -12,7 +12,7 @@ The Grid Parallax allows you to add a scrolling parallax effect to columns withi
 
 There are two types of markup to apply this effect. The following example uses 3 defined columns.
 
-```run:uikit
+```html : uikit
 <div class="uk-child-width-expand@s uk-text-center" uk-grid-parallax>
     <div>
         <div class="uk-card uk-card-default uk-card-body uk-grid-margin">Item</div>
@@ -36,7 +36,7 @@ There are two types of markup to apply this effect. The following example uses 3
 
 The parallax effect is also applied, if grid columns wrap into the next line which is shown in this example. With the `translate` option you can adjust the speed of the scrolling, by default it has the value 150.
 
-```run:uikit
+```html : uikit
 <div class="uk-child-width-1-2@s uk-child-width-1-3@m uk-child-width-1-4@l uk-text-center" uk-grid-parallax="translate:200">
     <div>
         <div class="uk-card uk-card-default uk-card-body">Item</div>

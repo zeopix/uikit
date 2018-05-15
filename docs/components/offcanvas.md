@@ -39,7 +39,7 @@ You can use any element to toggle an off-canvas sidebar. To enable the necessary
 </body>
 ```
 
-```run:uikit
+```html : uikit
 <div class="uk-offcanvas-content">
 
     <!-- The whole page content goes here -->
@@ -73,7 +73,7 @@ To add an overlay, blanking out the page, add the `overlay: true` parameter to t
 <div id="my-id" uk-offcanvas="overlay: true">...</div>
 ```
 
-```run:uikit
+```html : uikit
 <div class="uk-offcanvas-content">
 
     <button class="uk-button uk-button-default" type="button" uk-toggle="target: #offcanvas-overlay">Open</button>
@@ -104,7 +104,7 @@ Add the `flip: true` parameter to the `uk-offcanvas` attribute to adjust its ali
 <div id="my-id" uk-offcanvas="flip: true">...</div>
 ```
 
-```run:uikit
+```html : uikit
 <div class="uk-offcanvas-content">
 
     <button class="uk-button uk-button-default" type="button" uk-toggle="target: #offcanvas-flip">Open</button>
@@ -142,7 +142,7 @@ By default, the off-canvas slides in. But you can actually choose between differ
 <div id="my-id" uk-offcanvas="mode: push">...</div>
 ```
 
-```run:uikit
+```html : uikit
 <div class="uk-offcanvas-content">
 
     <button class="uk-button uk-button-default uk-margin-small-right" type="button" uk-toggle="target: #offcanvas-slide">Slide</button>
@@ -218,7 +218,7 @@ You can use the [Nav component](nav.md) inside an off-canvas to create a mobile 
 </div>
 ```
 
-```run:uikit
+```html : uikit
 <div class="uk-offcanvas-content">
 
     <button class="uk-button uk-button-default uk-margin-small-right" type="button" uk-toggle="target: #offcanvas-nav-primary">Primary Nav</button>

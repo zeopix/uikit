@@ -10,7 +10,7 @@ To apply this component, add the `uk-parallax` attribute to any element. Add an 
 <div uk-parallax="bgy: -200">...</div>
 ```
 
-```run:uikit
+```html : uikit
 <div class="uk-height-large uk-background-cover uk-light uk-flex" uk-parallax="bgy: -200" style="background-image: url('images/dark.jpg');">
 
     <h1 class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical">Headline</h1>
@@ -57,7 +57,7 @@ Properties are always animated from their current value to the target value you 
 <div uk-parallax="opacity: 0,1">...</div>
 ```
 
-```run:uikit
+```html : uikit
 <div class="uk-height-large uk-background-cover uk-overflow-hidden uk-light uk-flex uk-flex-top" style="background-image: url('images/dark.jpg');">
     <div class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical">
         <h1 uk-parallax="opacity: 0,1; y: -100,0; scale: 2,1; viewport: 0.5;">Headline</h1>
@@ -74,7 +74,7 @@ You can define multiple steps for a property by using a comma separated list of 
 <div uk-parallax="x: 0,50,150">...</div>
 ```
 
-```run:uikit
+```html : uikit
 <div class="uk-height-large uk-background-cover uk-overflow-hidden uk-light uk-flex uk-flex-top" style="background-image: url('images/dark.jpg');">
     <div class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical">
         <h1 uk-parallax="opacity: 0,1,1; y: -100,0,0; x: 100,100,0; scale: 2,1,1; viewport: 0.5;">Headline</h1>
@@ -93,7 +93,7 @@ Using the `viewport` option you can adjust the animation duration. The value def
 <div uk-parallax="viewport: 0.5">...</div>
 ```
 
-```run:uikit
+```html : uikit
 <div class="uk-height-large uk-background-cover uk-light uk-flex uk-flex-top" style="background-image: url('images/dark.jpg');">
 
     <h1 class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical" uk-parallax="opacity: 0,1; y: 100,0; viewport: 0.5">Headline</h1>
@@ -113,7 +113,7 @@ Different parallax animations can easily be nested.
 </div>
 ```
 
-```run:uikit
+```html : uikit
 <div class="uk-height-large uk-background-cover uk-light uk-flex uk-flex-top" uk-parallax="bgy: -200" style="background-image: url('images/dark.jpg');">
 
     <h1 class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical" uk-parallax="y: 100,0">Headline</h1>
@@ -133,7 +133,7 @@ Usually, the animation lasts as long as the element itself is in the viewport. T
 </div>
 ```
 
-```run:uikit
+```html : uikit
 <div id="test-target" class="uk-height-large uk-background-cover uk-light uk-flex uk-flex-top" uk-parallax="bgy: -200" style="background-image: url('images/dark.jpg');">
 
     <h1 class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical" uk-parallax="target: #test-target; y: 100,0">Headline</h1>
@@ -147,7 +147,7 @@ Usually, the animation lasts as long as the element itself is in the viewport. T
 
 To adjust the easing of the animation, add the `easing` option. Lower values will cause a faster transition in the beginning, higher values will cause a faster transition in the end of the animation.
 
-```run:uikit
+```html : uikit
 <div id="test-easing" class="uk-height-large uk-background-cover uk-overflow-hidden uk-light uk-flex" style="background-image: url('images/dark.jpg');">
      <div class="uk-grid uk-margin-auto uk-margin-auto-vertical uk-flex-inline">
         <div><div class="uk-card uk-card-default uk-padding-small" uk-parallax="target: #test-easing; y: 200; easing: 0">0</div></div>
@@ -171,7 +171,7 @@ You can also transition from one color to another, for example for borders, back
 <div uk-parallax="border-color: #00f,#f00">...</div>
 ```
 
-```run:uikit
+```html : uikit
 <div id="test-color" class="test-color uk-height-large uk-overflow-hidden uk-flex uk-flex-top" uk-parallax="background-color: yellow,white; border-color: #00f,#f00; viewport: 0.5" style="border: 10px solid #000;">
 
     <h1 class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical" uk-parallax="target: #test-target; color: #0f0; viewport: 0.5">Headline</h1>
@@ -189,7 +189,7 @@ CSS filters are an easy way to add graphical effects to any element on your page
 <div uk-parallax="blur: 10; sepia: 100;">...</div>
 ```
 
-```run:uikit
+```html : uikit
 <div id="test-filter" class="uk-height-large uk-background-cover uk-overflow-hidden uk-flex uk-flex-top" uk-parallax="sepia: 100;" style="background-image: url('images/light.jpg');">
 
     <h1 class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical" uk-parallax="target: #test-filter; blur: 0,10;">Headline</h1>
