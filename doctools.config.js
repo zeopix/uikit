@@ -1,6 +1,5 @@
 const path = require('path');
 const AssetLinker = require('yootheme-doctools/src/plugins/AssetLinker.js');
-const RuntimeAnalyzer = require('yootheme-doctools/src/plugins/RuntimeAnalyzer.js');
 const DefaultLoader = require('yootheme-doctools/src/loaders/DefaultLoader.js');
 const util = require('yootheme-doctools/src/util');
 
@@ -54,9 +53,6 @@ module.exports = {
      * extra mapping plugins
      */
     plugins: [
-        // new RuntimeAnalyzer({
-        //     serve: false
-        // }),
         new AssetLinker({
             getAssets(desc) {
                 if (desc.type === 'UIkitComponent') {
