@@ -226,7 +226,7 @@ These classes are often used to create a position context on containers with an 
 
 ```html : uikit
 <div class="uk-inline">
-    <img src="../docs/images/photo.jpg" width="300" alt="">
+    <img src="/images/photo.jpg" width="300" alt="">
     <div class="uk-position-medium uk-position-cover uk-overlay uk-overlay-default uk-flex uk-flex-center uk-flex-middle">Overlay</div>
 </div>
 ```
@@ -592,16 +592,16 @@ You can even automatically display alternative logos for light and dark backgrou
     <div>
         <div class="uk-panel uk-padding uk-background-muted">
             <a class="uk-logo" href="#">
-                <img src="../docs/images/logo-placeholder.svg" alt="">
-                <img class="uk-logo-inverse" src="../docs/images/logo-placeholder-light.svg" alt="">
+                <img src="/images/logo-placeholder.svg" alt="">
+                <img class="uk-logo-inverse" src="/images/logo-placeholder-light.svg" alt="">
             </a>
         </div>
     </div>
     <div>
         <div class="uk-panel uk-padding uk-background-secondary uk-light">
             <a class="uk-logo" href="#">
-                <img src="../docs/images/logo-placeholder.svg" alt="">
-                <img class="uk-logo-inverse" src="../docs/images/logo-placeholder-light.svg" alt="">
+                <img src="/images/logo-placeholder.svg" alt="">
+                <img class="uk-logo-inverse" src="/images/logo-placeholder-light.svg" alt="">
             </a>
         </div>
     </div>
@@ -641,7 +641,7 @@ To start playing an animated Gif only when it comes into the viewport, add the `
 ```
 
 ```html : uikit
-<img src="../docs/images/animated.gif" alt="" uk-gif>
+<img src="/images/animated.gif" alt="" uk-gif>
 ```
 
 ***

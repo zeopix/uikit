@@ -30,7 +30,7 @@ The Comment component consists of the comment itself, a comment header, includin
 <article class="uk-comment">
     <header class="uk-comment-header uk-grid-medium uk-flex-middle" uk-grid>
         <div class="uk-width-auto">
-            <img class="uk-comment-avatar" src="../docs/images/avatar.jpg" width="80" height="80" alt="">
+            <img class="uk-comment-avatar" src="/images/avatar.jpg" width="80" height="80" alt="">
         </div>
         <div class="uk-width-expand">
             <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">Author</a></h4>
@@ -60,7 +60,7 @@ To style a comment differently, for example to highlight it as the admin's comme
 <article class="uk-comment uk-comment-primary">
     <header class="uk-comment-header uk-grid-medium uk-flex-middle" uk-grid>
         <div class="uk-width-auto">
-            <img class="uk-comment-avatar" src="../docs/images/avatar.jpg" width="80" height="80" alt="">
+            <img class="uk-comment-avatar" src="/images/avatar.jpg" width="80" height="80" alt="">
         </div>
         <div class="uk-width-expand">
             <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">Author</a></h4>
@@ -102,7 +102,7 @@ Add the `.uk-comment-list` class to a `<ul>` element to create a list of comment
             <header class="uk-comment-header uk-position-relative">
                 <div class="uk-grid-medium uk-flex-middle" uk-grid>
                     <div class="uk-width-auto">
-                        <img class="uk-comment-avatar" src="../docs/images/avatar.jpg" width="80" height="80" alt="">
+                        <img class="uk-comment-avatar" src="/images/avatar.jpg" width="80" height="80" alt="">
                     </div>
                     <div class="uk-width-expand">
                         <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">Author</a></h4>
@@ -121,7 +121,7 @@ Add the `.uk-comment-list` class to a `<ul>` element to create a list of comment
                     <header class="uk-comment-header uk-position-relative">
                         <div class="uk-grid-medium uk-flex-middle" uk-grid>
                             <div class="uk-width-auto">
-                                <img class="uk-comment-avatar" src="../docs/images/avatar.jpg" width="80" height="80" alt="">
+                                <img class="uk-comment-avatar" src="/images/avatar.jpg" width="80" height="80" alt="">
                             </div>
                             <div class="uk-width-expand">
                                 <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">Author</a></h4>
@@ -140,7 +140,7 @@ Add the `.uk-comment-list` class to a `<ul>` element to create a list of comment
                     <header class="uk-comment-header uk-position-relative">
                         <div class="uk-grid-medium uk-flex-middle" uk-grid>
                             <div class="uk-width-auto">
-                                <img class="uk-comment-avatar" src="../docs/images/avatar.jpg" width="80" height="80" alt="">
+                                <img class="uk-comment-avatar" src="/images/avatar.jpg" width="80" height="80" alt="">
                             </div>
                             <div class="uk-width-expand">
                                 <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">Author</a></h4>
