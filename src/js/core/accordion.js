@@ -2,6 +2,9 @@ import Class from '../mixin/class';
 import Togglable from '../mixin/togglable';
 import {$, $$, attr, filter, getIndex, hasClass, includes, index, toggleClass, unwrap, wrapAll} from 'uikit-util';
 
+/**
+ * @tutorial accordion
+ */
 export default {
 
     mixins: [Class, Togglable],

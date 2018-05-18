@@ -11,6 +11,9 @@ export default {
     args: 'animation',
 
     props: {
+        /**
+         * closer
+         */
         close: String
     },
 

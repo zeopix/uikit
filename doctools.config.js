@@ -54,7 +54,7 @@ module.exports = {
      * extra mapping plugins
      */
     plugins: [
-        // new RuntimeAnalyzer({serve: false}),
+        new RuntimeAnalyzer({serve: false}),
         new AssetLinker({
             getAssets(desc) {
                 if (desc.type === 'UIkitComponent') {
