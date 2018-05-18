@@ -64,6 +64,8 @@ module.exports = {
                 }
             }
         }),
+        'HeadlineMapper',
+        'TypeMapper',
         'UIkitComponentMapper',
         'ComponentLinker',
     ],
