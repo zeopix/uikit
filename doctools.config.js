@@ -2,7 +2,6 @@ const path = require('path');
 const AssetLinker = require('yootheme-doctools/src/plugins/AssetLinker.js');
 const RuntimeAnalyzer = require('yootheme-doctools/src/plugins/RuntimeAnalyzer.js');
 const DefaultLoader = require('yootheme-doctools/src/loaders/DefaultLoader.js');
-const util = require('yootheme-doctools/src/util');
 
 module.exports = {
 
@@ -11,33 +10,6 @@ module.exports = {
     exclude: [],
 
     base: __dirname,
-
-    menu: [
-        {
-            label: 'package',
-            match: [ (file, desc) => desc.type === 'package']
-        },
-        {
-            label: 'core',
-            match: util.match.and('src/js/core/*.js', (file, {data}) => data.readme)
-        },
-        {
-            label: 'components',
-            match: ['src/js/components/*.js']
-        },
-        {
-            label: 'utils',
-            match: ['src/js/util/*.js']
-        },
-        {
-            label: 'mixin',
-            match: ['src/js/mixin/*.js']
-        }
-    ],
-
-    menus: {
-        menu: true
-    },
 
     loaders: [
         'MarkdownLoader',
