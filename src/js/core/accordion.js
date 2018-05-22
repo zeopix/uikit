@@ -11,37 +11,38 @@ export default {
 
     props: {
         /**
-         * simple test 1
+         * CSS selector of the element(s) to toggle.
          */
         targets: String,
 
         /**
-         * more testing
+         * Index of the element to open initially.
          */
         active: null,
 
         /**
-         * realtime
+         * Allow all items to be closed.
          */
         collapsible: Boolean,
 
         /**
-         * more tests
+         * Allow multiple open items.
          */
         multiple: Boolean,
 
         /**
-         * fixing bugs
+         * The toggle selector, which toggles accordion items.
          */
         toggle: String,
 
         /**
-         * enters
+         * The content selector, which selects the accordion content elements.
          */
         content: String,
 
         /**
-         * transitions are nicest
+         * The transition to use when revealing items. Use keyword for
+         * [easing functions](https://developer.mozilla.org/en-US/docs/Web/CSS/single-transition-timing-function#Keywords_for_common_timing-functions).
          */
         transition: String
     },
@@ -109,6 +110,11 @@ export default {
 
     methods: {
 
+        /**
+         * Toggles the content pane.
+         * @param {String|Integer|Node} [item = 0] - Accordion pane to toggle. 0 based index.
+         * @param {Boolean} [animate = true] - Suppress opening animation by passing false.
+         */
         toggle(item, animate) {
 
             const index = getIndex(item, this.items);

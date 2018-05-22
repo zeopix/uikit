@@ -226,7 +226,7 @@ These classes are often used to create a position context on containers with an 
 
 ```html : uikit
 <div class="uk-inline">
-    <img src="/images/photo.jpg" width="300" alt="">
+    <img src="/uikit/tests/images/photo.jpg" width="300" alt="">
     <div class="uk-position-medium uk-position-cover uk-overlay uk-overlay-default uk-flex uk-flex-center uk-flex-middle">Overlay</div>
 </div>
 ```
@@ -408,8 +408,8 @@ To modify the border radius of an element, like an image, add one of the followi
 | `.uk-border-circle`  | Add this class to a apply a circled shape. |
 
 ```html : uikit
-<img class="uk-border-rounded" src="images/avatar.jpg" width="200" height="200" alt="Border rounded">
-<img class="uk-border-circle" src="images/avatar.jpg" width="200" height="200" alt="Border circle">
+<img class="uk-border-rounded" src="/uikit/tests/images/avatar.jpg" width="200" height="200" alt="Border rounded">
+<img class="uk-border-circle" src="/uikit/tests/images/avatar.jpg" width="200" height="200" alt="Border circle">
 ```
 
 ***
@@ -592,16 +592,16 @@ You can even automatically display alternative logos for light and dark backgrou
     <div>
         <div class="uk-panel uk-padding uk-background-muted">
             <a class="uk-logo" href="#">
-                <img src="/images/logo-placeholder.svg" alt="">
-                <img class="uk-logo-inverse" src="/images/logo-placeholder-light.svg" alt="">
+                <img src="/uikit/tests/images/logo-placeholder.svg" alt="">
+                <img class="uk-logo-inverse" src="/uikit/tests/images/logo-placeholder-light.svg" alt="">
             </a>
         </div>
     </div>
     <div>
         <div class="uk-panel uk-padding uk-background-secondary uk-light">
             <a class="uk-logo" href="#">
-                <img src="/images/logo-placeholder.svg" alt="">
-                <img class="uk-logo-inverse" src="/images/logo-placeholder-light.svg" alt="">
+                <img src="/uikit/tests/images/logo-placeholder.svg" alt="">
+                <img class="uk-logo-inverse" src="/uikit/tests/images/logo-placeholder-light.svg" alt="">
             </a>
         </div>
     </div>
@@ -622,10 +622,10 @@ Using the `uk-svg` attribute also allows you to inject a symbol from the SVG fil
 
 ```html : uikit
 <!-- Targets the SVG image -->
-<img src="../assets/uikit/src/images/icons/cloud-download.svg" width="40" height="40" uk-svg>
+<img src="/uikit/src/images/icons/cloud-download.svg" width="40" height="40" uk-svg>
 
 <!-- Targets a symbol inside the SVG image -->
-<img src="../assets/uikit/tests/images/icons.svg#cloud-upload" width="40" height="40" uk-svg>
+<img src="/uikit/tests/images/icons.svg#cloud-upload" width="40" height="40" uk-svg>
 ```
 
 SVGs will adapt the current color for their stroke and fill color. To prevent this behavior,  you can add the `uk-preserve` class to the SVG itself or to elements inside the SVG.
@@ -641,7 +641,7 @@ To start playing an animated Gif only when it comes into the viewport, add the `
 ```
 
 ```html : uikit
-<img src="/images/animated.gif" alt="" uk-gif>
+<img src="/uikit/tests/images/animated.gif" alt="" uk-gif>
 ```
 
 ***
@@ -726,7 +726,7 @@ Add one of the following classes to apply different blend modes to your backgrou
 <div class="uk-child-width-1-2 uk-child-width-1-3@s uk-grid-small uk-light" uk-grid>
     <div>
         <div class="uk-inline uk-background-primary">
-            <img class="uk-blend-multiply" src="images/dark.jpg" alt="Blend Multiply">
+            <img class="uk-blend-multiply" src="/uikit/tests/images/dark.jpg" alt="Blend Multiply">
             <div class="uk-position-center">
                 <p class="uk-h4 uk-margin-remove">Multiply</p>
             </div>
@@ -734,7 +734,7 @@ Add one of the following classes to apply different blend modes to your backgrou
     </div>
     <div>
         <div class="uk-inline uk-background-primary">
-            <img class="uk-blend-screen" src="images/dark.jpg" alt="Blend Screen">
+            <img class="uk-blend-screen" src="/uikit/tests/images/dark.jpg" alt="Blend Screen">
             <div class="uk-position-center">
                 <p class="uk-h4 uk-margin-remove">Screen</p>
             </div>
@@ -742,7 +742,7 @@ Add one of the following classes to apply different blend modes to your backgrou
     </div>
     <div>
         <div class="uk-inline uk-background-primary">
-            <img class="uk-blend-overlay" src="images/dark.jpg" alt="Blend Overlay">
+            <img class="uk-blend-overlay" src="/uikit/tests/images/dark.jpg" alt="Blend Overlay">
             <div class="uk-position-center">
                 <p class="uk-h4 uk-margin-remove">Overlay</p>
             </div>
@@ -750,7 +750,7 @@ Add one of the following classes to apply different blend modes to your backgrou
     </div>
     <div>
         <div class="uk-inline uk-background-primary">
-            <img class="uk-blend-darken" src="images/dark.jpg" alt="Blend Darken">
+            <img class="uk-blend-darken" src="/uikit/tests/images/dark.jpg" alt="Blend Darken">
             <div class="uk-position-center">
                 <p class="uk-h4 uk-margin-remove">Darken</p>
             </div>
@@ -758,7 +758,7 @@ Add one of the following classes to apply different blend modes to your backgrou
     </div>
     <div>
         <div class="uk-inline uk-background-primary">
-            <img class="uk-blend-lighten" src="images/dark.jpg" alt="Blend Lighten">
+            <img class="uk-blend-lighten" src="/uikit/tests/images/dark.jpg" alt="Blend Lighten">
             <div class="uk-position-center">
                 <p class="uk-h4 uk-margin-remove">Lighten</p>
             </div>
@@ -766,7 +766,7 @@ Add one of the following classes to apply different blend modes to your backgrou
     </div>
     <div>
         <div class="uk-inline uk-background-primary">
-            <img class="uk-blend-color-dodge" src="images/dark.jpg" alt="Blend Color Dodge">
+            <img class="uk-blend-color-dodge" src="/uikit/tests/images/dark.jpg" alt="Blend Color Dodge">
             <div class="uk-position-center">
                 <p class="uk-h4 uk-margin-remove">Color Dodge</p>
             </div>
@@ -774,7 +774,7 @@ Add one of the following classes to apply different blend modes to your backgrou
     </div>
     <div>
         <div class="uk-inline uk-background-primary">
-            <img class="uk-blend-color-burn" src="images/dark.jpg" alt="Blend Color Burn">
+            <img class="uk-blend-color-burn" src="/uikit/tests/images/dark.jpg" alt="Blend Color Burn">
             <div class="uk-position-center">
                 <p class="uk-h4 uk-margin-remove">Color Burn</p>
             </div>
@@ -782,7 +782,7 @@ Add one of the following classes to apply different blend modes to your backgrou
     </div>
     <div>
         <div class="uk-inline uk-background-primary">
-            <img class="uk-blend-hard-light" src="images/dark.jpg" alt="Blend Hard Light">
+            <img class="uk-blend-hard-light" src="/uikit/tests/images/dark.jpg" alt="Blend Hard Light">
             <div class="uk-position-center">
                 <p class="uk-h4 uk-margin-remove">Hard Light</p>
             </div>
@@ -790,7 +790,7 @@ Add one of the following classes to apply different blend modes to your backgrou
     </div>
     <div>
         <div class="uk-inline uk-background-primary">
-            <img class="uk-blend-soft-light" src="images/dark.jpg" alt="Blend Soft Light">
+            <img class="uk-blend-soft-light" src="/uikit/tests/images/dark.jpg" alt="Blend Soft Light">
             <div class="uk-position-center">
                 <p class="uk-h4 uk-margin-remove">Soft Light</p>
             </div>
@@ -798,7 +798,7 @@ Add one of the following classes to apply different blend modes to your backgrou
     </div>
     <div>
         <div class="uk-inline uk-background-primary">
-            <img class="uk-blend-difference" src="images/dark.jpg" alt="Blend Difference">
+            <img class="uk-blend-difference" src="/uikit/tests/images/dark.jpg" alt="Blend Difference">
             <div class="uk-position-center">
                 <p class="uk-h4 uk-margin-remove">Difference</p>
             </div>
@@ -806,7 +806,7 @@ Add one of the following classes to apply different blend modes to your backgrou
     </div>
     <div>
         <div class="uk-inline uk-background-primary">
-            <img class="uk-blend-exclusion" src="images/dark.jpg" alt="Blend Exclusion">
+            <img class="uk-blend-exclusion" src="/uikit/tests/images/dark.jpg" alt="Blend Exclusion">
             <div class="uk-position-center">
                 <p class="uk-h4 uk-margin-remove">Exclusion</p>
             </div>
@@ -814,7 +814,7 @@ Add one of the following classes to apply different blend modes to your backgrou
     </div>
     <div>
         <div class="uk-inline uk-background-primary">
-            <img class="uk-blend-hue" src="images/dark.jpg" alt="Blend Hue">
+            <img class="uk-blend-hue" src="/uikit/tests/images/dark.jpg" alt="Blend Hue">
             <div class="uk-position-center">
                 <p class="uk-h4 uk-margin-remove">Hue</p>
             </div>
@@ -822,7 +822,7 @@ Add one of the following classes to apply different blend modes to your backgrou
     </div>
     <div>
         <div class="uk-inline uk-background-primary">
-            <img class="uk-blend-saturation" src="images/dark.jpg" alt="Blend Saturation">
+            <img class="uk-blend-saturation" src="/uikit/tests/images/dark.jpg" alt="Blend Saturation">
             <div class="uk-position-center">
                 <p class="uk-h4 uk-margin-remove">Saturation</p>
             </div>
@@ -830,7 +830,7 @@ Add one of the following classes to apply different blend modes to your backgrou
     </div>
     <div>
         <div class="uk-inline uk-background-primary">
-            <img class="uk-blend-color" src="images/dark.jpg" alt="Blend Color">
+            <img class="uk-blend-color" src="/uikit/tests/images/dark.jpg" alt="Blend Color">
             <div class="uk-position-center">
                 <p class="uk-h4 uk-margin-remove">Color</p>
             </div>
@@ -838,7 +838,7 @@ Add one of the following classes to apply different blend modes to your backgrou
     </div>
     <div>
         <div class="uk-inline uk-background-primary">
-            <img class="uk-blend-luminosity" src="images/dark.jpg" alt="Blend Luminosity">
+            <img class="uk-blend-luminosity" src="/uikit/tests/images/dark.jpg" alt="Blend Luminosity">
             <div class="uk-position-center">
                 <p class="uk-h4 uk-margin-remove">Luminosity</p>
             </div>
@@ -855,7 +855,7 @@ To center an element to itself, add the `uk-transform-center` class. This is par
 
 ```html : uikit
 <div class="uk-inline">
-    <img src="images/light.jpg" alt="">
+    <img src="/uikit/tests/images/light.jpg" alt="">
     <a class="uk-position-absolute uk-transform-center" style="left: 50%; top: 50%" href="#" uk-marker></a>
 </div>
 ```
