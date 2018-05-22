@@ -169,7 +169,7 @@ export default {
                  * @event shown
                  */
                 trigger(el, show ? 'shown' : 'hidden', [this]);
-                this.$update();
+                this.$update(el);
             });
         },
 
@@ -191,7 +191,7 @@ export default {
             $$('[autofocus]', el).some(el => isVisible(el) && (el.focus() || true));
 
             this.updateAria(el);
-            changed && this.$update();
+            changed && this.$update(el);
         },
 
         _toggleImmediate(el, show) {

@@ -53,7 +53,7 @@ export default {
 
     connected() {
 
-        this.placeholder = $('<div class="uk-sticky-placeholder"></div>');
+        this.placeholder = $('+ .uk-sticky-placeholder', this.$el) || $('<div class="uk-sticky-placeholder"></div>');
 
         if (!this.isActive) {
             this.hide();
@@ -105,7 +105,7 @@ export default {
 
             handler() {
 
-                if (!(this.targetOffset !== false && location.hash && window.scrollY > 0)) {
+                if (!(this.targetOffset !== false && location.hash && window.pageYOffset > 0)) {
                     return;
                 }
 
@@ -159,9 +159,6 @@ export default {
                 this.bottom = bottom && bottom - outerHeight;
                 this.inactive = this.media && !window.matchMedia(this.media).matches;
 
-                if (this.isActive) {
-                    this.update();
-                }
             },
 
             events: ['load', 'resize']
@@ -170,7 +167,7 @@ export default {
 
         {
 
-            read(_, {scrollY = window.scrollY}) {
+            read(_, {scrollY = window.pageYOffset}) {
 
                 this.width = (isVisible(this.widthElement) ? this.widthElement : this.$el).offsetWidth;
 
@@ -220,7 +217,7 @@ export default {
 
             },
 
-            events: ['scroll']
+            events: ['load', 'resize', 'scroll']
 
         },
 

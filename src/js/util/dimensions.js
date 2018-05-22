@@ -126,7 +126,7 @@ function getDimensions(element) {
 
     element = toNode(element);
 
-    const {scrollY: top, scrollX: left} = window(element);
+    const {pageYOffset: top, pageXOffset: left} = window(element);
 
     if (isWindow(element)) {
 
@@ -301,28 +301,45 @@ export function flipPosition(pos) {
     }
 }
 
-export function isInView(element, topOffset = 0, leftOffset = 0) {
+export function isInView(element, topOffset = 0, leftOffset = 0, relativeToViewport) {
+
+    if (!isVisible(element)) {
+        return false;
+    }
 
     element = toNode(element);
-
-    const [elTop, elLeft] = offsetPosition(element);
     const win = window(element);
-    const {scrollY: top, scrollX: left} = win;
 
-    return isVisible(element) && intersectRect(
-        {
-            top: elTop,
-            left: elLeft,
-            bottom: elTop + element.offsetHeight,
-            right: elTop + element.offsetWidth
-        },
-        {
-            top,
-            left,
-            bottom: top + topOffset + height(win),
-            right: left + leftOffset + width(win)
-        }
-    );
+    if (relativeToViewport) {
+
+        return intersectRect(element.getBoundingClientRect(), {
+            top: -topOffset,
+            left: -leftOffset,
+            bottom: topOffset + height(win),
+            right: leftOffset + width(win)
+        });
+
+    } else {
+
+        const [elTop, elLeft] = offsetPosition(element);
+        const {pageYOffset: top, pageXOffset: left} = win;
+
+        return intersectRect(
+            {
+                top: elTop,
+                left: elLeft,
+                bottom: elTop + element.offsetHeight,
+                right: elTop + element.offsetWidth
+            },
+            {
+                top: top - topOffset,
+                left: left - leftOffset,
+                bottom: top + topOffset + height(win),
+                right: left + leftOffset + width(win)
+            }
+        );
+    }
+
 }
 
 export function scrolledOver(element, heightOffset = 0) {
@@ -341,7 +358,7 @@ export function scrolledOver(element, heightOffset = 0) {
     const vh = vp + Math.min(0, top - vp);
     const diff = Math.max(0, vp - (height(doc) + heightOffset - (top + elHeight)));
 
-    return clamp(((vh + win.scrollY - top) / ((vh + (elHeight - (diff < vp ? diff : 0))) / 100)) / 100);
+    return clamp(((vh + win.pageYOffset - top) / ((vh + (elHeight - (diff < vp ? diff : 0))) / 100)) / 100);
 }
 
 function offsetPosition(element) {
@@ -354,8 +371,8 @@ function offsetPosition(element) {
 
         if (css(element, 'position') === 'fixed') {
             const win = window(element);
-            offset[0] += win.scrollY;
-            offset[1] += win.scrollX;
+            offset[0] += win.pageYOffset;
+            offset[1] += win.pageXOffset;
             return offset;
         }
 

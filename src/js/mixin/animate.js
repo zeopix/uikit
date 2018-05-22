@@ -8,7 +8,7 @@ export default {
         animation: Number
     },
 
-    defaults: {
+    data: {
         animation: 150
     },
 
@@ -30,7 +30,7 @@ export default {
             let propsFrom = children.map(el => getProps(el, true));
 
             const oldHeight = height(this.target);
-            const oldScrollY = window.scrollY;
+            const oldScrollY = window.pageYOffset;
 
             action();
 
@@ -52,10 +52,7 @@ export default {
                         el.parentNode && i in propsFrom
                             ? propsFrom[i]
                             ? isVisible(el)
-                                ? assign({
-                                    width: el.offsetWidth,
-                                    height: el.offsetHeight,
-                                }, getPositionWithMargin(el))
+                                ? getPositionWithMargin(el)
                                 : {opacity: 0}
                             : {opacity: isVisible(el) ? 1 : 0}
                             : false
@@ -86,7 +83,7 @@ export default {
                     addClass(this.target, targetClass);
                     children.forEach((el, i) => propsFrom[i] && css(el, propsFrom[i]));
                     css(this.target, 'height', oldHeight);
-                    window.scroll(window.scrollX, oldScrollY);
+                    window.scroll(window.pageXOffset, oldScrollY);
 
                     Promise.all(children.map((el, i) =>
                         propsFrom[i] && propsTo[i]
@@ -112,11 +109,9 @@ function getProps(el, opacity) {
     return isVisible(el)
         ? assign({
             display: '',
-            height: el.offsetHeight,
             opacity: opacity ? css(el, 'opacity') : '0',
             pointerEvents: 'none',
             position: 'absolute',
-            width: el.offsetWidth,
             zIndex: zIndex === 'auto' ? index(el) : zIndex
         }, getPositionWithMargin(el))
         : false;
@@ -137,9 +132,11 @@ function reset(el) {
 }
 
 function getPositionWithMargin(el) {
+    const {height, width} = el.getBoundingClientRect();
     let {top, left} = position(el);
     top += toFloat(css(el, 'marginTop'));
-    return {top, left};
+
+    return {top, left, height, width};
 }
 
 let style;

@@ -1,6 +1,6 @@
 import Position from '../mixin/position';
 import Togglable from '../mixin/togglable';
-import {$$, addClass, Animation, attr, css, includes, isString, isTouch, MouseTracker, offset, on, once, pointerEnter, pointerLeave, pointInRect, query, removeClass, removeClasses, toggleClass, within} from 'uikit-util';
+import {$$, addClass, Animation, attr, css, includes, isTouch, MouseTracker, offset, on, once, pointerEnter, pointerLeave, pointInRect, query, removeClass, removeClasses, toggleClass, within} from 'uikit-util';
 
 let active;
 
@@ -22,7 +22,7 @@ export default {
 
     data: {
         mode: ['click', 'hover'],
-        toggle: true,
+        toggle: '- *',
         boundary: window,
         boundaryAlign: false,
         delayShow: 0,
@@ -58,7 +58,7 @@ export default {
         addClass(this.$el, this.clsDrop);
 
         const {toggle} = this.$props;
-        this.toggle = toggle && this.$create('toggle', isString(toggle) ? query(toggle, this.$el) : this.$el.previousElementSibling, {
+        this.toggle = toggle && this.$create('toggle', query(toggle, this.$el), {
             target: this.$el,
             mode: this.mode
         });
