@@ -1,5 +1,4 @@
 export default Vue => {
 
-    debugger
 
 };

@@ -5,7 +5,7 @@ const DefaultLoader = require('yootheme-doctools/src/loaders/DefaultLoader.js');
 
 module.exports = {
 
-    include: [ 'src/js/@(core|mixin|util|components)/*', 'docs/**/*.md', 'package.json', 'README.md'],
+    include: [ 'src/js/@(core|mixin|util|components)/*', 'docs/**/*.md', 'package.json', 'README.md', 'tests/*.html'],
 
     exclude: [],
 
@@ -19,7 +19,12 @@ module.exports = {
             exclude: ['src/js/core/core.js'],
             desc: {runtime: true}
         }),
-        'DefaultLoader'
+        'DefaultLoader',
+        new DefaultLoader({
+            type: 'UIkitTest',
+            include: __dirname + '/tests/*.html',
+            member: 'html'
+        })
     ],
 
      /**
@@ -29,17 +34,27 @@ module.exports = {
         new RuntimeAnalyzer({serve: false}),
         new AssetLinker({
             getAssets(desc) {
+
+                const assets = AssetLinker.defaultConfig.getAssets(desc);
+                assets.test = path.join(__dirname, 'tests', desc.name.toLowerCase() + '.html');
+
                 if (desc.type === 'UIkitComponent') {
-                    return {readme: path.join(__dirname, 'docs', 'components', desc.name.toLowerCase() + '.md')};
-                } else {
-                    return AssetLinker.defaultConfig.getAssets(desc);
+                    assets.readme = path.join(__dirname, 'docs', 'components', desc.name.toLowerCase() + '.md');
                 }
+                return assets;
             }
         }),
-        'HeadlineMapper',
+        // 'HeadlineMapper',
         'TypeMapper',
         'UIkitComponentMapper',
         'ComponentLinker',
+        {
+            onSerialize(desc, data) {
+                if (desc.html) {
+                    data.html = desc.html;
+                }
+            }
+        }
     ],
 
 };
