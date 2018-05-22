@@ -16,7 +16,7 @@ To have an image cover its parent element, add the `.uk-cover-container` class t
 
 ```html : uikit
 <div class="uk-cover-container uk-height-medium">
-    <img src="/images/dark.jpg" alt="" uk-cover>
+    <img src="/uikit/tests/images/dark.jpg" alt="" uk-cover>
 </div>
 ```
 
@@ -77,7 +77,7 @@ To add responsive behavior to your cover image, you need to create an invisible 
 ```html : uikit
 <div class="uk-cover-container">
     <canvas width="400" height="200"></canvas>
-    <img src="/images/dark.jpg" alt="" uk-cover>
+    <img src="/uikit/tests/images/dark.jpg" alt="" uk-cover>
 </div>
 ```
 

@@ -592,16 +592,16 @@ You can even automatically display alternative logos for light and dark backgrou
     <div>
         <div class="uk-panel uk-padding uk-background-muted">
             <a class="uk-logo" href="#">
-                <img src="/uikit/tests/images/logo-placeholder.svg" alt="">
-                <img class="uk-logo-inverse" src="/uikit/tests/images/logo-placeholder-light.svg" alt="">
+                <img src="/images/logo-placeholder.svg" alt="">
+                <img class="uk-logo-inverse" src="/images/logo-placeholder-light.svg" alt="">
             </a>
         </div>
     </div>
     <div>
         <div class="uk-panel uk-padding uk-background-secondary uk-light">
             <a class="uk-logo" href="#">
-                <img src="/uikit/tests/images/logo-placeholder.svg" alt="">
-                <img class="uk-logo-inverse" src="/uikit/tests/images/logo-placeholder-light.svg" alt="">
+                <img src="/images/logo-placeholder.svg" alt="">
+                <img class="uk-logo-inverse" src="/images/logo-placeholder-light.svg" alt="">
             </a>
         </div>
     </div>

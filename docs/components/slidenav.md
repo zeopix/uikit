@@ -78,13 +78,13 @@ Use the `.uk-light` or `.uk-dark` class from the [Inverse component](inverse.md)
 
     <ul class="uk-slideshow-items">
         <li>
-            <img src="/images/photo.jpg" alt="" uk-cover>
+            <img src="/uikit/tests/images/photo.jpg" alt="" uk-cover>
         </li>
         <li>
-            <img src="/images/dark.jpg" alt="" uk-cover>
+            <img src="/uikit/tests/images/dark.jpg" alt="" uk-cover>
         </li>
         <li>
-            <img src="/images/light.jpg" alt="" uk-cover>
+            <img src="/uikit/tests/images/light.jpg" alt="" uk-cover>
         </li>
     </ul>
 
