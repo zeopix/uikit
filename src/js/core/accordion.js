@@ -3,6 +3,8 @@ import Togglable from '../mixin/togglable';
 import {$, $$, attr, filter, getIndex, hasClass, includes, index, toggleClass, unwrap, wrapAll} from 'uikit-util';
 
 /**
+ * accordion
+ * @exclude {props:{targets: true}}
  * @tutorial accordion
  */
 export default {
