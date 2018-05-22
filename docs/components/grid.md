@@ -353,7 +353,7 @@ If grid cells have different heights, a layout free of gaps can be created by ad
 <div uk-grid="masonry: true">...</div>
 ```
 
-```example
+```html | uikit
 <div class="uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid="masonry: true">
     <div>
         <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 100px">Item</div>
@@ -405,7 +405,7 @@ To move single columns of a grid at different speeds while scrolling, just add `
 
 This effect can be applied to two types of markup. The following example uses three defined columns with three items each.
 
-```example
+```html | uikit
 <div class="uk-child-width-expand@s uk-text-center" uk-grid="parallax: 150">
     <div>
         <div class="uk-card uk-card-default uk-card-body uk-grid-margin">Item</div>
@@ -427,7 +427,7 @@ This effect can be applied to two types of markup. The following example uses th
 
 The parallax effect is also applied if grid columns wrap into the next row, as shown in the next example.
 
-```example
+```html | uikit
 <div class="uk-child-width-1-2@s uk-child-width-1-3@m uk-child-width-1-4@l uk-text-center" uk-grid="parallax: 150">
     <div>
         <div class="uk-card uk-card-default uk-card-body">Item</div>
