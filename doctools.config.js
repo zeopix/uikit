@@ -2,12 +2,20 @@ const path = require('path');
 const AssetLinker = require('yootheme-doctools/src/plugins/AssetLinker.js');
 const RuntimeAnalyzer = require('yootheme-doctools/src/plugins/RuntimeAnalyzer.js');
 const DefaultLoader = require('yootheme-doctools/src/loaders/DefaultLoader.js');
+const _ = require('lodash');
 
 module.exports = {
 
     include: [ 'src/js/@(core|mixin|util|components)/*', 'docs/**/*.md', 'package.json', 'README.md', 'tests/*.html'],
 
     exclude: [],
+
+    server: {
+        assets: {
+            '/images': 'tests/images',
+            '/uikit/tests/images': 'tests/images',
+        }
+    },
 
     base: __dirname,
 
@@ -20,7 +28,7 @@ module.exports = {
             desc: {runtime: true}
         }),
         'DefaultLoader',
-        new DefaultLoader({
+        () => new DefaultLoader({
             type: 'UIkitTest',
             include: __dirname + '/tests/*.html',
             member: 'html'
@@ -31,8 +39,8 @@ module.exports = {
      * extra mapping plugins
      */
     plugins: [
-        new RuntimeAnalyzer({serve: false}),
-        new AssetLinker({
+        () => new RuntimeAnalyzer({serve: false}),
+        () => new AssetLinker({
             getAssets(desc) {
 
                 const assets = AssetLinker.defaultConfig.getAssets(desc);
@@ -40,11 +48,13 @@ module.exports = {
 
                 if (desc.type === 'UIkitComponent') {
                     assets.readme = path.join(__dirname, 'docs', 'components', desc.name.toLowerCase() + '.md');
+                } else if (desc.type === 'markdown') {
+                    assets.test = path.join(__dirname, 'tests', desc.name.toLowerCase() + '.html');
+
                 }
                 return assets;
             }
         }),
-        // 'HeadlineMapper',
         'TypeMapper',
         'UIkitComponentMapper',
         'ComponentLinker',
@@ -53,6 +63,19 @@ module.exports = {
                 if (desc.html) {
                     data.html = desc.html;
                 }
+            },
+            onGet(app, data) {
+                data.pages = Object.values(app.resources)
+
+                .map(res => {res._order = res.type === 'UIkitComponents' ? 2 : (res.type === 'markdown' ? 1 : 0); return res;})
+                .sort((a, b) => b.name - a.name)
+                .reduce((comps, res) => {
+                    comps[res.name] = comps[res.name] || {};
+                    comps[res.name][res.type] = res.resource;
+                    return comps;
+                }, {});
+
+                [data.rootPackage] = Object.keys(data.pages);
             }
         }
     ],
