@@ -58,7 +58,7 @@ module.exports = {
         'TypeMapper',
         'UIkitComponentMapper',
         'ComponentLinker',
-        {
+        () => ({
             onSerialize(desc, data) {
                 if (desc.html) {
                     data.html = desc.html;
@@ -75,9 +75,9 @@ module.exports = {
                     return comps;
                 }, {});
 
-                [data.rootPackage] = Object.keys(data.pages);
+                [data.indexPage] = Object.keys(data.pages);
             }
-        }
+        })
     ],
 
 };
