@@ -38,7 +38,17 @@ stories.addDecorator(content => {
     values.current.style = select('Style', opts, values.defaults.style);
 
     window.document.dir = values.current.isRTL ? 'RTL' : 'LTR';
-    styleElement.setAttribute('href', getStyleSheet()[values.current.style]);
+
+
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = getStyleSheet()[values.current.style];
+    link.id = 'UIkitStyle';
+    link.onload = () => UIkit.update();
+
+    styleElement.parentNode.appendChild(link);
+    styleElement.remove();
+
 
     return content();
 });
