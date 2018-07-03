@@ -1,8 +1,8 @@
 const path = require('path');
+const _ = require('lodash');
 const AssetLinker = require('yootheme-doctools/src/plugins/AssetLinker.js');
 const RuntimeAnalyzer = require('yootheme-doctools/src/plugins/RuntimeAnalyzer.js');
 const DefaultLoader = require('yootheme-doctools/src/loaders/DefaultLoader.js');
-const _ = require('lodash');
 
 module.exports = {
 
