@@ -96,11 +96,11 @@ Options passed via the component attribute will have the highest precedence, fol
 
 ### Globally
 
-Component options can be changed globally by setting the component's `defaults` property.
+Component options can be changed globally by setting the component's `data` property.
 
 ```js
-UIkit.components.sticky.options.defaults.offset = 50;
-UIkit.components.sticky.options.defaults.top = 100;
+UIkit.component('sticky').options.data.offset = 50;
+UIkit.component('sticky').options.data.top = 100;
 ```
 
 ***
@@ -125,7 +125,7 @@ The options names must be in their camel cased representation, e.g. `show-on-up`
 
 After initialisation you can get your component by calling the same initialisation function, omitting the options parameter.
 
-```js
+```javscript
 // Sticky is now the prior initialised components
 var sticky = UIkit.sticky('.sticky');
 ```
