@@ -2,17 +2,47 @@ import Class from '../mixin/class';
 import Togglable from '../mixin/togglable';
 import {$, $$, attr, filter, getIndex, hasClass, includes, index, toggleClass, unwrap, wrapAll} from 'uikit-util';
 
+/**
+ * accordion
+ * @customize {
+ *  props: {
+ *      animation: {description: 'Reveal item directly or with a transition.'}
+ *      }
+ *  }
+ */
 export default {
 
     mixins: [Class, Togglable],
 
     props: {
+        /**
+         * CSS selector of the element(s) to toggle.
+         */
         targets: String,
+        /**
+         * Index of the element to open initially.
+         */
         active: null,
+        /**
+         * Allow all items to be closed.
+         */
         collapsible: Boolean,
+        /**
+         * Allow multiple open items.
+         */
         multiple: Boolean,
+        /**
+         * The toggle selector, which toggles accordion items.
+         */
         toggle: String,
+        /**
+         * The content selector, which selects the accordion content elements.
+         */
         content: String,
+        /**
+         * The transition to use when revealing items. Use keyword for
+         * [easing functions](https://developer.mozilla.org/en-US/docs/Web/CSS/single-transition-timing-function#Keywords_for_common_timing-functions).
+         */
         transition: String
     },
 
@@ -78,7 +108,11 @@ export default {
     },
 
     methods: {
-
+        /**
+         * Toggles the content pane.
+         * @param {String|Integer|Node} [item = 0] - Accordion pane to toggle. 0 based index.
+         * @param {Boolean} [animate = true] - Suppress opening animation by passing false.
+         */
         toggle(item, animate) {
 
             const index = getIndex(item, this.items);

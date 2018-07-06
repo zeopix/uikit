@@ -2,6 +2,22 @@ import Class from '../mixin/class';
 import Togglable from '../mixin/togglable';
 import {assign} from 'uikit-util';
 
+/**
+ * @structure {
+ *  props: [
+ *      'animation', 'duration', 'selClose'
+ *  ],
+ *  emit: ['hidden', 'hide', 'beforehide']
+ * }
+ * @customize {
+ *  props: {
+ *      animation: {
+ *          description: 'Fade out or use the [Animation component](animation.md).'
+ *      }
+ *  }
+ * }
+ *
+ */
 export default {
 
     attrs: true,
@@ -11,6 +27,12 @@ export default {
     args: 'animation',
 
     props: {
+
+        /**
+         * The close trigger element.
+         * @type {CSS-selector}
+         */
+        selClose: String,
         close: String
     },
 

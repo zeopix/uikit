@@ -8,6 +8,10 @@ export default {
     attrs: true,
 
     props: {
+        /**
+         * Any string parsable by ```Date.parse```.
+         * See [Reference](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Date/parse).
+         */
         date: String,
         clsWrapper: String
     },
@@ -116,6 +120,9 @@ export default {
 
     methods: {
 
+        /**
+         * Starts the countdown.
+         */
         start() {
 
             this.stop();
@@ -127,6 +134,9 @@ export default {
 
         },
 
+        /**
+         * Stops the countdown.
+         */
         stop() {
 
             if (this.timer) {

@@ -4,7 +4,13 @@ export default {
 
     props: {
         cls: Boolean,
+        /**
+         * Reveal element directly or with a transition.
+         */
         animation: 'list',
+        /**
+         * Animation duration in milliseconds.
+         */
         duration: Number,
         origin: String,
         transition: String,
@@ -120,6 +126,16 @@ export default {
                         ? el.style.height === '0px'
                         : !this.isToggled(el);
 
+            /**
+             * Fires before an item is shown. Can prevent showing by returning `false`.
+             * @event beforeshow
+             */
+
+            /**
+             * Fires before an item is hidden. Can prevent hiding by returning `false`.
+             * @event beforehide
+             */
+
             if (!trigger(el, `before${show ? 'show' : 'hide'}`, [this])) {
                 return Promise.reject();
             }
@@ -131,9 +147,29 @@ export default {
                     : this._toggleAnimation
             )(el, show);
 
+            /**
+             * Fires after an item is shown.
+             * @event show
+             */
+
+            /**
+             * Fires after an item's hide animation has started.
+             * @event hide
+             */
             trigger(el, show ? 'show' : 'hide', [this]);
 
             return promise.then(() => {
+
+                /**
+                 * Fires after an item is hidden.
+                 * @event hidden
+                 */
+
+                /**
+                 * Fires after the item's show animation has completed.
+                 * @event shown
+                 */
+
                 trigger(el, show ? 'shown' : 'hidden', [this]);
                 this.$update(el);
             });
