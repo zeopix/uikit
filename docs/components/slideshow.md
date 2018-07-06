@@ -41,6 +41,8 @@ Add an image in the background of each slide using the `uk-cover` attribute from
 </div>
 ```
 
+**Note** To lazy load images in the slides, take a look at the [Image component](image.md#target).
+
 ***
 
 ## Animations
@@ -271,7 +273,7 @@ By default, the slideshow height adopts to the defined ratio. A minimum or maxim
 
 ## Viewport height
 
-Adding the `uk-height-viewport` attribute from the [Utility component](utility.md) to the list of slideshow items will stretch the height to fill the whole viewport. You can set the `min-height` option to define a minimum height.
+Adding the `uk-height-viewport` attribute from the [Height component](height.md#viewport-height) to the list of slideshow items will stretch the height to fill the whole viewport. You can set the `min-height` option to define a minimum height.
 
 ```html
 <div uk-slideshow>
@@ -396,12 +398,12 @@ The slideshow is not restricted to images. Other media, like videos, can be posi
         </li>
         <li>
             <video autoplay loop muted playslinline uk-cover>
-                <source src="//www.quirksmode.org/html5/videos/big_buck_bunny.mp4" type="video/mp4">
-                <source src="//www.quirksmode.org/html5/videos/big_buck_bunny.ogv" type="video/ogg">
+                <source src="https://quirksmode.org/html5/videos/big_buck_bunny.mp4" type="video/mp4">
+                <source src="https://quirksmode.org/html5/videos/big_buck_bunny.ogv" type="video/ogg">
             </video>
         </li>
         <li>
-            <iframe src="//www.youtube.com/embed/YE7VzlLtp-4?autoplay=1&amp;controls=0&amp;showinfo=0&amp;rel=0&amp;loop=1&amp;modestbranding=1&amp;wmode=transparent&amp;playsinline=1" width="560" height="315" frameborder="0" allowfullscreen uk-cover></iframe>
+            <iframe src="https://www.youtube-nocookie.com/embed/YE7VzlLtp-4?autoplay=1&amp;controls=0&amp;showinfo=0&amp;rel=0&amp;loop=1&amp;modestbranding=1&amp;wmode=transparent&amp;playsinline=1" width="560" height="315" frameborder="0" allowfullscreen uk-cover></iframe>
         </li>
     </ul>
 

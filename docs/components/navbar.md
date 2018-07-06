@@ -879,7 +879,7 @@ For a basic sticky navbar, wrap the navbar inside a container with the `uk-stick
 
 The navbar itself has a modifier class `uk-navbar-sticky` that ensures an optimized styling for the sticky state (for example an additional box shadow). To let the sticky component dynamically add and remove that class, set `cls-active: uk-navbar-sticky`. To ensure that the class is added to the navbar container, set `sel-target: .uk-navbar-container`.
 
-**Note** You can view more examples in the tests for the [Sticky Navbar](../assets/uikit/tests/sticky-navbar.html).
+**Note** You can view more examples in the tests for the [Sticky Navbar](/uikit/tests/sticky-navbar.html).
 
 ```html
 <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">

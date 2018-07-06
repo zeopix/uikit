@@ -4,7 +4,7 @@
 
 ## Usage
 
-The switcher component consists of a number of toggles and their related content items. Add the `uk-switcher` attribute to the element which contains the toggles. Add the `.uk-switcher` class to the element containing the content items.
+The Switcher component consists of a number of toggles and their related content items. Add the `uk-switcher` attribute to the element which contains the toggles. Add the `.uk-switcher` class to the element containing the content items.
 
 By default, the element with the `.uk-switcher` class has to succeed the toggle directly in order for the switcher to function. If you need it to be nested in another element, for example when using a grid, add the `connect: SELECTOR` option to the `uk-switcher` attribute and select the element containing the items for switching.
 
@@ -13,7 +13,7 @@ Typically, the switcher toggles are styled through other components, some of whi
 ```html
 <!-- This is the nav containing the toggling elements -->
 <ul uk-switcher>
-    <li><a href=""></a></li>
+    <li><a href="#"></a></li>
 </ul>
 
 <!-- This is the container of the content items -->
@@ -48,10 +48,10 @@ Setting the attribute to `next` and `previous` will switch to the adjacent items
 
 ```html
 <ul class="uk-switcher uk-margin">
-    <li><a href="" uk-switcher-item="0"></a></li>
-    <li><a href="" uk-switcher-item="1"></a></li>
-    <li><a href="" uk-switcher-item="next"></a></li>
-    <li><a href="" uk-switcher-item="previous"></a></li>
+    <li><a href="#" uk-switcher-item="0"></a></li>
+    <li><a href="#" uk-switcher-item="1"></a></li>
+    <li><a href="#" uk-switcher-item="next"></a></li>
+    <li><a href="#" uk-switcher-item="previous"></a></li>
 </ul>
 ```
 
@@ -350,7 +350,7 @@ Any of these options can be applied to the component attribute. Separate multipl
 
 | Option      | Value        | Default | Description                                                                                              |
 |:------------|:-------------|:--------|:---------------------------------------------------------------------------------------------------------|
-| `connect`   | CSS selector | `false` | Related item's container. By default, this is the next element with the 'uk-switcher' class.             |
+| `connect`   | CSS selector | `~.uk-switcher` | Related items container. By default succeeding elements with class 'uk-switcher'.             |
 | `toggle `   | CSS selector | `> *`   | The toggle selector, which triggers content switching on click.                                          |
 | `active `   | Number       | `0`     | Active index on init. Providing a negative number indicates a position starting from the end of the set. |
 | `animation` | String       | `false` | The space separated names of animations to use. Comma separate for animation out.                        |

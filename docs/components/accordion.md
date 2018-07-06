@@ -148,3 +148,63 @@ To specify which items should be opened initially, add the `.uk-open` class to t
     </li>
 </ul>
 ```
+
+***
+
+## Component options
+
+Any of these options can be applied to the component attribute. Separate multiple options with a semicolon. [Learn more](javascript.md#component-configuration)
+
+| Option        | Value   | Default | Description                                |
+|:--------------|:--------|:--------|:-------------------------------------------|
+| `active`      | Number  | `false` | Index of the element to open initially.    |
+| `animation`   | Boolean | `true`  | Reveal item directly or with a transition. |
+| `collapsible` | Boolean | `true`  | Allow all items to be closed.              |
+| `content`     | String  | `> .uk-accordion-content` | The content selector, which selects the accordion content elements. |
+| `duration`    | Number  | `200`   | Animation duration in milliseconds.        |
+| `multiple`    | Boolean | `false` | Allow multiple open items.                 |
+| `targets`     | String  | `> *`   | CSS selector of the element(s) to toggle.  |
+| `toggle`      | String  | `> .uk-accordion-title` | The toggle selector, which toggles accordion items. |
+| `transition`  | String  | `ease`  | The transition to use when revealing items. Use keyword for [easing functions](https://developer.mozilla.org/en-US/docs/Web/CSS/single-transition-timing-function#Keywords_for_common_timing-functions). |
+
+***
+
+## JavaScript
+
+Learn more about [JavaScript components](javascript.md#programmatic-use).
+
+### Initialization
+
+```js
+UIkit.accordion(element, options);
+```
+
+### Events
+
+The following events will be triggered on elements with this component attached:
+
+| Name         | Description                                                              |
+|:-------------|:-------------------------------------------------------------------------|
+| `beforeshow` | Fires before an item is shown. Can prevent showing by returning `false`. |
+| `show`       | Fires after an item is shown.                                            |
+| `shown`      | Fires after the item's show animation has completed.                     |
+| `beforehide` | Fires before an item is hidden. Can prevent hiding by returning `false`. |
+| `hide`       | Fires after an item's hide animation has started.                        |
+| `hidden`     | Fires after an item is hidden.                                           |
+
+### Methods
+
+The following methods are available for the component:
+
+#### Toggle
+
+```js
+UIkit.accordion(element).toggle(index, animate);
+```
+
+Toggles the content pane.
+
+| Name      | Type                  | Default | Description                                  |
+|:----------|:----------------------|:--------|:---------------------------------------------|
+| `index`   | String, Integer, Node | 0       | Accordion pane to toggle. 0 based index.     |
+| `animate` | Boolean               | true    | Suppress opening animation by passing false. |

@@ -4,7 +4,14 @@ import {$, $$, attr, filter, getIndex, hasClass, includes, index, toggleClass, u
 
 /**
  * accordion
- * @exclude {props:{targets: true}}
+ * @exclude {props:{targets: false}}
+ * @customize {
+ *  emit: {show:{description:'overridden twice'}},
+ *  props: {
+ *      targets:{private: false},
+ *      animation: {description: 'Reveal item directly or with a transition.'}
+ *  }
+ * }
  * @tutorial accordion
  */
 export default {
@@ -38,6 +45,7 @@ export default {
         toggle: String,
 
         /**
+         * @private
          * The content selector, which selects the accordion content elements.
          */
         content: String,

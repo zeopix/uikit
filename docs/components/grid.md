@@ -385,7 +385,7 @@ If grid cells have different heights, a layout free of gaps can be created by ad
 </div>
 ```
 
-**Note** You can view more examples in the tests for the [Grid Masonry](../assets/uikit/tests/grid-masonry.html).
+**Note** You can view more examples in the tests for the [Grid Masonry](/uikit/tests/grid-masonry.html).
 
 ***
 
@@ -468,7 +468,7 @@ The parallax effect is also applied if grid columns wrap into the next row, as s
 </div>
 ```
 
-**Note** You can view more examples in the [Grid Parallax](../assets/uikit/tests/grid-parallax.html) tests.
+**Note** You can view more examples in the [Grid Parallax](/uikit/tests/grid-parallax.html) tests.
 
 ***
 

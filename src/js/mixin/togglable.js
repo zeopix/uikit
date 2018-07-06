@@ -6,6 +6,7 @@ export default {
         cls: Boolean,
         /**
          * Reveal item directly or with a transition.
+         * @type {Boolean}
          */
         animation: 'list',
         /**
@@ -159,15 +160,7 @@ export default {
 
             return promise.then(() => {
 
-                /**
-                 * Fires after an item is hidden.
-                 * @event hidden
-                 */
 
-                /**
-                 * Fires after an item is shown.
-                 * @event shown
-                 */
                 trigger(el, show ? 'shown' : 'hidden', [this]);
                 this.$update(el);
             });

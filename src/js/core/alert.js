@@ -2,6 +2,9 @@ import Class from '../mixin/class';
 import Togglable from '../mixin/togglable';
 import {assign} from 'uikit-util';
 
+/**
+ * @customize {props:{animation:{description:'Fade out or use the [Animation component](animation.md).'}}}
+ */
 export default {
 
     attrs: true,
@@ -11,10 +14,13 @@ export default {
     args: 'animation',
 
     props: {
+        close: String,
         /**
-         * closer
+         * The close trigger element.
+         * @type {CSS-selector}
+         * @default false
          */
-        close: String
+        selClose: String
     },
 
     data: {

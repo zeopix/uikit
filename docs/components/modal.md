@@ -285,7 +285,7 @@ By default, the page will scroll with the modal, if its content exceeds the wind
 
 If you want to display media, you should first check, if the [Lightbox component](lightbox.md) doesn't already offer everything you need. However, you can also use the modal to have more control over the markup to wrap your media in.
 
-**Note** Use the `uk-video` attribute from the [Utility component](utility.md) to make sure videos are stopped when the modal is closed.
+**Note** Use the `uk-video` attribute from the [Video component](video.md) to make sure videos are stopped when the modal is closed.
 
 ```html
 <div uk-modal>
@@ -299,7 +299,7 @@ If you want to display media, you should first check, if the [Lightbox component
  <p uk-margin>
     <a class="uk-button uk-button-default" href="#modal-media-image" uk-toggle>Image</a>
     <a class="uk-button uk-button-default" href="#modal-media-video" uk-toggle>Video</a>
-    <a class="uk-button uk-button-default" href="#modal-media-youtube" uk-toggle>Youtube</a>
+    <a class="uk-button uk-button-default" href="#modal-media-youtube" uk-toggle>YouTube</a>
     <a class="uk-button uk-button-default" href="#modal-media-vimeo" uk-toggle>Vimeo</a>
 </p>
 
@@ -314,8 +314,8 @@ If you want to display media, you should first check, if the [Lightbox component
     <div class="uk-modal-dialog uk-width-auto uk-margin-auto-vertical">
         <button class="uk-modal-close-outside" type="button" uk-close></button>
         <video controls playsinline uk-video>
-            <source src="//www.quirksmode.org/html5/videos/big_buck_bunny.mp4" type="video/mp4">
-            <source src="//www.quirksmode.org/html5/videos/big_buck_bunny.ogv" type="video/ogg">
+            <source src="https://quirksmode.org/html5/videos/big_buck_bunny.mp4" type="video/mp4">
+            <source src="https://quirksmode.org/html5/videos/big_buck_bunny.ogv" type="video/ogg">
         </video>
     </div>
 </div>
@@ -323,14 +323,14 @@ If you want to display media, you should first check, if the [Lightbox component
 <div id="modal-media-youtube" class="uk-flex-top" uk-modal>
     <div class="uk-modal-dialog uk-width-auto uk-margin-auto-vertical">
         <button class="uk-modal-close-outside" type="button" uk-close></button>
-        <iframe src="//www.youtube.com/embed/YE7VzlLtp-4" width="560" height="315" frameborder="0" uk-video></iframe>
+        <iframe src="https://www.youtube-nocookie.com/embed/YE7VzlLtp-4" width="560" height="315" frameborder="0" uk-video></iframe>
     </div>
 </div>
 
 <div id="modal-media-vimeo" class="uk-flex-top" uk-modal>
     <div class="uk-modal-dialog uk-width-auto uk-margin-auto-vertical">
         <button class="uk-modal-close-outside" type="button" uk-close></button>
-        <iframe src="//player.vimeo.com/video/1084537" width="500" height="281" frameborder="0" uk-video></iframe>
+        <iframe src="https://player.vimeo.com/video/1084537" width="500" height="281" frameborder="0" uk-video></iframe>
     </div>
 </div>
 ```
